@@ -72,7 +72,6 @@
                     toastr.error('{{Session::get('message')}}');
                     break;
             }
-
             @endif
         </script>
     </body>
