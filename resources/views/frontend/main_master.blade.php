@@ -44,7 +44,6 @@
 <!-- For demo purposes – can be removed on production -->
 
 <!-- For demo purposes – can be removed on production : End -->
-')}}
 <!-- JavaScripts placed at the end of the document so the pages load faster -->
 <script src="{{asset('frontend/assets/js/jquery-1.11.1.min.js')}}"></script>
 <script src="{{asset('frontend/assets/js/bootstrap.min.js')}}"></script>
