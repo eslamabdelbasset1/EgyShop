@@ -12,9 +12,9 @@
             </div>
         @endif
 
-        <form method="POST" action="{{ isset($guard) ? url($guard.'/login') : route('login') }}">
+ <form method="POST" action="{{ isset($guard) ? url($guard.'/login') : route('login') }}">
             @csrf
-            @dd(isset($guard) ? url($guard.'/login') : route('login'))
+ 
             <div>
                 <x-jet-label for="email" value="{{ __('Email') }}" />
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
@@ -40,7 +40,7 @@
                 @endif
 
                 <x-jet-button class="ml-4">
-                    {{ __('Log in') }}
+                    {{ __('Login') }}
                 </x-jet-button>
             </div>
         </form>

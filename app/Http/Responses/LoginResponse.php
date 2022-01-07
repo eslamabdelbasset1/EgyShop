@@ -1,15 +1,11 @@
 <?php
 
 namespace App\Http\Responses;
-use Laravel\Fortify\Contracts\LoginResponse as LoginResponseContract;
-use Laravel\Fortify\Fortify;
 
-//use Laravel\Fortify\Fortify;
+use Laravel\Fortify\Contracts\LoginResponse as LoginResponseContract;
 
 class LoginResponse implements LoginResponseContract
 {
-
-
     /**
      * Create an HTTP response that represents the object.
      *
@@ -19,7 +15,7 @@ class LoginResponse implements LoginResponseContract
     public function toResponse($request)
     {
         return $request->wantsJson()
-            ? response()->json(['two_factor' => false])
-            : redirect()->intended(Fortify::redirects('admin/dashboard'));
+                    ? response()->json(['two_factor' => false])
+                    : redirect()->intended('admin/dashboard');
     }
 }

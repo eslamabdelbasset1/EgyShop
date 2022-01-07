@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Contracts\Auth\StatefulGuard;
@@ -28,22 +29,23 @@ class AdminController extends Controller
     /**
      * Create a new controller instance.
      *
-     * @param \Illuminate\Contracts\Auth\StatefulGuard $guard
+     * @param  \Illuminate\Contracts\Auth\StatefulGuard  $guard
      * @return void
      */
     public function __construct(StatefulGuard $guard)
     {
         $this->guard = $guard;
+         
     }
 
-    public function loginForm()
-    {
-        return view('auth.login',['guard' => 'admin']);
+    public function loginForm(){
+    	return view('auth.login', ['guard' => 'admin']);
     }
+
     /**
      * Show the login view.
      *
-     * @param \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Laravel\Fortify\Contracts\LoginViewResponse
      */
     public function create(Request $request): LoginViewResponse
@@ -54,7 +56,7 @@ class AdminController extends Controller
     /**
      * Attempt to authenticate a new session.
      *
-     * @param \Laravel\Fortify\Http\Requests\LoginRequest $request
+     * @param  \Laravel\Fortify\Http\Requests\LoginRequest  $request
      * @return mixed
      */
     public function store(LoginRequest $request)
@@ -67,7 +69,7 @@ class AdminController extends Controller
     /**
      * Get the authentication pipeline instance.
      *
-     * @param \Laravel\Fortify\Http\Requests\LoginRequest $request
+     * @param  \Laravel\Fortify\Http\Requests\LoginRequest  $request
      * @return \Illuminate\Pipeline\Pipeline
      */
     protected function loginPipeline(LoginRequest $request)
@@ -95,7 +97,7 @@ class AdminController extends Controller
     /**
      * Destroy an authenticated session.
      *
-     * @param \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Laravel\Fortify\Contracts\LogoutResponse
      */
     public function destroy(Request $request): LogoutResponse
@@ -109,3 +111,4 @@ class AdminController extends Controller
         return app(LogoutResponse::class);
     }
 }
+
