@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backend\AdminProfileController;
+use App\Http\Controllers\Backend\BrandController;
 use App\Http\Controllers\Frontend\IndexController;
 use App\Models\Admin;
 use Illuminate\Support\Facades\Route;
@@ -48,3 +49,10 @@ Route::get('/user/profile', [IndexController::class, 'userProfile'])->name('user
 Route::post('/user/store', [IndexController::class, 'userUpdateProfile'])->name('user.updateProfile');
 Route::get('/user/change/password', [IndexController::class, 'userChangePassword'])->name('user.changePassword');
 Route::post('/user/update/password', [IndexController::class, 'userUpdatePassword'])->name('user.updatePassword');
+
+// Admin All Brand Route =======================
+Route::prefix('brand')->group(function (){
+    Route::get('/view', [BrandController::class, 'brandView'])->name('all.brand');
+    Route::post('/store', [BrandController::class, 'brandStore'])->name('brand.store');
+
+});
