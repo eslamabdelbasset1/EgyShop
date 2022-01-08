@@ -35,8 +35,8 @@ class BrandController extends Controller
         Brand::insert([
             'brand_name_en' => $request->brand_name_en,
             'brand_name_ar' => $request->brand_name_ar,
-//            'brand_slug_en' => strtolower(str_replace(' ', '-',$request->brand_name_en)),
-//            'brand_slug_ar' => str_replace(' ', '-',$request->brand_name_ar),
+            'brand_slug_en' => strtolower(str_replace(' ', '-',$request->brand_name_en)),
+            'brand_slug_ar' => str_replace(' ', '-',$request->brand_name_ar),
             'brand_image' => $save_url,
 
         ]);

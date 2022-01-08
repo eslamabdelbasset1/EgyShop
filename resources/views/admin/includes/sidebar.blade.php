@@ -30,7 +30,7 @@
                 </a>
             </li>
 
-            <li class="treeview {{($prefix == '/brand')? 'active' : ''}}">
+            <li class="treeview {{($route == '/brand')? 'active' : ''}}">
                 <a href="{{route('all.brand')}}">
                     <i data-feather="message-circle"></i>
                     <span>Brand</span>
