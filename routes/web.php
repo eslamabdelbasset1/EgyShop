@@ -43,3 +43,8 @@ Route::middleware(['auth:sanctum,web', 'verified'])->get('/dashboard', function 
     return view('dashboard');
 })->name('dashboard');
 Route::get('/', [IndexController::class, 'index'])->name('user.index');
+Route::get('/user/logout', [IndexController::class, 'userLogout'])->name('user.logout');
+Route::get('/user/profile', [IndexController::class, 'userProfile'])->name('user.profile');
+Route::post('/user/store', [IndexController::class, 'userUpdateProfile'])->name('user.updateProfile');
+Route::get('/user/change/password', [IndexController::class, 'userChangePassword'])->name('user.changePassword');
+Route::post('/user/update/password', [IndexController::class, 'userUpdatePassword'])->name('user.updatePassword');
