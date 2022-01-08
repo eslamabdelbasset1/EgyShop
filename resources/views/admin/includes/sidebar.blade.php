@@ -53,8 +53,8 @@
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="{{($route == '/brand')? 'active' : ''}}">
-                        <a href="mailbox_inbox.html"><i class="ti-more"></i>All Category</a>
+                    <li class="{{($route == 'all.category')? 'active' : ''}}">
+                        <a href="{{route('all.category')}}"><i class="ti-more"></i>All Category</a>
                     </li>
                 </ul>
             </li>

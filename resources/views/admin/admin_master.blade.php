@@ -112,6 +112,8 @@
             });
 
         </script>
+
+        <script src="{{ asset('backend/js/code.js') }}"></script>
     </body>
 </html>
 {{--{{asset('backend/')}}--}}
