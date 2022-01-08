@@ -54,5 +54,19 @@ Route::post('/user/update/password', [IndexController::class, 'userUpdatePasswor
 Route::prefix('brand')->group(function (){
     Route::get('/view', [BrandController::class, 'brandView'])->name('all.brand');
     Route::post('/store', [BrandController::class, 'brandStore'])->name('brand.store');
+    Route::get('/edit/{id}', [BrandController::class, 'brandEdit'])->name('brand.edit');
+    Route::post('/update/{id}',[BrandController::class, 'brandUpdate']);
+    Route::get('/delete/{id}', [BrandController::class, 'brandDelete'])->name('brand.delete');
+
+});
+
+
+// Admin All Category Route =======================
+Route::prefix('category')->group(function (){
+    Route::get('/view', [BrandController::class, 'brandView'])->name('all.brand');
+    Route::post('/store', [BrandController::class, 'brandStore'])->name('brand.store');
+    Route::get('/edit/{id}', [BrandController::class, 'brandEdit'])->name('brand.edit');
+    Route::post('/update/{id}',[BrandController::class, 'brandUpdate']);
+    Route::get('/delete/{id}', [BrandController::class, 'brandDelete'])->name('brand.delete');
 
 });
