@@ -1,18 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf040fd6-9e4c-4a61-9c9a-94f55c8f8893" name="Changes" comment="add brands">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/AdminProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/AdminProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/BrandController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/BrandController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/backend/js/pages/data-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/backend/js/pages/data-table.js" afterDir="false" />
+    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Actions/Fortify/CreateNewUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Actions/Fortify/CreateNewUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Guards/AdminStatefulGuard.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Guards/AdminStatefulGuard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/AdminRedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/AdminRedirectIfAuthenticated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Responses/LoginResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Responses/LoginResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/admin_master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin_master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/forgot-password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/forgot-password.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/reset-password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/reset-password.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
-    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+  <component name="ComposerSettings">
     <execution />
   </component>
   <component name="Git.Settings">
@@ -147,10 +165,8 @@
       <path value="$PROJECT_DIR$/vendor/intervention/image" />
     </include_path>
   </component>
-  <component name="ProjectId" id="23LEvyUj9XnFJvvGe3xt7UAbeRH" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="23Px9Ig0oACJbfuoD57wDk1DRZ8" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -159,137 +175,26 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/frontend/profile" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="MTHome" />
-    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Contracts/Auth/Middleware/AdminStatefulGuard.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\resources\views\frontend\profile" />
-      <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\resources\views\frontend" />
-      <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\resources\views\frontend\includes" />
-      <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\resources\views\includes" />
-      <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\resources\views\admin" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\resources\views\admin" />
-      <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\vendor\laravel\framework\src\Illuminate\Contracts\Auth" />
-    </key>
-  </component>
   <component name="RunManager">
-    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner scope="XML" />
+    <configuration default="true" type="ComposerRunConfigurationType" factoryName="Composer Script">
+      <option name="pathToComposerJson" value="$PROJECT_DIR$/composer.json" />
       <method v="2" />
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="bf040fd6-9e4c-4a61-9c9a-94f55c8f8893" name="Changes" comment="" />
-      <created>1641505205634</created>
+      <changelist id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="" />
+      <created>1641649375428</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1641505205634</updated>
-      <workItem from="1641505207985" duration="16920000" />
-      <workItem from="1641551861543" duration="53808000" />
-      <workItem from="1641643713847" duration="1934000" />
+      <updated>1641649375428</updated>
+      <workItem from="1641649381178" duration="26000" />
+      <workItem from="1641649540485" duration="122000" />
     </task>
-    <task id="LOCAL-00001" summary="init commit">
-      <created>1641521490063</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1641521490063</updated>
-    </task>
-    <task id="LOCAL-00002" summary="init commit">
-      <created>1641521829077</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1641521829077</updated>
-    </task>
-    <task id="LOCAL-00003" summary="init commit">
-      <created>1641522521021</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1641522521021</updated>
-    </task>
-    <task id="LOCAL-00004" summary="init commit">
-      <created>1641554916710</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1641554916710</updated>
-    </task>
-    <task id="LOCAL-00005" summary="init commit">
-      <created>1641558362329</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1641558362329</updated>
-    </task>
-    <task id="LOCAL-00006" summary="init commit">
-      <created>1641558412943</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1641558412943</updated>
-    </task>
-    <task id="LOCAL-00007" summary="add login$logout Dashboard">
-      <created>1641561971896</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1641561971896</updated>
-    </task>
-    <task id="LOCAL-00008" summary="edit profile">
-      <created>1641575793546</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1641575793546</updated>
-    </task>
-    <task id="LOCAL-00009" summary="update profile">
-      <created>1641581460051</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1641581460051</updated>
-    </task>
-    <task id="LOCAL-00010" summary="add brands">
-      <created>1641613593087</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1641613593087</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="init commit" />
-    <MESSAGE value="add login$logout Dashboard" />
-    <MESSAGE value="edit profile" />
-    <MESSAGE value="update profile" />
-    <MESSAGE value="add brands" />
-    <option name="LAST_COMMIT_MESSAGE" value="add brands" />
   </component>
 </project>

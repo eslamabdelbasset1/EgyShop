@@ -1,3 +1,7 @@
+@php
+    $profile = \Illuminate\Support\Facades\DB::table('admins')->find(1);
+@endphp
+
 <header class="main-header">
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top pl-30">
@@ -104,14 +108,12 @@
                 <!-- User Account-->
                 <li class="dropdown user user-menu">
                     <a href="#" class="waves-effect waves-light rounded dropdown-toggle p-0" data-toggle="dropdown" title="User">
-                        <img src="{{(!empty($profile->profile_photo_path)) ?
-                        url('upload/admin/profile/'.$profile->profile_photo_path)
-                        : url('upload/admin/profile/no_image.jpg')}}" alt="">
+                        <img src="{{(!empty($profile->profile_photo_path)) ? url('upload/admin/profile/'.$profile->profile_photo_path) : url('upload/admin/profile/no_image.jpg')}}">
                     </a>
                     <ul class="dropdown-menu animated flipInX">
                         <li class="user-body">
                             <a class="dropdown-item" href="{{route('admin.profile')}}"><i class="ti-user text-muted mr-2"></i> Profile</a>
-                            <a class="dropdown-item" href="#"><i class="ti-wallet text-muted mr-2"></i> My Wallet</a>
+                            <a class="dropdown-item" href="{{route('admin.changePassword')}}"><i class="ti-lock text-muted mr-2"></i> Change Password</a>
                             <a class="dropdown-item" href="#"><i class="ti-settings text-muted mr-2"></i> Settings</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{route('admin.logout')}}"><i class="ti-lock text-muted mr-2"></i> Logout</a>
@@ -123,7 +125,6 @@
 {{--                        <i class="ti-settings"></i>--}}
 {{--                    </a>--}}
 {{--                </li>--}}
-
             </ul>
         </div>
     </nav>
