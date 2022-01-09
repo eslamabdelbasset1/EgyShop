@@ -70,7 +70,7 @@ $(function () {
     } );
 
 
-	// //---------------Form inputs
+	//---------------Form inputs
 	// var table = $('#example6').DataTable();
     //
     // $('button').click( function() {
