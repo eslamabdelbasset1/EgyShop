@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="add sub subcategory" />
+    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="add sub subcategory">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/SubCategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/SubCategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/category/subCategoryEdit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/category/subCategoryEdit.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="Git.Settings">
@@ -154,8 +159,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/backend/category" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\resources\views\backend\category" />
+      <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\resources\views\backend" />
+      <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\resources\views\backend\brand" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\app\Models" />
+      <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\app\Models\Backend" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -166,9 +185,81 @@
       <option name="presentableId" value="Default" />
       <updated>1641649375428</updated>
       <workItem from="1641649381178" duration="26000" />
-      <workItem from="1641649540485" duration="122000" />
+      <workItem from="1641649540485" duration="15678000" />
+      <workItem from="1641675733924" duration="2817000" />
+      <workItem from="1641684849975" duration="3322000" />
+      <workItem from="1641913347772" duration="1377000" />
+      <workItem from="1641923016747" duration="392000" />
+      <workItem from="1642083498724" duration="5236000" />
     </task>
+    <task id="LOCAL-00001" summary="init commit">
+      <created>1641649877243</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1641649877243</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add category">
+      <created>1641659853315</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1641659853316</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add category">
+      <created>1641659933176</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1641659933176</updated>
+    </task>
+    <task id="LOCAL-00004" summary="update and delete category">
+      <created>1641665338836</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1641665338836</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add sub category">
+      <created>1641688021457</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1641688021457</updated>
+    </task>
+    <task id="LOCAL-00006" summary="init commit">
+      <created>1641913587531</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1641913587531</updated>
+    </task>
+    <task id="LOCAL-00007" summary="init commit">
+      <created>1642084081142</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1642084081142</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add sub subcategory">
+      <created>1642089727408</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1642089727408</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add sub subcategory">
+      <created>1642089892550</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1642089892550</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -181,5 +272,13 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add category" />
+    <MESSAGE value="update and delete category" />
+    <MESSAGE value="add sub category" />
+    <MESSAGE value="init commit" />
+    <MESSAGE value="add sub subcategory" />
+    <option name="LAST_COMMIT_MESSAGE" value="add sub subcategory" />
   </component>
 </project>
