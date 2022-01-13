@@ -31,8 +31,8 @@
                                                      style="width: 70px;" alt="">
                                             </td>
                                             <td>
-                                                <a href="" class="btn btn-info">Edit</a>
-                                                <a href="" class="btn btn-danger">Delete</a>
+                                                <a href="{{route('brand.edit', $brand->id)}}" class="btn btn-info">Edit</a>
+                                                <a href="{{route('brand.delete', $brand->id)}}" id="delete" class="btn btn-danger">Delete</a>
                                             </td>
                                         </tr>
                                     @endforeach
