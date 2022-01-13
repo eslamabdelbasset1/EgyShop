@@ -24,7 +24,7 @@
 
                     <div class="box">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Edit Sub-SubCategory </h3>
+                            <h3 class="box-title">Edit SubCategory </h3>
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
@@ -53,55 +53,33 @@
                                     </div>
 
 
-                                    <div class="form-group">
-                                        <h5>SubCategory Select <span class="text-danger">*</span></h5>
-                                        <div class="controls">
-                                            <select name="subcategory_id" class="form-control"  >
-                                                <option value="" selected="" disabled="">Select SubCategory</option>
 
-{{--                                                @foreach($subcategory as $subsub)--}}
-{{--                                                    <option value="{{ $subsub->id }}" {{ $subsub->id == $subcategory->subcategory_id ? 'selected':'' }} >--}}
-{{--                                                        {{ $subsub->subcategory_name_en }}</option>--}}
-{{--                                                @endforeach--}}
-                                            </select>
-                                            @error('subcategory_id')
-                                            <span class="text-danger">{{ $message }}</span>
-                                            @enderror
-                                        </div>
-                                    </div>
+                                   <div class="form-group">
+                                       <h5>SubCategory English <span class="text-danger">*</span></h5>
+                                       <div class="controls">
+                                           <input type="text" name="subcategory_name_en" class="form-control" value="{{ $subcategory->subcategory_name_en }}" >
+                                           @error('subcategory_name_en')
+                                           <span class="text-danger">{{ $message }}</span>
+                                           @enderror
+                                       </div>
+                                   </div>
 
 
-{{--                                    <div class="form-group">--}}
-{{--                                        <h5>Sub-SubCategory English <span class="text-danger">*</span></h5>--}}
-{{--                                        <div class="controls">--}}
-{{--                                            <input type="text" name="subsubcategory_name_en" class="form-control" value="{{ $subcategory->subsubcategory_name_en }}" >--}}
-{{--                                            @error('subsubcategory_name_en')--}}
-{{--                                            <span class="text-danger">{{ $message }}</span>--}}
-{{--                                            @enderror--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
+                                   <div class="form-group">
+                                       <h5>SubCategory Arabic  <span class="text-danger">*</span></h5>
+                                       <div class="controls">
+                                           <input type="text" name="subcategory_name_ar" class="form-control" value="{{ $subcategory->subcategory_name_ar }}">
+                                           @error('subcategory_name_ar')
+                                           <span class="text-danger">{{ $message }}</span>
+                                           @enderror
+                                       </div>
+                                   </div>
 
 
-{{--                                    <div class="form-group">--}}
-{{--                                        <h5>Sub-SubCategory Hindi  <span class="text-danger">*</span></h5>--}}
-{{--                                        <div class="controls">--}}
-{{--                                            <input type="text" name="subsubcategory_name_hin" class="form-control" value="{{ $subsubcategories->subsubcategory_name_hin }}">--}}
-{{--                                            @error('subsubcategory_name_hin')--}}
-{{--                                            <span class="text-danger">{{ $message }}</span>--}}
-{{--                                            @enderror--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-
-
-{{--                                    <div class="text-xs-right">--}}
-{{--                                        <input type="submit" class="btn btn-rounded btn-primary mb-5" value="Update">--}}
-{{--                                    </div>--}}
+                                   <div class="text-xs-right">
+                                       <button type="submit" class="btn btn-rounded btn-warning mb-5">Update</button>
+                                   </div>
                                 </form>
-
-
-
-
-
                             </div>
                         </div>
                         <!-- /.box-body -->

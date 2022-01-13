@@ -50,15 +50,15 @@ class SubCategoryController extends Controller
         $categories = Category::orderBy('category_name_en','ASC')->get();
         $subcategory = SubCategory::findOrFail($id);
         return view('backend.category.subCategoryEdit',
-            compact('subcategory','categories'));
+            compact('subcategory','categories','subcategory'));
 
     }
 
     public function subCategoryUpdate(Request $request){
 
-        $subcat_id = $request->id;
+        $subcategory_id = $request->id;
 
-        SubCategory::findOrFail($subcat_id)->update([
+        SubCategory::findOrFail($subcategory_id)->update([
             'category_id' => $request->category_id,
             'subcategory_name_en' => $request->subcategory_name_en,
             'subcategory_name_ar' => $request->subcategory_name_ar,
@@ -74,8 +74,6 @@ class SubCategoryController extends Controller
         return redirect()->route('all.subcategory')->with($notification);
 
     }  // end method
-
-
 
     public function subCategoryDelete($id){
 
