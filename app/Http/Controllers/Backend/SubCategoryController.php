@@ -169,6 +169,7 @@ class SubCategoryController extends Controller
             'alert-type' => 'error'
         );
 
+
         return redirect()->back()->with($notification);
     }
 }
