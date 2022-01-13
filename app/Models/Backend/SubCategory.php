@@ -13,7 +13,7 @@ class SubCategory extends Model
         'subcategory_name_en',
         'subcategory_name_ar',
         'subcategory_slug_en',
-        'subcategory_name_ar',
+        'subcategory_slug_ar',
     ];
 
     public function category(){

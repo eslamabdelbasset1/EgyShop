@@ -64,7 +64,7 @@ Route::prefix('brand')->group(function (){
 
 
 // Admin All Category Route =======================
-Route::prefix('category')->group(function (){
+Route::prefix( 'category')->group(function (){
     Route::get('/view', [CategoryController::class, 'categoryView'])->name('all.category');
     Route::post('/store', [CategoryController::class, 'categoryStore'])->name('category.store');
     Route::get('/edit/{id}', [CategoryController::class, 'categoryEdit'])->name('category.edit');
