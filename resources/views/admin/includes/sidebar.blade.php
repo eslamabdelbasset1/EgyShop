@@ -76,8 +76,8 @@
                     <li class="{{($route == 'add_products')? 'active' : ''}}">
                         <a href="{{route('add_products')}}"><i class="ti-more"></i>Add Products</a>
                     </li>
-                    <li class="{{($route == 'all.subcategory')? 'active' : ''}}">
-                        <a href="{{route('all.subcategory')}}"><i class="ti-more"></i>All SubCategory</a>
+                    <li class="{{($route == 'manage.product')? 'active' : ''}}">
+                        <a href="{{route('manage.product')}}"><i class="ti-more"></i>Manage Products</a>
                     </li>
                 </ul>
             </li>

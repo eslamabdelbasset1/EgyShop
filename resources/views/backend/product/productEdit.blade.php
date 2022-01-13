@@ -7,7 +7,7 @@
             <!-- Basic Forms -->
             <div class="box">
                 <div class="box-header with-border">
-                    <h4 class="box-title">Add Product</h4></div>
+                    <h4 class="box-title">Edit Product</h4></div>
                 <!-- /.box-header -->
                 <div class="box-body">
                     <div class="row">
@@ -25,8 +25,9 @@
                                                     <div class="controls">
                                                         <select name="brand_id" class="form-control"  required>
                                                             <option value="" selected="" disabled="">Select Brand</option>
+                                                            <option value="" selected="" disabled="">Select Brand</option>
                                                             @foreach($brands as $brand)
-                                                                <option value="{{ $brand->id }}">{{ $brand->brand_name_en }}</option>
+                                                                <option value="{{ $brand->id }}" {{ $brand->id == $products->brand_id ? 'selected': '' }} >{{ $brand->brand_name_en }}</option>
                                                             @endforeach
                                                         </select>
                                                         @error('brand_id')
@@ -45,7 +46,8 @@
                                                         <select name="category_id" class="form-control"  required>
                                                             <option value="" selected="" disabled="">Select Category</option>
                                                             @foreach($categories as $category)
-                                                                <option value="{{ $category->id }}">{{ $category->category_name_en }}</option>
+                                                                <option value="{{ $category->id }}" {{ $category->id == $products->category_id ? 'selected': '' }} >
+                                                                    {{ $category->category_name_en }}</option>
                                                             @endforeach
                                                         </select>
                                                         @error('category_id')
