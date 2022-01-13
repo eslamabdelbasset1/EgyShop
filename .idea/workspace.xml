@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="add sub subcategory">
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/category/subSubCategoryEdit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/SubCategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/SubCategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/category/subCategoryEdit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/category/subCategoryEdit.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
