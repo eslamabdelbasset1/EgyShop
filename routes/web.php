@@ -3,6 +3,7 @@
 use App\Http\Controllers\Backend\AdminProfileController;
 use App\Http\Controllers\Backend\BrandController;
 use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\SubCategoryController;
 use App\Http\Controllers\Frontend\IndexController;
 use App\Models\Admin;
@@ -86,3 +87,12 @@ Route::prefix( 'category')->group(function (){
     Route::get('/sub/sub/delete/{id}', [SubCategoryController::class, 'subSubCategoryDelete'])->name('subSubcategory.delete');
 });
 
+// Admin All Products Route =======================
+Route::prefix('product')->group(function (){
+    Route::get('/add', [ProductController::class, 'addProduct'])->name('add_products');
+//    Route::post('/store', [ProductController::class, 'brandStore'])->name('brand.store');
+//    Route::get('/edit/{id}', [ProductController::class, 'brandEdit'])->name('brand.edit');
+//    Route::post('/update/{id}',[ProductController::class, 'brandUpdate']);
+//    Route::get('/delete/{id}', [ProductController::class, 'brandDelete'])->name('brand.delete');
+
+});

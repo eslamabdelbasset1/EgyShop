@@ -50,7 +50,7 @@ class SubCategoryController extends Controller
         $categories = Category::orderBy('category_name_en','ASC')->get();
         $subcategory = SubCategory::findOrFail($id);
         return view('backend.category.subCategoryEdit',
-            compact('subcategory','categories','subcategory'));
+            compact('subcategory','categories'));
 
     }
 
@@ -129,4 +129,47 @@ class SubCategoryController extends Controller
         );
         return redirect()->back()->with($notification);
     } // end method
+
+    public function subSubCategoryEdit($id){
+        $categories = Category::orderBy('category_name_en','ASC')->get();
+        $subcategory = SubCategory::orderBy('subcategory_name_en','ASC')->get();
+        $subSubcategory = SubSubCategory::findOrFail($id);
+        return view('backend.category.subSubCategoryEdit',
+            compact('categories','subcategory','subSubcategory'));
+    }
+
+    public function subSubCategoryUpdate(Request $request){
+
+        $subSubcategory_id = $request->id;
+
+        SubSubCategory::findOrFail($subSubcategory_id)->update([
+            'category_id' => $request->category_id,
+            'subcategory_id' => $request->subcategory_id,
+            'subsubcategory_name_en' => $request->subsubcategory_name_en,
+            'subsubcategory_name_ar' => $request->subsubcategory_name_ar,
+            'subsubcategory_slug_en' => strtolower(str_replace(' ', '-',$request->subsubcategory_name_en)),
+            'subsubcategory_slug_ar' => str_replace(' ', '-',$request->subsubcategory_name_ar),
+        ]);
+
+        $notification = array(
+            'message' => 'SubCategory Updated Successfully',
+            'alert-type' => 'info'
+        );
+
+        return redirect()->route('all.subSubcategory')->with($notification);
+
+    }  // end method
+
+    public function subSubCategoryDelete($id){
+
+        SubSubCategory::findOrFail($id)->delete();
+
+        $notification = array(
+            'message' => 'Sub-SubCategory Deleted Successfully',
+            'alert-type' => 'error'
+        );
+
+
+        return redirect()->back()->with($notification);
+    }
 }
