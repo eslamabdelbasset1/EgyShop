@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Backend\AdminProfileController;
+use App\Http\Controllers\Backend\BrandController;
+use App\Http\Controllers\Frontend\IndexController;
 use App\Models\Admin;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
@@ -16,16 +18,14 @@ use App\Http\Controllers\AdminController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+// Admin All Route -------------------------------------------------------------------------
 Route::group(['prefix'=> 'admin', 'middleware'=>['admin:admin']], function(){
     Route::get('/login', [AdminController::class, 'loginForm']);
     Route::post('/login',[AdminController::class, 'store'])->name('admin.login');
-
 });
-// Admin Dashboard
 Route::middleware(['auth:sanctum,admin', 'verified'])->get('/admin/dashboard', function () {
     return view('admin.index');
 })->name('dashboard');
@@ -33,8 +33,26 @@ Route::get('/admin/logout', [AdminController::class, 'destroy'])->name('admin.lo
 Route::get('/admin/profile', [AdminProfileController::class, 'adminProfile'])->name('admin.profile');
 Route::get('/admin/profile/edit', [AdminProfileController::class, 'adminProfileEdit'])->name('admin.profile.edit');
 Route::post('/admin/profile/store', [AdminProfileController::class, 'adminProfileStore'])->name('admin.profile.store');
+Route::get('/admin/change/password', [AdminProfileController::class, 'adminChangePassword'])->name('admin.changePassword');
+Route::post('/admin/update/password', [AdminProfileController::class, 'adminUpdatePassword'])->name('admin.updatePassword');
+
+//=======================================================================================================================================
 
 
+// User All Route---------------------------------------------------------------------------------------
 Route::middleware(['auth:sanctum,web', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+Route::get('/', [IndexController::class, 'index'])->name('user.index');
+Route::get('/user/logout', [IndexController::class, 'userLogout'])->name('user.logout');
+Route::get('/user/profile', [IndexController::class, 'userProfile'])->name('user.profile');
+Route::post('/user/store', [IndexController::class, 'userUpdateProfile'])->name('user.updateProfile');
+Route::get('/user/change/password', [IndexController::class, 'userChangePassword'])->name('user.changePassword');
+Route::post('/user/update/password', [IndexController::class, 'userUpdatePassword'])->name('user.updatePassword');
+
+// Admin All Brand Route =======================
+Route::prefix('brand')->group(function (){
+    Route::get('/view', [BrandController::class, 'brandView'])->name('all.brand');
+    Route::post('/store', [BrandController::class, 'brandStore'])->name('brand.store');
+
+});
