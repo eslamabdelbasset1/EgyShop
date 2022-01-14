@@ -35,18 +35,13 @@
                                             <td>
                                                 @if($product->discount_price == NULL)
                                                     <span class="badge badge-pill badge-danger">No Discount</span>
-
                                                 @else
                                                     @php
                                                         $amount = $product->selling_price - $product->discount_price;
                                                         $discount = ($amount/$product->selling_price) * 100;
                                                     @endphp
-                                                    <span class="badge badge-pill badge-danger">{{ round($discount)  }} %</span>
-
+                                                    <span class="badge badge-pill badge-danger">{{ round($discount) }}%</span>
                                                 @endif
-
-
-
                                             </td>
 
                                             <td>
@@ -58,17 +53,23 @@
                                             </td>
 
                                             <td width="30%">
-                                                <a href="{{ route('product.edit',$product->id) }}" class="btn btn-primary" title="Product Details Data"><i class="fa fa-eye"></i> </a>
-
-                                                <a href="{{ route('product.edit',$product->id) }}" class="btn btn-info" title="Edit Data"><i class="fa fa-pencil"></i> </a>
-
-                                                <a href="{{ route('category.delete',$product->id) }}" class="btn btn-danger" title="Delete Data" id="delete">
-                                                    <i class="fa fa-trash"></i></a>
-
+                                                <a href="{{ route('product.edit',$product->id) }}" class="btn btn-primary" title="Product Details Data">
+                                                    <i class="fa fa-eye"></i>
+                                                </a>
+                                                <a href="{{ route('product.edit',$product->id) }}" class="btn btn-info" title="Edit Data">
+                                                    <i class="fa fa-pencil"></i>
+                                                </a>
+                                                <a href="{{ route('product.delete',$product->id) }}" class="btn btn-danger" title="Delete Data" id="delete">
+                                                    <i class="fa fa-trash"></i>
+                                                </a>
                                                 @if($product->status == 1)
-                                                    <a href="{{ route('product.inactive',$product->id) }}" class="btn btn-danger" title="Inactive Now"><i class="fa fa-arrow-down"></i> </a>
+                                                    <a href="{{ route('product.inactive',$product->id) }}" class="btn btn-danger" title="Inactive Now">
+                                                        <i class="fa fa-arrow-down"></i>
+                                                    </a>
                                                 @else
-                                                    <a href="{{ route('product.active',$product->id) }}" class="btn btn-success" title="Active Now"><i class="fa fa-arrow-up"></i> </a>
+                                                    <a href="{{ route('product.active',$product->id) }}" class="btn btn-success" title="Active Now">
+                                                        <i class="fa fa-arrow-up"></i>
+                                                    </a>
                                                 @endif
                                             </td>
                                         </tr>
@@ -82,12 +83,10 @@
                     <!-- /.box -->
                 </div>
                 <!-- /.col -->
-
             </div>
             <!-- /.row -->
         </section>
         <!-- /.content -->
-
     </div>
 @endsection
 
