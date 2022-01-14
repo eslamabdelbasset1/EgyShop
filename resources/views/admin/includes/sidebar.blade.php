@@ -35,8 +35,8 @@
                     <i data-feather="message-circle"></i>
                     <span>Brand</span>
                     <span class="pull-right-container">
-              <i class="fa fa-angle-right pull-right"></i>
-            </span>
+                        <i class="fa fa-angle-right pull-right"></i>
+                    </span>
                 </a>
                 <ul class="treeview-menu">
                     <li class="{{($route == 'all.brand')? 'active' : ''}}">
@@ -81,6 +81,24 @@
                     </li>
                 </ul>
             </li>
+
+            <li class="treeview {{($route == '/slider')? 'active' : ''}}">
+                <a href="{{route('manage.slider')}}">
+                    <i data-feather="message-circle"></i>
+                    <span>Slider</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-right pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="{{($route == 'manage.slider')? 'active' : ''}}">
+                        <a href="{{route('manage.slider')}}"><i class="ti-more"></i>Manage Slider</a>
+                    </li>
+                </ul>
+            </li>
+
+
+
 
             <li class="header nav-small-cap">User Interface</li>
 

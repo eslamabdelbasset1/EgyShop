@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="update manage multi image">
+    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="delete product">
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/slider/sliderEdit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/slider/sliderView.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/products/multi-image/1721881829116697.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/products/multi-image/1721882895749636.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/products/thambnail/1721882894990403.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/product/productEdit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/product/productEdit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/product/productView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/product/productView.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -172,7 +169,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/backend/product" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/backend/slider" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -180,6 +177,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\resources\views\backend\slider" />
       <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\resources\views\backend\product" />
       <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\resources\views\backend\category" />
       <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\resources\views\backend" />
@@ -205,7 +203,7 @@
       <workItem from="1641913347772" duration="1377000" />
       <workItem from="1641923016747" duration="392000" />
       <workItem from="1642083498724" duration="5236000" />
-      <workItem from="1642164999917" duration="5600000" />
+      <workItem from="1642164999917" duration="12608000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1641649877243</created>
@@ -319,7 +317,28 @@
       <option name="project" value="LOCAL" />
       <updated>1642167729161</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="add active product">
+      <created>1642171355550</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1642171355550</updated>
+    </task>
+    <task id="LOCAL-00018" summary="delete product">
+      <created>1642176820306</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1642176820306</updated>
+    </task>
+    <task id="LOCAL-00019" summary="delete product">
+      <created>1642176882070</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1642176882070</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,6 +368,8 @@
     <MESSAGE value="manage product" />
     <MESSAGE value="update product" />
     <MESSAGE value="update manage multi image" />
-    <option name="LAST_COMMIT_MESSAGE" value="update manage multi image" />
+    <MESSAGE value="add active product" />
+    <MESSAGE value="delete product" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete product" />
   </component>
 </project>
