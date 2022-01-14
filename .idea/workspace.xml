@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="delete product">
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/slider/sliderEdit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/slider/sliderView.blade.php" afterDir="false" />
+    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="Add slider">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/includes/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/main_master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/main_master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/test.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -203,7 +205,7 @@
       <workItem from="1641913347772" duration="1377000" />
       <workItem from="1641923016747" duration="392000" />
       <workItem from="1642083498724" duration="5236000" />
-      <workItem from="1642164999917" duration="12608000" />
+      <workItem from="1642164999917" duration="21701000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1641649877243</created>
@@ -338,7 +340,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642176882070</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Add slider">
+      <created>1642185889804</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1642185889804</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,6 +379,7 @@
     <MESSAGE value="update manage multi image" />
     <MESSAGE value="add active product" />
     <MESSAGE value="delete product" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete product" />
+    <MESSAGE value="Add slider" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add slider" />
   </component>
 </project>
