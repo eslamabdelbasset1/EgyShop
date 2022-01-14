@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="manage product">
+    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="update manage multi image">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/products/multi-image/1721881829116697.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/products/multi-image/1721882895749636.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/products/thambnail/1721882894990403.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/product/productEdit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/product/productEdit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/product/productView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/product/productView.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -201,6 +205,7 @@
       <workItem from="1641913347772" duration="1377000" />
       <workItem from="1641923016747" duration="392000" />
       <workItem from="1642083498724" duration="5236000" />
+      <workItem from="1642164999917" duration="5600000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1641649877243</created>
@@ -300,7 +305,21 @@
       <option name="project" value="LOCAL" />
       <updated>1642118080347</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="update product">
+      <created>1642120026710</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1642120026710</updated>
+    </task>
+    <task id="LOCAL-00016" summary="update manage multi image">
+      <created>1642167729161</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1642167729161</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,6 +347,8 @@
     <MESSAGE value="add product" />
     <MESSAGE value="Add Multi images" />
     <MESSAGE value="manage product" />
-    <option name="LAST_COMMIT_MESSAGE" value="manage product" />
+    <MESSAGE value="update product" />
+    <MESSAGE value="update manage multi image" />
+    <option name="LAST_COMMIT_MESSAGE" value="update manage multi image" />
   </component>
 </project>

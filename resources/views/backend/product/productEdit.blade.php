@@ -229,12 +229,9 @@
                                                 </div>
 
                                             </div> <!-- end col md 4 -->
-
                                         </div> <!-- end 4th row  -->
-
-
                                         <div class="row"> <!-- start 5th row  -->
-                                            <div class="col-md-4">
+                                            <div class="col-md-6">
 
                                                 <div class="form-group">
                                                     <h5>Product Color English <span class="text-danger">*</span></h5>
@@ -246,11 +243,8 @@
                                                         @enderror
                                                     </div>
                                                 </div>
-
                                             </div> <!-- end col md 4 -->
-
-                                            <div class="col-md-4">
-
+                                            <div class="col-md-6">
                                                 <div class="form-group">
                                                     <h5>Product Color Arabic <span class="text-danger">*</span></h5>
                                                     <div class="controls">
@@ -260,31 +254,11 @@
                                                         @enderror
                                                     </div>
                                                 </div>
-
                                             </div> <!-- end col md 4 -->
-
-
-                                            <div class="col-md-4">
-
-                                                <div class="form-group">
-                                                    <h5>Product Selling Price <span class="text-danger">*</span></h5>
-                                                    <div class="controls">
-                                                        <input type="text" name="selling_price" class="form-control" required value="{{ $products->selling_price }}">
-                                                        @error('selling_price')
-                                                        <span class="text-danger">{{ $message }}</span>
-                                                        @enderror
-                                                    </div>
-                                                </div>
-
-                                            </div> <!-- end col md 4 -->
-
                                         </div> <!-- end 5th row  -->
 
-
-
-
                                         <div class="row"> <!-- start 6th row  -->
-                                            <div class="col-md-4">
+                                            <div class="col-md-6">
 
                                                 <div class="form-group">
                                                     <h5>Product Discount Price <span class="text-danger">*</span></h5>
@@ -298,36 +272,16 @@
 
                                             </div> <!-- end col md 4 -->
 
-                                            <div class="col-md-4">
-
+                                            <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <h5>Main Thambnail <span class="text-danger">*</span></h5>
+                                                    <h5>Product Selling Price <span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <input type="file" name="product_thambnail" class="form-control" onChange="mainThamUrl(this)">
-                                                        @error('product_thambnail')
+                                                        <input type="text" name="selling_price" class="form-control" required value="{{ $products->selling_price }}">
+                                                        @error('selling_price')
                                                         <span class="text-danger">{{ $message }}</span>
                                                         @enderror
-                                                        <img src="" id="mainThmb">
                                                     </div>
                                                 </div>
-
-
-                                            </div> <!-- end col md 4 -->
-
-
-                                            <div class="col-md-4">
-
-                                                <div class="form-group">
-                                                    <h5>Multiple Image <span class="text-danger">*</span></h5>
-                                                    <div class="controls">
-                                                        <input type="file" name="multi_img[]" class="form-control" multiple="" id="multiImg">
-                                                        @error('multi_img')
-                                                        <span class="text-danger">{{ $message }}</span>
-                                                        @enderror
-                                                        <div class="row" id="preview_img"></div>
-                                                    </div>
-                                                </div>
-
 
                                             </div> <!-- end col md 4 -->
 
@@ -449,7 +403,116 @@
 
         </section>
         <!-- /.content -->
+
+
+
+        <!-- ///////////////// Start Multiple Image Update Area ///////// -->
+
+        <section class="content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box bt-3 border-info">
+                        <div class="box-header">
+                            <h4 class="box-title">Product Multiple Image <strong>Update</strong></h4>
+                        </div>
+
+                        <form method="post" action="{{ route('update-product-image') }}" enctype="multipart/form-data">
+                            @csrf
+                            <div class="row row-sm">
+                                @foreach($multiImgs as $img)
+                                    <div class="col-md-3">
+
+                                        <div class="card">
+                                            <img src="{{ asset($img->photo_name) }}" class="card-img-top" style="height: 130px; width: 280px;">
+                                            <div class="card-body">
+                                                <h5 class="card-title">
+                                                    <a href="{{ route('product.multiimg.delete',$img->id) }}"
+                                                       class="btn btn-sm btn-danger" id="delete" title="Delete Data">
+                                                        <i class="fa fa-trash"></i>
+                                                    </a>
+                                                </h5>
+                                                <p class="card-text">
+                                                    <div class="form-group">
+                                                        <label class="form-control-label">Change Image <span class="tx-danger">*</span></label>
+                                                        <input class="form-control" type="file" name="multi_img[{{ $img->id }}]">
+                                                    </div>
+                                                </p>
+
+                                            </div>
+                                        </div>
+
+                                    </div><!--  end col md 3		 -->
+                                @endforeach
+
+                            </div>
+
+                            <div class="text-xs-right">
+                                <input type="submit" class="btn btn-rounded btn-warning mb-5" value="Update Image">
+                            </div>
+                            <br><br>
+                        </form>
+                    </div>
+                </div> <!-- // end row  -->
+            </div>
+        </section>
+        <!-- ///////////////// End Start Multiple Image Update Area ///////// -->
+
+
+        <!-- ///////////////// Start Thambnail Image Update Area ///////// -->
+
+        <section class="content">
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="box bt-3 border-info">
+                        <div class="box-header">
+                            <h4 class="box-title">Product Thambnail Image <strong>Update</strong></h4>
+                        </div>
+
+
+                        <form method="post" action="{{ route('update-product-thambnail') }}" enctype="multipart/form-data">
+                            @csrf
+
+                            <input type="hidden" name="id" value="{{ $products->id }}">
+                            <input type="hidden" name="old_img" value="{{ $products->product_thambnail }}">
+
+                            <div class="row row-sm">
+
+                                <div class="col-md-3">
+                                    <div class="card">
+                                        <img src="{{ asset($products->product_thambnail) }}" class="card-img-top" style="height: 130px; width: 280px;">
+                                        <div class="card-body">
+
+                                            <p class="card-text">
+                                            <div class="form-group">
+                                                <label class="form-control-label">Change Image <span class="tx-danger">*</span></label>
+                                                <input type="file" name="product_thambnail" class="form-control" onChange="mainThamUrl(this)"  >
+                                                <img src="" id="mainThmb">
+                                            </div>
+                                            </p>
+
+                                        </div>
+                                    </div>
+
+                                </div><!--  end col md 3 -->
+                            </div>
+                            <div class="text-xs-right">
+                                <input type="submit" class="btn btn-rounded btn-primary mb-5" value="Update Image">
+                            </div>
+                            <br><br>
+                        </form>
+                    </div>
+                </div>
+            </div> <!-- // end row  -->
+        </section>
+        <!-- ///////////////// End Start Thambnail Image Update Area ///////// -->
+
     </div>
+
+
+
+
+
     <script type="text/javascript">
         //SubCategory
         $(document).ready(function() {
