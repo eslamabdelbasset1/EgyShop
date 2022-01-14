@@ -4,11 +4,8 @@
     <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="Add slider">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/includes/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/product/productEdit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/product/productEdit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/main_master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/main_master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/test.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
