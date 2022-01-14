@@ -7,6 +7,7 @@ use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Backend\SubCategoryController;
 use App\Http\Controllers\Frontend\IndexController;
+use App\Http\Controllers\Frontend\LanguageController;
 use App\Models\Admin;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
@@ -123,4 +124,9 @@ Route::middleware(['auth:web'])->group(function()
     Route::get('/user/change/password', [IndexController::class, 'userChangePassword'])->name('user.changePassword');
     Route::post('/user/update/password', [IndexController::class, 'userUpdatePassword'])->name('user.updatePassword');
 
+
+    //// Frontend All Routes /////
+/// Multi Language All Routes ////
+    Route::get('/language/arabic', [LanguageController::class, 'arabic'])->name('arabic.language');
+    Route::get('/language/english', [LanguageController::class, 'english'])->name('english.language');
 }); // end Middleware User
