@@ -262,7 +262,7 @@ class ProductController extends Controller
 
         $notification = array(
             'message' => 'Product Deleted Successfully',
-            'alert-type' => 'success'
+            'alert-type' => 'error'
         );
         return redirect()->back()->with($notification);
 
