@@ -376,8 +376,8 @@
                                                     @if ($product->discount_price == NULL)
                                                         <span class="price">{{ $product->selling_price }} EGY</span>
                                                     @else
-                                                        <span class="price">{{ $product->selling_price }} EGY</span>
-                                                        <span class="price-strike">{{ $product->discount_price}} EGY</span>
+                                                        <span class="price">{{ $product->discount_price }} EGY</span>
+                                                        <span class="price-strike">{{ $product->selling_price}} EGY</span>
                                                     @endif
                                                 </div>
                                             </div>
