@@ -134,3 +134,5 @@ Route::get('/language/english', [LanguageController::class, 'english'])->name('e
 Route::get('/user/logout', [IndexController::class, 'userLogout'])->name('user.logout');
 // Frontend Product Details Page url
 Route::get('/product/details/{id}/{slug}', [IndexController::class, 'productDetails']);
+// Frontend Product Tags Page
+Route::get('/product/tag/{tag}', [IndexController::class, 'tagWiseProduct']);
