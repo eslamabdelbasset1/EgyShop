@@ -1,7 +1,7 @@
 @extends('frontend.main_master')
 @section('content')
 @section('title')
-    Subcategory Product
+    Sub - Subcategory Product
 @endsection
 
 
@@ -544,4 +544,5 @@
 
 </div>
 <!-- /.body-content -->
+
 @endsection
