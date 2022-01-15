@@ -7,6 +7,7 @@ use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Backend\SubCategoryController;
 use App\Http\Controllers\Frontend\IndexController;
+use App\Http\Controllers\Frontend\LanguageController;
 use App\Models\Admin;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
@@ -112,15 +113,26 @@ Route::middleware(['auth:admin'])->group(function()
 
 Route::middleware(['auth:web'])->group(function()
 {
-    // User All Route---------------------------------------------------------------------------------------
-    Route::middleware(['auth:sanctum,web', 'verified'])->get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-    Route::get('/', [IndexController::class, 'index'])->name('user.index');
-    Route::get('/user/logout', [IndexController::class, 'userLogout'])->name('user.logout');
     Route::get('/user/profile', [IndexController::class, 'userProfile'])->name('user.profile');
     Route::post('/user/store', [IndexController::class, 'userUpdateProfile'])->name('user.updateProfile');
     Route::get('/user/change/password', [IndexController::class, 'userChangePassword'])->name('user.changePassword');
     Route::post('/user/update/password', [IndexController::class, 'userUpdatePassword'])->name('user.updatePassword');
 
 }); // end Middleware User
+
+
+Route::get('/', [IndexController::class, 'index'])->name('user.index');
+
+// User All Route---------------------------------------------------------------------------------------
+Route::middleware(['auth:sanctum,web', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
+//// Frontend All Routes /////
+/// Multi Language All Routes ////
+Route::get('/language/arabic', [LanguageController::class, 'arabic'])->name('arabic.language');
+Route::get('/language/english', [LanguageController::class, 'english'])->name('english.language');
+Route::get('/user/logout', [IndexController::class, 'userLogout'])->name('user.logout');
+// Frontend Product Details Page url
+Route::get('/product/details/{id}/{slug}', [IndexController::class, 'productDetails']);
+// Frontend Product Tags Page
+Route::get('/product/tag/{tag}', [IndexController::class, 'tagWiseProduct']);

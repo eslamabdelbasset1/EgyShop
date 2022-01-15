@@ -259,20 +259,6 @@
 
                                         <div class="row"> <!-- start 6th row  -->
                                             <div class="col-md-6">
-
-                                                <div class="form-group">
-                                                    <h5>Product Discount Price <span class="text-danger">*</span></h5>
-                                                    <div class="controls">
-                                                        <input type="text" name="discount_price" class="form-control" required="" value="{{ $products->discount_price }}">
-                                                        @error('discount_price')
-                                                        <span class="text-danger">{{ $message }}</span>
-                                                        @enderror
-                                                    </div>
-                                                </div>
-
-                                            </div> <!-- end col md 4 -->
-
-                                            <div class="col-md-6">
                                                 <div class="form-group">
                                                     <h5>Product Selling Price <span class="text-danger">*</span></h5>
                                                     <div class="controls">
@@ -282,9 +268,20 @@
                                                         @enderror
                                                     </div>
                                                 </div>
-
                                             </div> <!-- end col md 4 -->
 
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <h5>Product Discount Price <span class="text-danger">*</span></h5>
+                                                    <div class="controls">
+                                                        <input type="text" name="discount_price" class="form-control"
+                                                               value="{{ $products->discount_price }}">
+                                                        @error('discount_price')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                        @enderror
+                                                    </div>
+                                                </div>
+                                            </div> <!-- end col md 4 -->
                                         </div> <!-- end 6th row  -->
 
                                         <div class="row"> <!-- start 7th row  -->

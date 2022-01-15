@@ -8,13 +8,13 @@
     <meta name="author" content="">
     <meta name="keywords" content="MediaCenter, Template, eCommerce">
     <meta name="robots" content="all">
-    <title>Egy Shop</title>
+    <title>@yield('title')</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="{{asset('frontend/assets/css/bootstrap.min.css')}}">
+
+        <link rel="stylesheet" href="{{asset('frontend/assets/css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{asset('frontend/assets/css/main.css')}}">
 
     <!-- Customizable CSS -->
-    <link rel="stylesheet" href="{{asset('frontend/assets/css/main.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/blue.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/owl.carousel.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/owl.transitions.css')}}">
