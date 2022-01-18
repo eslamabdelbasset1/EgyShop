@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="add docker compose">
-      <change afterPath="$PROJECT_DIR$/src/resources/views/frontend/common/hot_deals.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/frontend/product/subSubCategory_view.blade.php" afterDir="false" />
+    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="add some details">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/product/subcategory_view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/product/subcategory_view.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +203,9 @@
       <workItem from="1642083498724" duration="5236000" />
       <workItem from="1642164999917" duration="21701000" />
       <workItem from="1642244816639" duration="7416000" />
-      <workItem from="1642261221288" duration="15022000" />
+      <workItem from="1642261221288" duration="15247000" />
+      <workItem from="1642360530838" duration="779000" />
+      <workItem from="1642374361606" duration="2743000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1641649877243</created>
@@ -403,7 +403,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642285034069</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="add some details">
+      <created>1642288829403</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1642288829403</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,6 +451,7 @@
     <MESSAGE value="Show hot deal" />
     <MESSAGE value="Show tags" />
     <MESSAGE value="add docker compose" />
-    <option name="LAST_COMMIT_MESSAGE" value="add docker compose" />
+    <MESSAGE value="add some details" />
+    <option name="LAST_COMMIT_MESSAGE" value="add some details" />
   </component>
 </project>
