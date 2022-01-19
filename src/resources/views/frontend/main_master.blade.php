@@ -8,11 +8,12 @@
     <meta name="author" content="">
     <meta name="keywords" content="MediaCenter, Template, eCommerce">
     <meta name="robots" content="all">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title')</title>
 
 
         <link rel="stylesheet" href="{{asset('frontend/assets/css/bootstrap.min.css')}}">
-        <link rel="stylesheet" href="{{asset('frontend/assets/css/main.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/main.css')}}">
 
     <!-- Customizable CSS -->
     <link rel="stylesheet" href="{{asset('frontend/assets/css/blue.css')}}">
@@ -81,6 +82,102 @@
             break;
     }
     @endif
+</script>
+
+
+
+<!-- Add to Cart Product Modal -->
+<div class="modal fade" id="addToCart" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"><span id="pname"></span> </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src=" " class="card-img-top" alt="..." style="height: 200px; width: 180px;" id="pimage">
+                        </div>
+                    </div><!-- // end col md -->
+
+
+                    <div class="col-md-4">
+                        <ul class="list-group">
+                            <li class="list-group-item">Product Price: <strong id="price"></strong> </li>
+                            <li class="list-group-item">Product Code: <strong id="pcode"></strong></li>
+                            <li class="list-group-item">Category: <strong id="pcategory"></strong></li>
+                            <li class="list-group-item">Brand: <strong id="pbrand"></strong></li>
+                            <li class="list-group-item">Stock</li>
+                        </ul>
+                    </div><!-- // end col md -->
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Choose Color</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Choose Size</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>  <!-- // end form group -->
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Quantity</label>
+                            <input type="number" class="form-control" id="exampleFormControlInput1" value="1" min="1" >
+                        </div> <!-- // end form group -->
+
+                        <button type="submit" class="btn btn-primary mb-2">Add to Cart</button>
+
+                    </div><!-- // end col md -->
+                </div> <!-- // end row -->
+            </div> <!-- // end modal Body -->
+
+        </div>
+    </div>
+</div>
+<!-- End Add to Cart Product Modal -->
+
+
+<script type="text/javascript">
+    $.ajaxSetup({
+        headers:{
+            'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')
+        }
+    })
+    // Start Product View with Modal
+    function productView(id){
+        // alert(id)
+        $.ajax({
+            type: 'GET',
+            url: '/product/view/modal/'+id,
+            dataType:'json',
+            success:function(data){
+                // console.log(data)
+                $('#pname').text(data.product.product_name_en);
+                $('#price').text(data.product.selling_price);
+                $('#pcode').text(data.product.product_code);
+                $('#pcategory').text(data.product.category.category_name_en);
+                $('#pbrand').text(data.product.brand.brand_name_en);
+                $('#pimage').attr('src','/'+data.product.product_thambnail);
+            }
+        })
+
+    }
 </script>
 </body>
 </html>
