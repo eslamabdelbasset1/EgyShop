@@ -171,7 +171,6 @@ class IndexController extends Controller
             'product' => $product,
             'color' => $product_color,
             'size' => $product_size,
-
         ));
 
     } // end method
