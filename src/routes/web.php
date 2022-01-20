@@ -3,6 +3,7 @@
 use App\Http\Controllers\Backend\AdminProfileController;
 use App\Http\Controllers\Backend\BrandController;
 use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Backend\CouponController;
 use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Backend\SubCategoryController;
@@ -113,7 +114,25 @@ Route::middleware(['auth:admin'])->group(function()
         Route::get('/inactive/{id}', [SliderController::class, 'sliderInactive'])->name('slider.inactive');
         Route::get('/active/{id}', [SliderController::class, 'sliderActive'])->name('slider.active');
     });
+
+    // Admin Coupons All Routes
+
+    Route::prefix('coupons')->group(function(){
+        Route::get('/view', [CouponController::class, 'couponView'])->name('manage-coupon');
+        Route::post('/store', [CouponController::class, 'couponStore'])->name('coupon.store');
+        Route::get('/edit/{id}', [CouponController::class, 'couponEdit'])->name('coupon.edit');
+        Route::post('/update/{id}', [CouponController::class, 'couponUpdate'])->name('coupon.update');
+        Route::get('/delete/{id}', [CouponController::class, 'couponDelete'])->name('coupon.delete');
+    });
 }); // end Middleware admin
+
+
+
+
+
+
+
+
 
 
 // User All Route---------------------------------------------------------------------------------------
