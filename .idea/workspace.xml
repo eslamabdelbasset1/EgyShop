@@ -1,24 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="add wishlist">
+    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="update wishlist page">
+      <change afterPath="$PROJECT_DIR$/src/resources/views/frontend/wishlist/view_mycart.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/ecommerce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/.idea/ecommerce.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Frontend/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Frontend/CartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/User/WishlistController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/User/WishlistController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Models/Wishlist.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Models/Wishlist.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/upload/user/profile/2022-01-08-00-311629962018211.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/upload/user/profile/2022-01-08-00-468679297.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/dashboard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/includes/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/main_master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/main_master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/profile/userChangePassword.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/profile/userChangePassword.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/profile/userProfile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/profile/userProfile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -240,7 +227,7 @@
       <workItem from="1642638721890" duration="104000" />
       <workItem from="1642638840584" duration="6000" />
       <workItem from="1642689880997" duration="12000" />
-      <workItem from="1642699301644" duration="1377000" />
+      <workItem from="1642699301644" duration="4944000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1641649877243</created>
@@ -466,7 +453,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642638766122</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="update wishlist page">
+      <created>1642700814840</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1642700814840</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -510,6 +504,7 @@
     <MESSAGE value="add some details" />
     <MESSAGE value="update add to cart" />
     <MESSAGE value="add wishlist" />
-    <option name="LAST_COMMIT_MESSAGE" value="add wishlist" />
+    <MESSAGE value="update wishlist page" />
+    <option name="LAST_COMMIT_MESSAGE" value="update wishlist page" />
   </component>
 </project>

@@ -9,6 +9,7 @@ use App\Http\Controllers\Backend\SubCategoryController;
 use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\IndexController;
 use App\Http\Controllers\Frontend\LanguageController;
+use App\Http\Controllers\User\CartPageController;
 use App\Http\Controllers\User\WishlistController;
 use App\Models\Admin;
 use Illuminate\Support\Facades\Auth;
@@ -162,3 +163,9 @@ Route::get('/wishlist', [WishlistController::class, 'viewWishlist'])->name('wish
 Route::get('/get-wishlist-product', [WishlistController::class, 'getWishlistProduct']);
 Route::get('/wishlist-remove/{id}', [WishlistController::class, 'removeWishlistProduct']);
 });
+// My Cart Page All Routes
+Route::get('/mycart', [CartPageController::class, 'myCart'])->name('mycart');
+Route::get('/user/get-cart-product', [CartPageController::class, 'getCartProduct']);
+Route::get('/user/cart-remove/{rowId}', [CartPageController::class, 'removeCartProduct']);
+Route::get('/cart-increment/{rowId}', [CartPageController::class, 'cartIncrement']);
+Route::get('/cart-decrement/{rowId}', [CartPageController::class, 'cartDecrement']);
