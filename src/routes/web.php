@@ -9,7 +9,9 @@ use App\Http\Controllers\Backend\SubCategoryController;
 use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\IndexController;
 use App\Http\Controllers\Frontend\LanguageController;
+use App\Http\Controllers\User\WishlistController;
 use App\Models\Admin;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 
@@ -23,11 +25,12 @@ use App\Http\Controllers\AdminController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 //Route::get('/', function () {
 //    return view('welcome');
 //});
 // Admin All Route -------------------------------------------------------------------------
+
+
 Route::group(['prefix'=> 'admin', 'middleware'=>['admin:admin']], function(){
     Route::get('/login', [AdminController::class, 'loginForm']);
     Route::post('/login',[AdminController::class, 'store'])->name('admin.login');
@@ -112,6 +115,11 @@ Route::middleware(['auth:admin'])->group(function()
 }); // end Middleware admin
 
 
+// User All Route---------------------------------------------------------------------------------------
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
+//// Frontend All Routes /////
 Route::middleware(['auth:web'])->group(function()
 {
     Route::get('/user/profile', [IndexController::class, 'userProfile'])->name('user.profile');
@@ -120,15 +128,9 @@ Route::middleware(['auth:web'])->group(function()
     Route::post('/user/update/password', [IndexController::class, 'userUpdatePassword'])->name('user.updatePassword');
 
 }); // end Middleware User
-
-
 Route::get('/', [IndexController::class, 'index'])->name('user.index');
-
-// User All Route---------------------------------------------------------------------------------------
-Route::middleware(['auth:sanctum,web', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
 //// Frontend All Routes /////
+
 /// Multi Language All Routes ////
 Route::get('/language/arabic', [LanguageController::class, 'arabic'])->name('arabic.language');
 Route::get('/language/english', [LanguageController::class, 'english'])->name('english.language');
@@ -150,3 +152,13 @@ Route::post('/cart/data/store/{id}', [CartController::class, 'addToCart']);
 Route::get('/product/mini/cart/', [CartController::class, 'addMiniCart']);
 // Remove mini cart
 Route::get('/minicart/product-remove/{rowId}', [CartController::class, 'removeMiniCart']);
+
+// Add to Wishlist
+Route::post('/add-to-wishlist/{product_id}', [CartController::class, 'addToWishlist']);
+
+Route::group(['prefix'=>'user','middleware' => ['user','auth'],'namespace'=>'User'],function(){
+// Wishlist page
+Route::get('/wishlist', [WishlistController::class, 'viewWishlist'])->name('wishlist');
+Route::get('/get-wishlist-product', [WishlistController::class, 'getWishlistProduct']);
+Route::get('/wishlist-remove/{id}', [WishlistController::class, 'removeWishlistProduct']);
+});

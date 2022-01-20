@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="update add to cart">
+    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="add wishlist">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.idea/ecommerce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/.idea/ecommerce.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Frontend/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Frontend/CartController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/User/WishlistController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/User/WishlistController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Models/Wishlist.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Models/Wishlist.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/upload/user/profile/2022-01-08-00-311629962018211.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/upload/user/profile/2022-01-08-00-468679297.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/includes/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/main_master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/main_master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/profile/userChangePassword.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/profile/userChangePassword.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/profile/userProfile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/profile/userProfile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,6 +168,17 @@
       <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
       <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
       <path value="$PROJECT_DIR$/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/vendor/bumbummen99/shoppingcart" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/support" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/session" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/pipeline" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/container" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/collections" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/bus" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/macroable" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/events" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/contracts" />
     </include_path>
   </component>
   <component name="ProjectId" id="23Px9Ig0oACJbfuoD57wDk1DRZ8" />
@@ -210,6 +237,10 @@
       <workItem from="1642612994398" duration="306000" />
       <workItem from="1642616345407" duration="1353000" />
       <workItem from="1642627996441" duration="9064000" />
+      <workItem from="1642638721890" duration="104000" />
+      <workItem from="1642638840584" duration="6000" />
+      <workItem from="1642689880997" duration="12000" />
+      <workItem from="1642699301644" duration="1377000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1641649877243</created>
@@ -428,7 +459,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642636978390</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="add wishlist">
+      <created>1642638766122</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1642638766122</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -471,6 +509,7 @@
     <MESSAGE value="add docker compose" />
     <MESSAGE value="add some details" />
     <MESSAGE value="update add to cart" />
-    <option name="LAST_COMMIT_MESSAGE" value="update add to cart" />
+    <MESSAGE value="add wishlist" />
+    <option name="LAST_COMMIT_MESSAGE" value="add wishlist" />
   </component>
 </project>

@@ -41,7 +41,7 @@
                                                         <!-- /.col -->
                                                         <div class="col col-xs-7">
                                                             <div class="product-info">
-                                                                <h3 class="name"><a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}">@if(session()->get('language') == 'hindi') {{ $product->product_name_hin }} @else {{ $product->product_name_en }} @endif</a></h3>
+                                                                <h3 class="name"><a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}">@if(session()->get('language') == 'arabic') {{ $product->product_name_ar }} @else {{ $product->product_name_en }} @endif</a></h3>
                                                                 <div class="rating rateit-small"></div>
                                                                 <div class="product-price"> <span class="price"> ${{ $product->selling_price }} </span> </div>
                                                                 <!-- /.product-price -->
@@ -327,7 +327,9 @@
 
                                                                         <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
                                                                     </li>
-                                                                    <li class="lnk wishlist"> <a data-toggle="tooltip" class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                                                                    <button class="btn btn-primary icon" type="button" title="Wishlist" id="{{ $product->id }}" onclick="addToWishList(this.id)"> <i class="fa fa-heart"></i> </button>
+
+
                                                                     <li class="lnk"> <a data-toggle="tooltip" class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
                                                                 </ul>
                                                             </div>
@@ -566,7 +568,7 @@
 
                     <section class="section featured-product wow fadeInUp">
                         <h3 class="section-title">
-                            @if(session()->get('language') == 'hindi') {{ $skip_category_0->category_name_hin }} @else {{ $skip_category_0->category_name_en }} @endif
+                            @if(session()->get('language') == 'arabic') {{ $skip_category_0->category_name_ar }} @else {{ $skip_category_0->category_name_en }} @endif
                         </h3>
                         <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs">
 
@@ -649,7 +651,7 @@
 
                     <section class="section featured-product wow fadeInUp">
                         <h3 class="section-title">
-                            @if(session()->get('language') == 'hindi') {{ $skip_category_1->category_name_hin }} @else {{ $skip_category_1->category_name_en }} @endif
+                            @if(session()->get('language') == 'arabic') {{ $skip_category_1->category_name_ar }} @else {{ $skip_category_1->category_name_en }} @endif
                         </h3>
                         <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs">
 
@@ -680,7 +682,7 @@
 
                                             <div class="product-info text-left">
                                                 <h3 class="name"><a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}">
-                                                        @if(session()->get('language') == 'hindi') {{ $product->product_name_hin }} @else {{ $product->product_name_en }} @endif
+                                                        @if(session()->get('language') == 'arabic') {{ $product->product_name_ar }} @else {{ $product->product_name_en }} @endif
                                                     </a></h3>
                                                 <div class="rating rateit-small"></div>
                                                 <div class="description"></div>
@@ -765,7 +767,7 @@
 
                     <section class="section featured-product wow fadeInUp">
                         <h3 class="section-title">
-                            @if(session()->get('language') == 'hindi') {{ $skip_brand_1->brand_name_hin }} @else {{ $skip_brand_1->brand_name_en }} @endif
+                            @if(session()->get('language') == 'arabic') {{ $skip_brand_1->brand_name_ar }} @else {{ $skip_brand_1->brand_name_en }} @endif
                         </h3>
                         <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs">
 
@@ -796,7 +798,7 @@
 
                                             <div class="product-info text-left">
                                                 <h3 class="name"><a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}">
-                                                        @if(session()->get('language') == 'hindi') {{ $product->product_name_hin }} @else {{ $product->product_name_en }} @endif
+                                                        @if(session()->get('language') == 'arabic') {{ $product->product_name_ar }} @else {{ $product->product_name_en }} @endif
                                                     </a></h3>
                                                 <div class="rating rateit-small"></div>
                                                 <div class="description"></div>
