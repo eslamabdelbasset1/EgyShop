@@ -1,5 +1,7 @@
 @extends('admin.admin_master')
 @section('content')
+
+
     <!-- Content Wrapper. Contains page content -->
 
     <div class="container-full">
@@ -7,42 +9,45 @@
         <!-- Main content -->
         <section class="content">
             <div class="row">
-                <!--   ------------ Add Coupon Page -------- -->
+                <!--   ------------ Add District Page -------- -->
                 <div class="col-12">
 
                     <div class="box">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Edit Coupon </h3>
+                            <h3 class="box-title">Edit District </h3>
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
                             <div class="table-responsive">
-                                <form method="post" action="{{ route('coupon.update',$coupons->id) }}" >
+
+
+                                <form method="post" action="{{ route('district.update',$district->id ) }}" >
                                     @csrf
+
+
+
                                     <div class="form-group">
-                                        <h5>Coupon Name  <span class="text-danger">*</span></h5>
+                                        <h5>Division Select <span class="text-danger">*</span></h5>
                                         <div class="controls">
-                                            <input type="text"  name="coupon_name" class="form-control" value="{{ $coupons->coupon_name }}">
-                                            @error('coupon_name')
-                                            <span class="text-danger">{{ $message }}</span>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <h5>Coupon Discount(%) <span class="text-danger">*</span></h5>
-                                        <div class="controls">
-                                            <input type="text" name="coupon_discount" class="form-control" value="{{ $coupons->coupon_discount }}">
-                                            @error('coupon_discount')
+                                            <select name="division_id" class="form-control"  >
+                                                <option value="" selected="" disabled="">Select Division</option>
+                                                @foreach($division as $div)
+                                                    <option value="{{ $div->id }}" {{ $div->id == $district->division_id ? 'selected': '' }} >{{ $div->division_name }}</option>
+                                                @endforeach
+                                            </select>
+                                            @error('division_id')
                                             <span class="text-danger">{{ $message }}</span>
                                             @enderror
                                         </div>
                                     </div>
 
+
+
                                     <div class="form-group">
-                                        <h5>Coupon Validity Date  <span class="text-danger">*</span></h5>
+                                        <h5>District Name  <span class="text-danger">*</span></h5>
                                         <div class="controls">
-                                            <input type="date" name="coupon_validity" class="form-control" min="{{ Carbon\Carbon::now()->format('Y-m-d') }}" value="{{ $coupons->coupon_validity }}">
-                                            @error('coupon_validity')
+                                            <input type="text"  name="district_name" class="form-control" value="{{ $district->district_name }}" >
+                                            @error('district_name')
                                             <span class="text-danger">{{ $message }}</span>
                                             @enderror
                                         </div>
@@ -67,4 +72,8 @@
         <!-- /.content -->
 
     </div>
+
+
+
+
 @endsection

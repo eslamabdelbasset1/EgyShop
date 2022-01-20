@@ -5,6 +5,7 @@ use App\Http\Controllers\Backend\BrandController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\CouponController;
 use App\Http\Controllers\Backend\ProductController;
+use App\Http\Controllers\Backend\ShippingAreaController;
 use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Backend\SubCategoryController;
 use App\Http\Controllers\Frontend\CartController;
@@ -116,7 +117,6 @@ Route::middleware(['auth:admin'])->group(function()
     });
 
     // Admin Coupons All Routes
-
     Route::prefix('coupons')->group(function(){
         Route::get('/view', [CouponController::class, 'couponView'])->name('manage-coupon');
         Route::post('/store', [CouponController::class, 'couponStore'])->name('coupon.store');
@@ -124,7 +124,37 @@ Route::middleware(['auth:admin'])->group(function()
         Route::post('/update/{id}', [CouponController::class, 'couponUpdate'])->name('coupon.update');
         Route::get('/delete/{id}', [CouponController::class, 'couponDelete'])->name('coupon.delete');
     });
+
+
+// Admin Shipping All Routes
+    Route::prefix('shipping')->group(function(){
+        Route::get('/division/view', [ShippingAreaController::class, 'divisionView'])->name('manage-division');
+        Route::post('/division/store', [ShippingAreaController::class, 'divisionStore'])->name('division.store');
+        Route::get('/division/edit/{id}', [ShippingAreaController::class, 'divisionEdit'])->name('division.edit');
+        Route::post('/division/update/{id}', [ShippingAreaController::class, 'divisionUpdate'])->name('division.update');
+        Route::get('/division/delete/{id}', [ShippingAreaController::class, 'divisionDelete'])->name('division.delete');
+
+    });
+
+// Ship District
+    Route::get('/district/view', [ShippingAreaController::class, 'DistrictView'])->name('manage-district');
+    Route::post('/district/store', [ShippingAreaController::class, 'districtStore'])->name('district.store');
+    Route::get('/district/edit/{id}', [ShippingAreaController::class, 'districtEdit'])->name('district.edit');
+    Route::post('/district/update/{id}', [ShippingAreaController::class, 'districtUpdate'])->name('district.update');
+    Route::get('/district/delete/{id}', [ShippingAreaController::class, 'districtDelete'])->name('district.delete');
+
+
+
+// Ship State
+    Route::get('/state/view', [ShippingAreaController::class, 'stateView'])->name('manage-state');
+    Route::post('/state/store', [ShippingAreaController::class, 'stateStore'])->name('state.store');
+    Route::get('/state/edit/{id}', [ShippingAreaController::class, 'stateEdit'])->name('state.edit');
+    Route::post('/state/update/{id}', [ShippingAreaController::class, 'stateUpdate'])->name('state.update');
+    Route::get('/state/delete/{id}', [ShippingAreaController::class, 'stateDelete'])->name('state.delete');
 }); // end Middleware admin
+
+
+
 
 
 
