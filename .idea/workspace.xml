@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="update myCart">
-      <change afterPath="$PROJECT_DIR$/src/resources/views/backend/ship/district/edit_district.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/backend/ship/district/view_district.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/backend/ship/division/edit_division.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/backend/ship/division/view_division.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/backend/ship/state/edit_state.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/backend/ship/state/view_state.blade.php" afterDir="false" />
+    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="add shipping Area">
+      <change afterPath="$PROJECT_DIR$/src/resources/views/frontend/payment/stripe.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/admin/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/admin/includes/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/backend/coupon/edit_coupon.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/backend/coupon/edit_coupon.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Frontend/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Frontend/CartController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/User/CartPageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/User/CartPageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/includes/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/main_master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/main_master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/wishlist/view_mycart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/wishlist/view_mycart.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -232,7 +230,7 @@
       <workItem from="1642638721890" duration="104000" />
       <workItem from="1642638840584" duration="6000" />
       <workItem from="1642689880997" duration="12000" />
-      <workItem from="1642699301644" duration="11586000" />
+      <workItem from="1642699301644" duration="20960000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1641649877243</created>
@@ -472,7 +470,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642711447575</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="add shipping Area">
+      <created>1642718226215</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1642718226215</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -518,6 +523,7 @@
     <MESSAGE value="add wishlist" />
     <MESSAGE value="update wishlist page" />
     <MESSAGE value="update myCart" />
-    <option name="LAST_COMMIT_MESSAGE" value="update myCart" />
+    <MESSAGE value="add shipping Area" />
+    <option name="LAST_COMMIT_MESSAGE" value="add shipping Area" />
   </component>
 </project>
