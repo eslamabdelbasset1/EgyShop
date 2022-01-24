@@ -33,6 +33,7 @@
     <!-- Toastr CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" type="text/css" rel="stylesheet" />
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body class="cnt-home">
 <!-- ============================================== HEADER ============================================== -->
