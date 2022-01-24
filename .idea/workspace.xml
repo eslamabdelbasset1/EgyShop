@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="add strip Payment">
-      <change afterPath="$PROJECT_DIR$/resources/views/mail/order_mail.blade.php" afterDir="false" />
+    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="add orders">
+      <change afterPath="$PROJECT_DIR$/resources/views/frontend/common/user_sidebar.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/frontend/user/order/order_view.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/CartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/StripeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/StripeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Mail/OrderMail.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Mail/OrderMail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/frontend/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/profile/userChangePassword.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/profile/userChangePassword.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/profile/userProfile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/profile/userProfile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -413,7 +416,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643055653301</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="add orders">
+      <created>1643058680655</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1643058680655</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -451,6 +461,7 @@
     <MESSAGE value="Show hot deal" />
     <MESSAGE value="Show tags" />
     <MESSAGE value="add strip Payment" />
-    <option name="LAST_COMMIT_MESSAGE" value="add strip Payment" />
+    <MESSAGE value="add orders" />
+    <option name="LAST_COMMIT_MESSAGE" value="add orders" />
   </component>
 </project>

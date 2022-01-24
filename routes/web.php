@@ -11,6 +11,7 @@ use App\Http\Controllers\Backend\SubCategoryController;
 use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\IndexController;
 use App\Http\Controllers\Frontend\LanguageController;
+use App\Http\Controllers\User\AllUserController;
 use App\Http\Controllers\User\CartPageController;
 use App\Http\Controllers\User\CheckoutController;
 use App\Http\Controllers\User\StripeController;
@@ -214,6 +215,7 @@ Route::get('/wishlist', [WishlistController::class, 'viewWishlist'])->name('wish
 Route::get('/get-wishlist-product', [WishlistController::class, 'getWishlistProduct']);
 Route::get('/wishlist-remove/{id}', [WishlistController::class, 'removeWishlistProduct']);
 Route::post('/stripe/order', [StripeController::class, 'stripeOrder'])->name('stripe.order');
+Route::get('/my/orders', [AllUserController::class, 'myOrders'])->name('my.orders');
 });
 // My Cart Page All Routes
 Route::get('/mycart', [CartPageController::class, 'myCart'])->name('mycart');
