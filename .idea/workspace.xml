@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="add shipping Area">
-      <change afterPath="$PROJECT_DIR$/src/resources/views/frontend/payment/stripe.blade.php" afterDir="false" />
+    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="add checkout">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Frontend/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Frontend/CartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/User/CartPageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/User/CartPageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/includes/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/main_master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/main_master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/wishlist/view_mycart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/wishlist/view_mycart.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +223,8 @@
       <workItem from="1642638721890" duration="104000" />
       <workItem from="1642638840584" duration="6000" />
       <workItem from="1642689880997" duration="12000" />
-      <workItem from="1642699301644" duration="20960000" />
+      <workItem from="1642699301644" duration="21011000" />
+      <workItem from="1642771787820" duration="21000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1641649877243</created>
@@ -477,7 +471,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642718226215</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="add checkout">
+      <created>1642729039290</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1642729039290</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -499,7 +500,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add category" />
     <MESSAGE value="update and delete category" />
     <MESSAGE value="add sub category" />
     <MESSAGE value="init commit" />
@@ -524,6 +524,7 @@
     <MESSAGE value="update wishlist page" />
     <MESSAGE value="update myCart" />
     <MESSAGE value="add shipping Area" />
-    <option name="LAST_COMMIT_MESSAGE" value="add shipping Area" />
+    <MESSAGE value="add checkout" />
+    <option name="LAST_COMMIT_MESSAGE" value="add checkout" />
   </component>
 </project>
