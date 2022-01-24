@@ -1,6 +1,5 @@
 @extends('frontend.main_master')
-@section('content')
-    @extends('frontend.main_master')
+@section('title','User Change Password')
 @section('content')
     <div class="body-content">
         <div class="container">
@@ -51,7 +50,4 @@
             </div>
         </div>
     </div>
-@endsection
-
-
 @endsection
