@@ -3,6 +3,7 @@
         $user = \App\Models\User::find($id);
 @endphp
 @extends('frontend.main_master')
+@section('title', ' user profile')
 @section('content')
     <div class="body-content">
         <div class="container">
@@ -15,10 +16,10 @@
                     class="card-img-top my-4" style="border-radius: 50%; width: 150px">
 
                    <ul class="list-group list-group-flush">
-                       <a href="{{route('dashboard')}}" class="btn btn-primary btn-sm btn-block">Home</a>
-                       <a href="{{route('user.profile')}}" class="btn btn-primary btn-sm btn-block">Profile Update</a>
-                       <a href="{{route('user.changePassword')}}" class="btn btn-primary btn-sm btn-block">Change Password</a>
-                       <a href="{{route('user.logout')}}" class="btn btn-danger btn-sm btn-block">Logout</a>
+                        <li><a href="{{route('dashboard')}}" class="btn btn-primary btn-sm btn-block">Home</a></li>
+                        <li><a href="{{route('user.profile')}}" class="btn btn-primary btn-sm btn-block">Profile Update</a></li>
+                        <li><a href="{{route('user.changePassword')}}" class="btn btn-primary btn-sm btn-block">Change Password</a></li>
+                        <li><a href="{{route('user.logout')}}" class="btn btn-danger btn-sm btn-block">Logout</a></li>
                    </ul>
                 </div>
                 <div class="col-md-2"></div>

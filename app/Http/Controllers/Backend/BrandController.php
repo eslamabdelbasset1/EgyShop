@@ -38,8 +38,6 @@ class BrandController extends Controller
             'brand_slug_en' => strtolower(str_replace(' ', '-',$request->brand_name_en)),
             'brand_slug_ar' => str_replace(' ', '-',$request->brand_name_ar),
             'brand_image' => $save_url,
-
-
         ]);
 
         $notification = array(

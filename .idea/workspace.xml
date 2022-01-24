@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="Show tags">
-      <change afterPath="$PROJECT_DIR$/resources/views/frontend/common/testimonials.blade.php" afterDir="false" />
+    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="add strip Payment">
+      <change afterPath="$PROJECT_DIR$/resources/views/mail/order_mail.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/tags/tagsView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/tags/tagsView.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/CartController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/StripeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/StripeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Mail/OrderMail.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Mail/OrderMail.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,6 +155,8 @@
       <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
       <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
       <path value="$PROJECT_DIR$/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/vendor/bumbummen99/shoppingcart" />
+      <path value="$PROJECT_DIR$/vendor/stripe/stripe-php" />
     </include_path>
   </component>
   <component name="ProjectId" id="23Px9Ig0oACJbfuoD57wDk1DRZ8" />
@@ -169,7 +172,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/frontend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Middleware" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -177,16 +180,22 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\src\app\Http\Middleware" />
       <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\resources\views\frontend" />
       <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\resources\views\backend\slider" />
       <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\resources\views\backend\product" />
       <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\resources\views\backend\category" />
-      <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\resources\views\backend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\app\Models" />
       <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\app\Models\Backend" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -204,7 +213,9 @@
       <workItem from="1641923016747" duration="392000" />
       <workItem from="1642083498724" duration="5236000" />
       <workItem from="1642164999917" duration="21701000" />
-      <workItem from="1642244816639" duration="6762000" />
+      <workItem from="1642244816639" duration="7416000" />
+      <workItem from="1642261221288" duration="5538000" />
+      <workItem from="1642689930043" duration="6354000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1641649877243</created>
@@ -381,7 +392,28 @@
       <option name="project" value="LOCAL" />
       <updated>1642249305967</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Show tags">
+      <created>1642252237083</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1642252237083</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Show tags">
+      <created>1642277267677</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1642277267677</updated>
+    </task>
+    <task id="LOCAL-00028" summary="add strip Payment">
+      <created>1643055653301</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1643055653301</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,6 +450,7 @@
     <MESSAGE value="Show product details" />
     <MESSAGE value="Show hot deal" />
     <MESSAGE value="Show tags" />
-    <option name="LAST_COMMIT_MESSAGE" value="Show tags" />
+    <MESSAGE value="add strip Payment" />
+    <option name="LAST_COMMIT_MESSAGE" value="add strip Payment" />
   </component>
 </project>
