@@ -128,19 +128,12 @@
       <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
       <path value="$PROJECT_DIR$/vendor/intervention/image" />
       <path value="$PROJECT_DIR$/vendor/bumbummen99/shoppingcart" />
-      <path value="$PROJECT_DIR$/vendor/illuminate/support" />
-      <path value="$PROJECT_DIR$/vendor/illuminate/session" />
-      <path value="$PROJECT_DIR$/vendor/illuminate/pipeline" />
-      <path value="$PROJECT_DIR$/vendor/illuminate/container" />
-      <path value="$PROJECT_DIR$/vendor/illuminate/collections" />
-      <path value="$PROJECT_DIR$/vendor/illuminate/bus" />
-      <path value="$PROJECT_DIR$/vendor/illuminate/macroable" />
-      <path value="$PROJECT_DIR$/vendor/illuminate/filesystem" />
-      <path value="$PROJECT_DIR$/vendor/illuminate/events" />
-      <path value="$PROJECT_DIR$/vendor/illuminate/contracts" />
     </include_path>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="8.0">
-    <option name="suggestChangeDefaultLanguageLevel" value="false" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings configuration_file_path="$PROJECT_DIR$/phpunit.xml" custom_loader_path="$PROJECT_DIR$/vendor/autoload.php" use_configuration_file="true" />
+    </phpunit_settings>
   </component>
 </project>

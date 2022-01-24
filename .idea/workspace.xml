@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="add checkout">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="Show tags">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +14,7 @@
     <execution />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -152,16 +152,6 @@
       <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
       <path value="$PROJECT_DIR$/vendor/intervention/image" />
       <path value="$PROJECT_DIR$/vendor/bumbummen99/shoppingcart" />
-      <path value="$PROJECT_DIR$/vendor/illuminate/support" />
-      <path value="$PROJECT_DIR$/vendor/illuminate/session" />
-      <path value="$PROJECT_DIR$/vendor/illuminate/pipeline" />
-      <path value="$PROJECT_DIR$/vendor/illuminate/container" />
-      <path value="$PROJECT_DIR$/vendor/illuminate/collections" />
-      <path value="$PROJECT_DIR$/vendor/illuminate/bus" />
-      <path value="$PROJECT_DIR$/vendor/illuminate/macroable" />
-      <path value="$PROJECT_DIR$/vendor/illuminate/filesystem" />
-      <path value="$PROJECT_DIR$/vendor/illuminate/events" />
-      <path value="$PROJECT_DIR$/vendor/illuminate/contracts" />
     </include_path>
   </component>
   <component name="ProjectId" id="23Px9Ig0oACJbfuoD57wDk1DRZ8" />
@@ -177,7 +167,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/frontend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Middleware" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -185,16 +175,22 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\src\app\Http\Middleware" />
       <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\resources\views\frontend" />
       <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\resources\views\backend\slider" />
       <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\resources\views\backend\product" />
       <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\resources\views\backend\category" />
-      <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\resources\views\backend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\app\Models" />
       <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\app\Models\Backend" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -213,18 +209,8 @@
       <workItem from="1642083498724" duration="5236000" />
       <workItem from="1642164999917" duration="21701000" />
       <workItem from="1642244816639" duration="7416000" />
-      <workItem from="1642261221288" duration="15247000" />
-      <workItem from="1642360530838" duration="779000" />
-      <workItem from="1642374361606" duration="2743000" />
-      <workItem from="1642542018060" duration="6047000" />
-      <workItem from="1642612994398" duration="306000" />
-      <workItem from="1642616345407" duration="1353000" />
-      <workItem from="1642627996441" duration="9064000" />
-      <workItem from="1642638721890" duration="104000" />
-      <workItem from="1642638840584" duration="6000" />
-      <workItem from="1642689880997" duration="12000" />
-      <workItem from="1642699301644" duration="21011000" />
-      <workItem from="1642771787820" duration="21000" />
+      <workItem from="1642261221288" duration="5538000" />
+      <workItem from="1642689930043" duration="6354000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1641649877243</created>
@@ -415,77 +401,11 @@
       <option name="project" value="LOCAL" />
       <updated>1642277267677</updated>
     </task>
-    <task id="LOCAL-00028" summary="add docker compose">
-      <created>1642285034069</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1642285034069</updated>
-    </task>
-    <task id="LOCAL-00029" summary="add some details">
-      <created>1642288829403</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1642288829403</updated>
-    </task>
-    <task id="LOCAL-00030" summary="update add to cart">
-      <created>1642551984524</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1642551984524</updated>
-    </task>
-    <task id="LOCAL-00031" summary="update add to cart">
-      <created>1642636978390</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1642636978390</updated>
-    </task>
-    <task id="LOCAL-00032" summary="add wishlist">
-      <created>1642638766122</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1642638766122</updated>
-    </task>
-    <task id="LOCAL-00033" summary="update wishlist page">
-      <created>1642700814840</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1642700814840</updated>
-    </task>
-    <task id="LOCAL-00034" summary="update myCart">
-      <created>1642711447575</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1642711447575</updated>
-    </task>
-    <task id="LOCAL-00035" summary="add shipping Area">
-      <created>1642718226215</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1642718226215</updated>
-    </task>
-    <task id="LOCAL-00036" summary="add checkout">
-      <created>1642729039290</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1642729039290</updated>
-    </task>
-    <option name="localTasksCounter" value="37" />
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="UnknownFeatures">
-    <option featureType="com.intellij.fileTypeFactory" implementationName="*.d" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -500,6 +420,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="add category" />
     <MESSAGE value="update and delete category" />
     <MESSAGE value="add sub category" />
     <MESSAGE value="init commit" />
@@ -517,14 +438,6 @@
     <MESSAGE value="Show product details" />
     <MESSAGE value="Show hot deal" />
     <MESSAGE value="Show tags" />
-    <MESSAGE value="add docker compose" />
-    <MESSAGE value="add some details" />
-    <MESSAGE value="update add to cart" />
-    <MESSAGE value="add wishlist" />
-    <MESSAGE value="update wishlist page" />
-    <MESSAGE value="update myCart" />
-    <MESSAGE value="add shipping Area" />
-    <MESSAGE value="add checkout" />
-    <option name="LAST_COMMIT_MESSAGE" value="add checkout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Show tags" />
   </component>
 </project>

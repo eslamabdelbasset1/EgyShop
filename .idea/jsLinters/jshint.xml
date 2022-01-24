@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="JSHintConfiguration" version="2.13.0" use-config-file="true" use-custom-config-file="true" custom-config-file-path="$PROJECT_DIR$/src/public/assets/vendor_components/select2/.jshintrc">
+  <component name="JSHintConfiguration" version="2.13.0" use-config-file="true" use-custom-config-file="true" custom-config-file-path="$PROJECT_DIR$/public/assets/vendor_components/Magnific-Popup-master/.jshintrc">
     <option bitwise="true" />
     <option browser="true" />
     <option curly="true" />
