@@ -11,6 +11,7 @@ use App\Http\Controllers\Backend\SubCategoryController;
 use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\IndexController;
 use App\Http\Controllers\Frontend\LanguageController;
+use App\Http\Controllers\User\AllUserController;
 use App\Http\Controllers\User\CartPageController;
 use App\Http\Controllers\User\CheckoutController;
 use App\Http\Controllers\User\StripeController;
@@ -19,7 +20,7 @@ use App\Models\Admin;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
-
+use App\Http\Controllers\User\CashController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -211,9 +212,12 @@ Route::post('/add-to-wishlist/{product_id}', [CartController::class, 'addToWishl
 Route::group(['prefix'=>'user','middleware' => ['user','auth'],'namespace'=>'User'],function(){
 // Wishlist page
 Route::get('/wishlist', [WishlistController::class, 'viewWishlist'])->name('wishlist');
-Route::get('/get-wishlist-product', [WishlistController::class, 'getWishlistProduct']);
-Route::get('/wishlist-remove/{id}', [WishlistController::class, 'removeWishlistProduct']);
-Route::post('/stripe/order', [StripeController::class, 'stripeOrder'])->name('stripe.order');
+    Route::get('/get-wishlist-product', [WishlistController::class, 'getWishlistProduct']);
+    Route::get('/wishlist-remove/{id}', [WishlistController::class, 'removeWishlistProduct']);
+    Route::post('/cash/order', [CashController::class, 'cashOrder'])->name('cash.order');
+    Route::post('/stripe/order', [StripeController::class, 'stripeOrder'])->name('stripe.order');
+    Route::get('/my/orders', [AllUserController::class, 'myOrders'])->name('my.orders');
+    Route::get('/order_details/{order_id}', [AllUserController::class, 'orderDetails']);
 });
 // My Cart Page All Routes
 Route::get('/mycart', [CartPageController::class, 'myCart'])->name('mycart');
