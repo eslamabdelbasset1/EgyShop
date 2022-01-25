@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="add cancel order">
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/report/report_show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/report/report_view.blade.php" afterDir="false" />
+    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="add report">
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/user/all_user.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/AdminProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/AdminProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/UserRedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/UserRedirectIfAuthenticated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/brand/brandView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/brand/brandView.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/category/categoryView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/category/categoryView.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/category/subCategoryView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/category/subCategoryView.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/category/subSubCategoryView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/category/subSubCategoryView.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/coupon/view_coupon.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/coupon/view_coupon.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -225,7 +233,7 @@
       <workItem from="1642261221288" duration="5538000" />
       <workItem from="1642689930043" duration="6354000" />
       <workItem from="1643114130804" duration="2352000" />
-      <workItem from="1643118640384" duration="14278000" />
+      <workItem from="1643118640384" duration="16499000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1641649877243</created>
@@ -465,7 +473,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643141259545</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="add report">
+      <created>1643143727797</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1643143727797</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -483,7 +498,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add category" />
     <MESSAGE value="update and delete category" />
     <MESSAGE value="add sub category" />
     <MESSAGE value="init commit" />
@@ -508,6 +522,7 @@
     <MESSAGE value="update invoices pdf" />
     <MESSAGE value="add return orders" />
     <MESSAGE value="add cancel order" />
-    <option name="LAST_COMMIT_MESSAGE" value="add cancel order" />
+    <MESSAGE value="add report" />
+    <option name="LAST_COMMIT_MESSAGE" value="add report" />
   </component>
 </project>
