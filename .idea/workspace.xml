@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="add cash payment">
+    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="update invoices pdf">
+      <change afterPath="$PROJECT_DIR$/public/backend/js/code.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/orders/cancel_orders.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/orders/confirmed_orders.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/orders/delivered_orders.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/orders/order_invoice.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/orders/pending_orders.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/orders/pending_orders_details.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/orders/picked_orders.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/orders/processing_orders.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/orders/shipped_orders.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/AllUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/AllUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/user/order/order_invoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/user/order/order_invoice.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/user/order/order_view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/user/order/order_view.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/admin_master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin_master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/user/order/order_details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/user/order/order_details.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +235,7 @@
       <workItem from="1642261221288" duration="5538000" />
       <workItem from="1642689930043" duration="6354000" />
       <workItem from="1643114130804" duration="2352000" />
-      <workItem from="1643118640384" duration="1955000" />
+      <workItem from="1643118640384" duration="10854000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1641649877243</created>
@@ -443,7 +454,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643062745567</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="update invoices pdf">
+      <created>1643120714501</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1643120714501</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -483,6 +501,7 @@
     <MESSAGE value="add orders" />
     <MESSAGE value="update user profile" />
     <MESSAGE value="add cash payment" />
-    <option name="LAST_COMMIT_MESSAGE" value="add cash payment" />
+    <MESSAGE value="update invoices pdf" />
+    <option name="LAST_COMMIT_MESSAGE" value="update invoices pdf" />
   </component>
 </project>

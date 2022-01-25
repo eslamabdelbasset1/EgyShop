@@ -4,6 +4,7 @@ use App\Http\Controllers\Backend\AdminProfileController;
 use App\Http\Controllers\Backend\BrandController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\CouponController;
+use App\Http\Controllers\Backend\OrderController;
 use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\ShippingAreaController;
 use App\Http\Controllers\Backend\SliderController;
@@ -154,6 +155,26 @@ Route::middleware(['auth:admin'])->group(function()
     Route::get('/state/edit/{id}', [ShippingAreaController::class, 'stateEdit'])->name('state.edit');
     Route::post('/state/update/{id}', [ShippingAreaController::class, 'stateUpdate'])->name('state.update');
     Route::get('/state/delete/{id}', [ShippingAreaController::class, 'stateDelete'])->name('state.delete');
+
+    // Admin Order All Routes
+
+    Route::prefix('orders')->group(function(){
+        Route::get('/pending/orders', [OrderController::class, 'pendingOrders'])->name('pending-orders');
+        Route::get('/pending/orders/details/{order_id}', [OrderController::class, 'pendingOrdersDetails'])->name('pending.order.details');
+        Route::get('/confirmed/orders', [OrderController::class, 'confirmedOrders'])->name('confirmed-orders');
+        Route::get('/processing/orders', [OrderController::class, 'processingOrders'])->name('processing-orders');
+        Route::get('/picked/orders', [OrderController::class, 'pickedOrders'])->name('picked-orders');
+        Route::get('/shipped/orders', [OrderController::class, 'shippedOrders'])->name('shipped-orders');
+        Route::get('/delivered/orders', [OrderController::class, 'deliveredOrders'])->name('delivered-orders');
+        Route::get('/cancel/orders', [OrderController::class, 'cancelOrders'])->name('cancel-orders');
+        // Update Status
+        Route::get('/pending/confirm/{order_id}', [OrderController::class, 'pendingToConfirm'])->name('pending-confirm');
+        Route::get('/confirm/processing/{order_id}', [OrderController::class, 'confirmToProcessing'])->name('confirm.processing');
+        Route::get('/processing/picked/{order_id}', [OrderController::class, 'processingToPicked'])->name('processing.picked');
+        Route::get('/picked/shipped/{order_id}', [OrderController::class, 'pickedToShipped'])->name('picked.shipped');
+        Route::get('/shipped/delivered/{order_id}', [OrderController::class, 'shippedToDelivered'])->name('shipped.delivered');
+        Route::get('/invoice/download/{order_id}', [OrderController::class, 'adminInvoiceDownload'])->name('invoice.download');
+    });
 }); // end Middleware admin
 
 
