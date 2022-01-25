@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="add return orders">
-      <change afterPath="$PROJECT_DIR$/resources/views/frontend/user/order/cancel_order_view.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/frontend/user/order/return_order_view.blade.php" afterDir="false" />
+    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="add cancel order">
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/report/report_show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/report/report_view.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/AllUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/AllUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/common/user_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/common/user_sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/user/order/order_details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/user/order/order_details.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -227,7 +225,7 @@
       <workItem from="1642261221288" duration="5538000" />
       <workItem from="1642689930043" duration="6354000" />
       <workItem from="1643114130804" duration="2352000" />
-      <workItem from="1643118640384" duration="12522000" />
+      <workItem from="1643118640384" duration="14278000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1641649877243</created>
@@ -460,7 +458,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643139506125</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="add cancel order">
+      <created>1643141259545</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1643141259545</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,6 +507,7 @@
     <MESSAGE value="add cash payment" />
     <MESSAGE value="update invoices pdf" />
     <MESSAGE value="add return orders" />
-    <option name="LAST_COMMIT_MESSAGE" value="add return orders" />
+    <MESSAGE value="add cancel order" />
+    <option name="LAST_COMMIT_MESSAGE" value="add cancel order" />
   </component>
 </project>

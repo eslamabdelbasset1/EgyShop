@@ -6,6 +6,7 @@ use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\CouponController;
 use App\Http\Controllers\Backend\OrderController;
 use App\Http\Controllers\Backend\ProductController;
+use App\Http\Controllers\Backend\ReportController;
 use App\Http\Controllers\Backend\ShippingAreaController;
 use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Backend\SubCategoryController;
@@ -174,6 +175,14 @@ Route::middleware(['auth:admin'])->group(function()
         Route::get('/picked/shipped/{order_id}', [OrderController::class, 'pickedToShipped'])->name('picked.shipped');
         Route::get('/shipped/delivered/{order_id}', [OrderController::class, 'shippedToDelivered'])->name('shipped.delivered');
         Route::get('/invoice/download/{order_id}', [OrderController::class, 'adminInvoiceDownload'])->name('invoice.download');
+    });
+
+    // Admin Reports Routes
+    Route::prefix('reports')->group(function(){
+        Route::get('/view', [ReportController::class, 'reportView'])->name('all-reports');
+        Route::post('/search/by/date', [ReportController::class, 'reportByDate'])->name('search-by-date');
+        Route::post('/search/by/month', [ReportController::class, 'reportByMonth'])->name('search-by-month');
+        Route::post('/search/by/year', [ReportController::class, 'reportByYear'])->name('search-by-year');
     });
 }); // end Middleware admin
 
