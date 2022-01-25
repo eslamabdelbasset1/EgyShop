@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="update user profile">
-      <change afterPath="$PROJECT_DIR$/resources/views/frontend/payment/cash.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/frontend/user/order/order_details.blade.php" afterDir="false" />
+    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="add report">
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/user/all_user.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/AllUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/AllUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/CheckoutController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/CheckoutController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/OrderItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/OrderItem.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2022_01_24_191054_create_orders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2022_01_24_191054_create_orders_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/checkout/checkout_view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/checkout/checkout_view.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/profile/userChangePassword.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/profile/userChangePassword.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/user/order/order_view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/user/order/order_view.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/AdminProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/AdminProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/UserRedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/UserRedirectIfAuthenticated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/brand/brandView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/brand/brandView.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/category/categoryView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/category/categoryView.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/category/subCategoryView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/category/subCategoryView.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/category/subSubCategoryView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/category/subSubCategoryView.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/coupon/view_coupon.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/coupon/view_coupon.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +35,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -164,6 +168,11 @@
       <path value="$PROJECT_DIR$/vendor/intervention/image" />
       <path value="$PROJECT_DIR$/vendor/bumbummen99/shoppingcart" />
       <path value="$PROJECT_DIR$/vendor/stripe/stripe-php" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf" />
     </include_path>
   </component>
   <component name="ProjectId" id="23Px9Ig0oACJbfuoD57wDk1DRZ8" />
@@ -223,6 +232,8 @@
       <workItem from="1642244816639" duration="7416000" />
       <workItem from="1642261221288" duration="5538000" />
       <workItem from="1642689930043" duration="6354000" />
+      <workItem from="1643114130804" duration="2352000" />
+      <workItem from="1643118640384" duration="16499000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1641649877243</created>
@@ -434,7 +445,42 @@
       <option name="project" value="LOCAL" />
       <updated>1643060748375</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="add cash payment">
+      <created>1643062745567</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1643062745567</updated>
+    </task>
+    <task id="LOCAL-00032" summary="update invoices pdf">
+      <created>1643120714501</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1643120714501</updated>
+    </task>
+    <task id="LOCAL-00033" summary="add return orders">
+      <created>1643139506125</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1643139506125</updated>
+    </task>
+    <task id="LOCAL-00034" summary="add cancel order">
+      <created>1643141259545</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1643141259545</updated>
+    </task>
+    <task id="LOCAL-00035" summary="add report">
+      <created>1643143727797</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1643143727797</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,10 +496,8 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add category" />
     <MESSAGE value="update and delete category" />
     <MESSAGE value="add sub category" />
     <MESSAGE value="init commit" />
@@ -474,6 +518,11 @@
     <MESSAGE value="add strip Payment" />
     <MESSAGE value="add orders" />
     <MESSAGE value="update user profile" />
-    <option name="LAST_COMMIT_MESSAGE" value="update user profile" />
+    <MESSAGE value="add cash payment" />
+    <MESSAGE value="update invoices pdf" />
+    <MESSAGE value="add return orders" />
+    <MESSAGE value="add cancel order" />
+    <MESSAGE value="add report" />
+    <option name="LAST_COMMIT_MESSAGE" value="add report" />
   </component>
 </project>
