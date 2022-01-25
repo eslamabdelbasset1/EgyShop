@@ -242,6 +242,9 @@ Route::get('/wishlist', [WishlistController::class, 'viewWishlist'])->name('wish
     Route::get('/my/orders', [AllUserController::class, 'myOrders'])->name('my.orders');
     Route::get('/order_details/{order_id}', [AllUserController::class, 'orderDetails']);
     Route::get('/invoice_download/{order_id}', [AllUserController::class, 'invoiceDownload']);
+    Route::post('/return/order/{order_id}', [AllUserController::class, 'returnOrder'])->name('return.order');
+    Route::get('/return/order/list', [AllUserController::class, 'returnOrderList'])->name('return.order.list');
+    Route::get('/cancel/orders', [AllUserController::class, 'cancelOrders'])->name('cancel.orders');
 });
 // My Cart Page All Routes
 Route::get('/mycart', [CartPageController::class, 'myCart'])->name('mycart');
