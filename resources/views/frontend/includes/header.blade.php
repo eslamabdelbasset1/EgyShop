@@ -215,6 +215,7 @@
                             @endforeach <!-- // End Category Foreach -->
 
                                 <li class="dropdown  navbar-right special-menu"> <a href="#">Today's offer</a> </li>
+                                <li class="dropdown navbar-right special-menu"> <a href="{{ route('home.blog') }}">Blog</a> </li>
                             </ul>
                             <!-- /.navbar-nav -->
                             <div class="clearfix"></div>
