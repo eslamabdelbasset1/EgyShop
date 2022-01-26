@@ -10,7 +10,7 @@
                 <div class="col-12">
                     <div class="box">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Order List</h3>
+                            <h3 class="box-title">Order List <span class="badge badge-pill badge-danger"> {{ count($orders) }} </span></h3>
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
