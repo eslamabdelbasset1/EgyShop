@@ -7,8 +7,8 @@
                 <div class="col-8">
                     <div class="box">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Category List</h3>
-{{--                            <h3 class="box-title">Category List <span class="badge badge-pill badge-danger"> {{ count($category) }} </span> </h3>--}}
+{{--                            <h3 class="box-title">Category List</h3>--}}
+                            <h3 class="box-title">Category List <span class="badge badge-pill badge-danger"> {{ count($categories) }} </span> </h3>
 
                         </div>
                         <!-- /.box-header -->

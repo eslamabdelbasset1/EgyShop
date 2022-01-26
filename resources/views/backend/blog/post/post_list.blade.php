@@ -1,16 +1,25 @@
 @extends('admin.admin_master')
 @section('content')
 
+
     <!-- Content Wrapper. Contains page content -->
+
     <div class="container-full">
         <!-- Content Header (Page header) -->
+
+
         <!-- Main content -->
         <section class="content">
             <div class="row">
+
+
+
                 <div class="col-12">
+
                     <div class="box">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Order List <span class="badge badge-pill badge-danger"> {{ count($orders) }} </span></h3>
+                            <h3 class="box-title">Blog Post List <span class="badge badge-pill badge-danger"> {{ count($blogpost) }} </span></h3>
+                            <a href="{{ route('add.post') }}" class="btn btn-success" style="float: right;">Add Post</a>
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
@@ -18,31 +27,27 @@
                                 <table id="example1" class="table table-bordered table-striped">
                                     <thead>
                                     <tr>
-                                        <th>Date </th>
-                                        <th>Invoice </th>
-                                        <th>Amount </th>
-                                        <th>Payment </th>
-                                        <th>Status </th>
+
+                                        <th>Post Category  </th>
+                                        <th>Post Image </th>
+                                        <th>Post Title En </th>
+                                        <th>Post Title Arabic </th>
                                         <th>Action</th>
 
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach($orders as $item)
+                                    @foreach($blogpost as $item)
                                         <tr>
-                                            <td> {{ $item->order_date }}  </td>
-                                            <td> {{ $item->invoice_no }}  </td>
-                                            <td> ${{ $item->amount }}  </td>
 
-                                            <td> {{ $item->payment_method }}  </td>
-
-                                            <td> <span class="badge badge-pill badge-primary">{{ $item->status }} </span>  </td>
-
-                                            <td width="25%">
-                                                <a href="{{ route('pending.order.details',$item->id) }}" class="btn btn-info" title="Edit Data"><i class="fa fa-eye"></i> </a>
-
-                                                <a target="_blank" href="{{ route('invoice.download',$item->id) }}" class="btn btn-danger" title="Invoice Download">
-                                                    <i class="fa fa-download"></i></a>
+                                            <td>{{ $item->category->blog_category_name_en }}</td>
+                                            <td> <img src="{{ asset($item->post_image) }}" style="width: 60px; height: 60px;"> </td>
+                                            <td>{{ $item->post_title_en }}</td>
+                                            <td>{{ $item->post_title_ar }}</td>
+                                            <td width="20%">
+                                                <a href="{{ route('blog.category.edit',$item->id) }}" class="btn btn-info" title="Edit Data"><i class="fa fa-pencil"></i> </a>
+                                                <a href="{{ route('category.delete',$item->id) }}" class="btn btn-danger" title="Delete Data" id="delete">
+                                                    <i class="fa fa-trash"></i></a>
                                             </td>
 
                                         </tr>
@@ -55,11 +60,24 @@
                         <!-- /.box-body -->
                     </div>
                     <!-- /.box -->
+
+
                 </div>
                 <!-- /.col -->
+
+
+
+
+
+
             </div>
             <!-- /.row -->
         </section>
         <!-- /.content -->
+
     </div>
+
+
+
+
 @endsection
