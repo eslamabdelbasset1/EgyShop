@@ -9,6 +9,7 @@ use App\Http\Controllers\Backend\OrderController;
 use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\ReportController;
 use App\Http\Controllers\Backend\ShippingAreaController;
+use App\Http\Controllers\Backend\SiteSettingController;
 use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Backend\SubCategoryController;
 use App\Http\Controllers\Frontend\CartController;
@@ -207,6 +208,12 @@ Route::middleware(['auth:admin'])->group(function()
         Route::get('/list/post', [BlogController::class, 'listBlogPost'])->name('list.post');
         Route::get('/add/post', [BlogController::class, 'addBlogPost'])->name('add.post');
         Route::post('/post/store', [BlogController::class, 'blogPostStore'])->name('post-store');
+    });
+
+    // Admin Site Setting Routes
+    Route::prefix('setting')->group(function(){
+        Route::get('/site', [SiteSettingController::class, 'siteSetting'])->name('site.setting');
+        Route::post('/site/update', [SiteSettingController::class, 'siteSettingUpdate'])->name('update.sitesetting');
     });
 }); // end Middleware admin
 

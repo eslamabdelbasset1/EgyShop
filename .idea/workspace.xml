@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="Update counter in dashboard">
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/blog/category/category_edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/blog/category/category_view.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/blog/post/post_list.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/blog/post/post_view.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/frontend/blog/blog_cat_list.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/frontend/blog/blog_details.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/frontend/blog/blog_list.blade.php" afterDir="false" />
+    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="add blog posts in user and dashboard">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/SiteSettingController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/SiteSetting.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2022_01_26_193302_create_site_settings_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/upload/logo/1723052734343562.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/setting/setting_update.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/BlogController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/IndexController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/includes/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -185,6 +179,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -193,6 +188,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -236,7 +232,10 @@
       <workItem from="1642689930043" duration="6354000" />
       <workItem from="1643114130804" duration="2352000" />
       <workItem from="1643118640384" duration="18108000" />
-      <workItem from="1643199912803" duration="11484000" />
+      <workItem from="1643199912803" duration="12085000" />
+      <workItem from="1643224916832" duration="1312000" />
+      <workItem from="1643226256703" duration="1141000" />
+      <workItem from="1643228196697" duration="2989000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1641649877243</created>
@@ -497,7 +496,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643201682019</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="add blog posts in user and dashboard">
+      <created>1643211730570</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1643211730570</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -515,7 +521,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="init commit" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="add sub subcategory" />
     <MESSAGE value="update and delete sub subCategory" />
     <MESSAGE value="add product" />
@@ -540,6 +546,7 @@
     <MESSAGE value="add report" />
     <MESSAGE value="add last seen user" />
     <MESSAGE value="Update counter in dashboard" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update counter in dashboard" />
+    <MESSAGE value="add blog posts in user and dashboard" />
+    <option name="LAST_COMMIT_MESSAGE" value="add blog posts in user and dashboard" />
   </component>
 </project>
