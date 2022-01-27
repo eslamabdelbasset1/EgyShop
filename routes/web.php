@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backend\AdminProfileController;
+use App\Http\Controllers\Backend\AdminUserController;
 use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\Backend\BrandController;
 use App\Http\Controllers\Backend\CategoryController;
@@ -234,9 +235,14 @@ Route::middleware(['auth:admin'])->group(function()
         Route::get('/publish', [ReviewController::class, 'publishReview'])->name('publish.review');
         Route::get('/delete/{id}', [ReviewController::class, 'deleteReview'])->name('delete.review');
     });
-// Admin Manage Review Routes
+// Admin Manage Stock Routes
     Route::prefix('stock')->group(function(){
         Route::get('/product', [ProductController::class, 'productStock'])->name('product.stock');
+    });
+
+    // Admin User Role Routes
+    Route::prefix('adminuserrole')->group(function(){
+        Route::get('/all', [AdminUserController::class, 'allAdminRole'])->name('all.admin.user');
     });
 }); // end Middleware admin
 
