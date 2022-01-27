@@ -8,7 +8,8 @@
         <ul class="nav">
 
             @foreach($categories as $category)
-                <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <li class="dropdown menu-item">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="icon {{ $category->category_icon }}" aria-hidden="true"></i>
                         @if(session()->get('language') == 'arabic') {{ $category->category_name_ar }} @else {{ $category->category_name_en }} @endif
                     </a>
