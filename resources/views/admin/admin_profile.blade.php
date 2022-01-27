@@ -10,15 +10,15 @@
                     <!-- Add the bg color to the header using any of the bg-* classes -->
 {{--                    style="background: url({{asset('backend/images/gallery/full/10.jpg')}}) center center;"--}}
                     <div class="widget-user-header bg-black">
-                        <h3 class="widget-user-username">Admin Name: {{$profile->name}}</h3>
-                        <h6 class="widget-user-desc">Admin Email: {{$profile->email}}</h6>
+                        <h3 class="widget-user-username">Admin Name: {{$adminData->name}}</h3>
+                        <h6 class="widget-user-desc">Admin Email: {{$adminData->email}}</h6>
                         <a href="{{route('admin.profile.edit')}}" style="float: right;"
                         class="btn btn-rounded btn-success mb-4"> Edit Profile</a>
                     </div>
                     <div class="widget-user-image">
                         <img class="rounded-circle"
-                             src="{{ (!empty($profile->profile_photo_path)) ?
-                            url('upload/admin/profile/'.$profile->profile_photo_path)
+                             src="{{ (!empty($adminData->profile_photo_path)) ?
+                            url('upload/admin/profile/'.$adminData->profile_photo_path)
                             : url('upload/admin/profile/no_image.jpg')}}"
                              alt="User Avatar">
                     </div>

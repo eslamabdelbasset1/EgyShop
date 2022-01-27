@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backend\AdminProfileController;
+use App\Http\Controllers\Backend\AdminUserController;
 use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\Backend\BrandController;
 use App\Http\Controllers\Backend\CategoryController;
@@ -234,9 +235,19 @@ Route::middleware(['auth:admin'])->group(function()
         Route::get('/publish', [ReviewController::class, 'publishReview'])->name('publish.review');
         Route::get('/delete/{id}', [ReviewController::class, 'deleteReview'])->name('delete.review');
     });
-// Admin Manage Review Routes
+// Admin Manage Stock Routes
     Route::prefix('stock')->group(function(){
         Route::get('/product', [ProductController::class, 'productStock'])->name('product.stock');
+    });
+
+    // Admin User Role Routes
+    Route::prefix('adminuserrole')->group(function(){
+        Route::get('/all', [AdminUserController::class, 'allAdminRole'])->name('all.admin.user');
+        Route::get('/add', [AdminUserController::class, 'addAdminRole'])->name('add.admin');
+        Route::post('/store', [AdminUserController::class, 'storeAdminRole'])->name('admin.user.store');
+        Route::get('/edit/{id}', [AdminUserController::class, 'editAdminRole'])->name('edit.admin.user');
+        Route::post('/update', [AdminUserController::class, 'updateAdminRole'])->name('admin.user.update');
+        Route::get('/delete/{id}', [AdminUserController::class, 'deleteAdminRole'])->name('delete.admin.user');
     });
 }); // end Middleware admin
 
@@ -267,6 +278,10 @@ Route::middleware(['auth:web'])->group(function()
 
 }); // end Middleware User
 Route::get('/', [IndexController::class, 'index'])->name('user.index');
+/// Product Search Route
+Route::post('/search', [IndexController::class, 'productSearch'])->name('product.search');
+// Advance Search Routes
+Route::post('search-product', [IndexController::class, 'SearchProduct']);
 //// Frontend All Routes /////
 
 /// Multi Language All Routes ////
@@ -309,6 +324,9 @@ Route::get('/wishlist', [WishlistController::class, 'viewWishlist'])->name('wish
     Route::post('/return/order/{order_id}', [AllUserController::class, 'returnOrder'])->name('return.order');
     Route::get('/return/order/list', [AllUserController::class, 'returnOrderList'])->name('return.order.list');
     Route::get('/cancel/orders', [AllUserController::class, 'cancelOrders'])->name('cancel.orders');
+    /// Order Tracking Route
+    Route::post('/order/tracking', [AllUserController::class, 'orderTracking'])->name('order.tracking');
+
 });
 // My Cart Page All Routes
 Route::get('/mycart', [CartPageController::class, 'myCart'])->name('mycart');
