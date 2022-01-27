@@ -1,3 +1,20 @@
+<style>
+
+    .search-area{
+        position: relative;
+    }
+    #searchProducts {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        z-index: 999;
+        border-radius: 8px;
+        margin-top: 5px;
+    }
+</style>
+
 <header class="header-style-1">
 
     <!-- ============================================== TOP MENU ============================================== -->
@@ -74,7 +91,8 @@
                     <!-- /.contact-row -->
                     <!-- ============================================================= SEARCH AREA ============================================================= -->
                     <div class="search-area">
-                        <form>
+                        <form method="post" action="{{ route('product.search') }}">
+                            @csrf
                             <div class="control-group">
                                 <ul class="categories-filter animate-dropdown">
                                     <li class="dropdown"> <a class="dropdown-toggle"  data-toggle="dropdown" href="category.html">Categories <b class="caret"></b></a>
@@ -87,9 +105,10 @@
                                         </ul>
                                     </li>
                                 </ul>
-                                <input class="search-field" placeholder="Search here..." />
-                                <a class="search-button" href="#" ></a> </div>
+                                <input class="search-field" onfocus="search_result_show()" onblur="search_result_hide()" id="search" name="search" placeholder="Search here..." />
+                                <button class="search-button" type="submit"></button> </div>
                         </form>
+                        <div id="searchProducts"></div>
                     </div>
                     <!-- /.search-area -->
                     <!-- ============================================================= SEARCH AREA : END ============================================================= --> </div>
@@ -202,13 +221,11 @@
                                                                                 @endif
                                                                             </a></li>
                                                                     </ul>
-                                                            @endforeach <!-- // End SubSubCategory Foreach -->
-
+                                                                @endforeach
+                                                                <!-- // End SubSubCategory Foreach -->
                                                             </div>
                                                             <!-- /.col -->
-                                                    @endforeach <!-- // End SubCategory Foreach -->
-
-
+                                                        @endforeach <!-- // End SubCategory Foreach -->
                                                         <div class="col-xs-12 col-sm-6 col-md-4 col-menu banner-image"> <img class="img-responsive" src="{{ asset('frontend/assets/images/banners/top-menu-banner.jpg') }}" alt=""> </div>
                                                         <!-- /.yamm-content -->
                                                     </div>
@@ -216,7 +233,7 @@
                                             </li>
                                         </ul>
                                     </li>
-                            @endforeach <!-- // End Category Foreach -->
+                                @endforeach <!-- // End Category Foreach -->
 
                                 <li class="dropdown  navbar-right special-menu"> <a href="#">Today's offer</a> </li>
                                 <li class="dropdown navbar-right special-menu"> <a href="{{ route('home.blog') }}">Blog</a> </li>
@@ -263,3 +280,14 @@
         </div>
     </div>
 </header>
+
+
+
+<script>
+    function search_result_hide(){
+        $("#searchProducts").slideUp();
+    }
+    function search_result_show(){
+        $("#searchProducts").slideDown();
+    }
+</script>

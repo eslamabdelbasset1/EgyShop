@@ -278,6 +278,10 @@ Route::middleware(['auth:web'])->group(function()
 
 }); // end Middleware User
 Route::get('/', [IndexController::class, 'index'])->name('user.index');
+/// Product Search Route
+Route::post('/search', [IndexController::class, 'productSearch'])->name('product.search');
+// Advance Search Routes
+Route::post('search-product', [IndexController::class, 'SearchProduct']);
 //// Frontend All Routes /////
 
 /// Multi Language All Routes ////
