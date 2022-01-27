@@ -10,7 +10,7 @@
 
         <div class="user-profile">
             <div class="ulogo">
-                <a href="{{url('/')}}">
+                <a href="{{url('/admin/dashboard')}}">
                     <!-- logo for regular state and mobile devices -->
                     <div class="d-flex align-items-center justify-content-center">
                         <img src="{{asset('backend/images/logo-dark.png')}}" alt="">
@@ -176,6 +176,21 @@
                     <li class="{{ ($route == 'cancel-orders')? 'active':'' }}">
                         <a href="{{ route('cancel-orders') }}"><i class="ti-more"></i> Cancel Orders</a>
                     </li>
+                </ul>
+            </li>
+
+            <li class="treeview {{ ($prefix == '/stock')?'active':'' }}  ">
+                <a href="#">
+                    <i data-feather="file"></i>
+                    <span>Manage Stock </span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="{{ ($route == 'product.stock')? 'active':'' }}"><a href="{{ route('product.stock') }}"><i class="ti-more"></i>Product Stock</a></li>
+
+
                 </ul>
             </li>
 

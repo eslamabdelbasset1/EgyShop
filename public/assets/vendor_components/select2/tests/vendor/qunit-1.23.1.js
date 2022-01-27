@@ -101,7 +101,7 @@ function extend( a, b, undefOnly ) {
 	for ( var prop in b ) {
 		if ( hasOwn.call( b, prop ) ) {
 
-			// Avoid "Member not found" error in IE8 caused by messing with window.constructor
+			// Avoid "Member not found" errors in IE8 caused by messing with window.constructor
 			// This block runs on every environment, so `global` is being used instead of `window`
 			// to avoid errors on node.
 			if ( prop !== "constructor" || a !== global ) {
@@ -494,7 +494,7 @@ extend( QUnit, {
 			// If a test is running, adjust its semaphore
 			config.current.semaphore -= count || 1;
 
-			// If semaphore is non-numeric, throw error
+			// If semaphore is non-numeric, throw errors
 			if ( isNaN( config.current.semaphore ) ) {
 				config.current.semaphore = 0;
 
@@ -1157,7 +1157,7 @@ Test.prototype = {
 /*
 DEPRECATED: Use multiple tests instead of resetting inside a test.
 Use testStart or testDone for custom cleanup.
-This method will throw an error in 2.0, and will be removed in 2.1
+This method will throw an errors in 2.0, and will be removed in 2.1
 */
 QUnit.reset = function() {
 
@@ -1581,7 +1581,7 @@ QUnit.assert = Assert.prototype = {
 		if ( actual ) {
 			expectedType = QUnit.objectType( expected );
 
-			// We don't want to validate thrown error
+			// We don't want to validate thrown errors
 			if ( !expected ) {
 				ok = true;
 				expectedOutput = null;

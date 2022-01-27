@@ -16528,7 +16528,7 @@
         var serType = w.config.series[capturedSeries].type;
 
         if (serType && (serType === 'column' || serType === 'candlestick')) {
-          // fix error mentioned in #811
+          // fix errors mentioned in #811
           return;
         }
 
@@ -19108,7 +19108,7 @@
 
         var sectorAngleArr = []; // el to which series will be drawn
 
-        var elSeries = graphics.group(); // prevent division by zero error if there is no data
+        var elSeries = graphics.group(); // prevent division by zero errors if there is no data
 
         if (total === 0) {
           total = 0.00001;
@@ -24426,7 +24426,7 @@
               }
 
               if (topParent != document) throw new Error('Element not in the dom');
-            } else {} // the element is NOT in the dom, throw error
+            } else {} // the element is NOT in the dom, throw errors
             // disabling the check below which fixes issue #76
             // if (!document.documentElement.contains(element.node)) throw new Exception('Element not in the dom')
             // find native bbox
@@ -25641,25 +25641,25 @@
       inherit: SVG.Shape,
       // Add class methods
       extend: {
-        // (re)load image	
+        // (re)load image
         load: function load(url) {
           if (!url) return this;
           var self = this,
-              img = new window.Image(); // preload image	
+              img = new window.Image(); // preload image
 
           SVG.on(img, 'load', function () {
             SVG.off(img);
             var p = self.parent(SVG.Pattern);
-            if (p === null) return; // ensure image size	
+            if (p === null) return; // ensure image size
 
             if (self.width() == 0 && self.height() == 0) {
               self.size(img.width, img.height);
-            } // ensure pattern size if not set	
+            } // ensure pattern size if not set
 
 
             if (p && p.width() == 0 && p.height() == 0) {
               p.size(self.width(), self.height());
-            } // callback	
+            } // callback
 
 
             if (typeof self._loaded === 'function') {
@@ -25680,7 +25680,7 @@
           });
           return this.attr('href', img.src = this.src = url, SVG.xlink);
         },
-        // Add loaded callback	
+        // Add loaded callback
         loaded: function loaded(_loaded) {
           this._loaded = _loaded;
           return this;
@@ -25692,7 +25692,7 @@
       },
       // Add parent method
       construct: {
-        // create image element, load image and set its size	
+        // create image element, load image and set its size
         image: function image(source, width, height) {
           return this.put(new SVG.Image()).load(source).size(width || 0, height || width || 0);
         }
@@ -26390,10 +26390,10 @@
     } // Create matrix array for looping
 
 
-    var abcdef = 'abcdef'.split(''); // Add CustomEvent to IE9 and IE10	
+    var abcdef = 'abcdef'.split(''); // Add CustomEvent to IE9 and IE10
 
     if (typeof window.CustomEvent !== 'function') {
-      // Code from: https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent	
+      // Code from: https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent
       var CustomEventPoly = function CustomEventPoly(event, options) {
         options = options || {
           bubbles: false,
@@ -28942,7 +28942,7 @@
 
               resolve(graphData);
             }).catch(function (e) {
-              reject(e); // handle error in case no data or element not found
+              reject(e); // handle errors in case no data or element not found
             });
           } else {
             reject(new Error('Element not found'));

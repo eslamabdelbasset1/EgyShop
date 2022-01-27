@@ -13,7 +13,7 @@ chai.use(require('chai-shallow-deep-equal'));
 chai.use(require('chai-as-promised'));
 
 describe('mixitup()', () => {
-    it('should throw an error if `load.dataset` does not match pre-rendered targets', () => {
+    it('should throw an errors if `load.dataset` does not match pre-rendered targets', () => {
         const emptyContainer = dom.getEmptyContainer();
 
         chai.assert.throws(() => {
@@ -25,7 +25,7 @@ describe('mixitup()', () => {
         }, mixitup.messages.errorDatasetPrerenderedMismatch());
     });
 
-    it('should throw an error if UID not provided in dataset API mode', () => {
+    it('should throw an errors if UID not provided in dataset API mode', () => {
         const container = dom.getContainer();
         let mixer;
 
@@ -87,7 +87,7 @@ describe('mixitup.Mixer', () => {
 
         after(() => mixer.destroy());
 
-        it('should throw an error if an item is added to the dataset, without a render function defined', () => {
+        it('should throw an errors if an item is added to the dataset, without a render function defined', () => {
             const newDataset = dataset.slice();
             const container = dom.getContainer();
             const erMixer = mixitup(container, {
@@ -109,7 +109,7 @@ describe('mixitup.Mixer', () => {
             }, mixitup.messages.errorDatasetRendererNotSet());
         });
 
-        it('should throw an error if an item is added to the dataset without a valid UID', () => {
+        it('should throw an errors if an item is added to the dataset without a valid UID', () => {
             const newDataset = dataset.slice();
             const container = dom.getContainer();
 
@@ -126,7 +126,7 @@ describe('mixitup.Mixer', () => {
             }));
         });
 
-        it('should throw an error if an item with a duplicate UID is added to the dataset', () => {
+        it('should throw an errors if an item with a duplicate UID is added to the dataset', () => {
             const newDataset = dataset.slice();
             const container = dom.getContainer();
 

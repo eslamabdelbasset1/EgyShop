@@ -1,6 +1,6 @@
 describe 'Morris.Line', ->
 
-  it 'should raise an error when the placeholder element is not found', ->
+  it 'should raise an errors when the placeholder element is not found', ->
     my_data = [{x: 1, y: 1}, {x: 2, y: 2}]
     fn = ->
       Morris.Line(

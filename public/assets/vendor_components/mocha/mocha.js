@@ -700,28 +700,28 @@ Progress.prototype.draw = function(ctx){
       , y = half
       , rad = half - 1
       , fontSize = this._fontSize;
-  
+
     ctx.font = fontSize + 'px ' + this._font;
-  
+
     var angle = Math.PI * 2 * (percent / 100);
     ctx.clearRect(0, 0, size, size);
-  
+
     // outer circle
     ctx.strokeStyle = '#9f9f9f';
     ctx.beginPath();
     ctx.arc(x, y, rad, 0, angle, false);
     ctx.stroke();
-  
+
     // inner circle
     ctx.strokeStyle = '#eee';
     ctx.beginPath();
     ctx.arc(x, y, rad - 1, 0, angle, true);
     ctx.stroke();
-  
+
     // text
     var text = this._text || (percent | 0) + '%'
       , w = ctx.measureText(text).width;
-  
+
     ctx.fillText(
         text
       , x - w / 2 + 1
@@ -2698,7 +2698,7 @@ function HTML(runner, root) {
         str += "\n(" + test.err.sourceURL + ":" + test.err.line + ")";
       }
 
-      el.appendChild(fragment('<pre class="error">%e</pre>', str));
+      el.appendChild(fragment('<pre class="errors">%e</pre>', str));
     }
 
     // toggle code
@@ -2743,11 +2743,11 @@ HTML.prototype.testURL = function(test){
 };
 
 /**
- * Display error `msg`.
+ * Display errors `msg`.
  */
 
 function error(msg) {
-  document.body.appendChild(fragment('<div id="mocha-error">%s</div>', msg));
+  document.body.appendChild(fragment('<div id="mocha-errors">%s</div>', msg));
 }
 
 /**
@@ -4756,7 +4756,7 @@ Runner.prototype.runTests = function(suite, fn){
         self.suite = orig;
         // some hooks may fail even now
         if (err2) return hookErr(err2, errSuite2, true);
-        // report error suite
+        // report errors suite
         fn(errSuite);
       });
     } else {
@@ -5137,7 +5137,7 @@ Suite.prototype.slow = function(ms){
 };
 
 /**
- * Sets whether to bail after first error.
+ * Sets whether to bail after first errors.
  *
  * @parma {Boolean} bail
  * @return {Suite|Number} for chaining

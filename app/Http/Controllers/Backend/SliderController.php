@@ -97,7 +97,7 @@ class SliderController extends Controller
 
         $notification = array(
             'message' => 'Slider Deleted Successfully',
-            'alert-type' => 'error'
+            'alert-type' => 'errors'
         );
         return redirect()->back()->with($notification);
     } // end method

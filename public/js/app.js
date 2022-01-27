@@ -1183,7 +1183,7 @@
           if (!desc.configurable) {
               // If descriptor from original target is not configurable,
               // We must copy the wrapped descriptor over to the shadow target.
-              // Otherwise, proxy will throw an invariant error.
+              // Otherwise, proxy will throw an invariant errors.
               // This is our last chance to lock the value.
               // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPropertyDescriptor#Invariants
               ObjectDefineProperty(shadowTarget, key, desc);
@@ -1281,7 +1281,7 @@
           if (!desc.configurable) {
               // If descriptor from original target is not configurable,
               // We must copy the wrapped descriptor over to the shadow target.
-              // Otherwise, proxy will throw an invariant error.
+              // Otherwise, proxy will throw an invariant errors.
               // This is our last chance to lock the value.
               // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPropertyDescriptor#Invariants
               ObjectDefineProperty(shadowTarget, key, desc);
@@ -1907,7 +1907,7 @@
     initializeComponent: function initializeComponent(el) {
       if (!el.__x) {
         // Wrap in a try/catch so that we don't prevent other components
-        // from initializing when one component contains an error.
+        // from initializing when one component contains an errors.
         try {
           el.__x = new Component(el);
         } catch (error) {
@@ -2051,7 +2051,7 @@ module.exports = function xhrAdapter(config) {
     // Handle low level network errors
     request.onerror = function handleError() {
       // Real errors are hidden from us by the browser
-      // onerror should only fire if it's a network error
+      // onerror should only fire if it's a network errors
       reject(createError('Network Error', config, null, request));
 
       // Clean up request
@@ -2545,14 +2545,14 @@ module.exports = function buildFullPath(baseURL, requestedURL) {
 var enhanceError = __webpack_require__(/*! ./enhanceError */ "./node_modules/axios/lib/core/enhanceError.js");
 
 /**
- * Create an Error with the specified message, config, error code, request and response.
+ * Create an Error with the specified message, config, errors code, request and response.
  *
- * @param {string} message The error message.
+ * @param {string} message The errors message.
  * @param {Object} config The config.
- * @param {string} [code] The error code (for example, 'ECONNABORTED').
+ * @param {string} [code] The errors code (for example, 'ECONNABORTED').
  * @param {Object} [request] The request.
  * @param {Object} [response] The response.
- * @returns {Error} The created error.
+ * @returns {Error} The created errors.
  */
 module.exports = function createError(message, config, code, request, response) {
   var error = new Error(message);
@@ -2662,14 +2662,14 @@ module.exports = function dispatchRequest(config) {
 
 
 /**
- * Update an Error with the specified config, error code, and response.
+ * Update an Error with the specified config, errors code, and response.
  *
- * @param {Error} error The error to update.
+ * @param {Error} error The errors to update.
  * @param {Object} config The config.
- * @param {string} [code] The error code (for example, 'ECONNABORTED').
+ * @param {string} [code] The errors code (for example, 'ECONNABORTED').
  * @param {Object} [request] The request.
  * @param {Object} [response] The response.
- * @returns {Error} The error.
+ * @returns {Error} The errors.
  */
 module.exports = function enhanceError(error, config, code, request, response) {
   error.config = config;
@@ -3207,10 +3207,10 @@ module.exports = function isAbsoluteURL(url) {
 
 
 /**
- * Determines whether the payload is an error thrown by Axios
+ * Determines whether the payload is an errors thrown by Axios
  *
  * @param {*} payload The value to test
- * @returns {boolean} True if the payload is an error thrown by Axios, otherwise false
+ * @returns {boolean} True if the payload is an errors thrown by Axios, otherwise false
  */
 module.exports = function isAxiosError(payload) {
   return (typeof payload === 'object') && (payload.isAxiosError === true);
@@ -14872,7 +14872,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * numbers, `Object` objects, regexes, sets, strings, symbols, and typed
      * arrays. The own enumerable properties of `arguments` objects are cloned
      * as plain objects. An empty object is returned for uncloneable values such
-     * as error objects, functions, DOM nodes, and WeakMaps.
+     * as errors objects, functions, DOM nodes, and WeakMaps.
      *
      * @static
      * @memberOf _
@@ -15368,7 +15368,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * equivalent.
      *
      * **Note:** This method supports comparing arrays, array buffers, booleans,
-     * date objects, error objects, maps, numbers, `Object` objects, regexes,
+     * date objects, errors objects, maps, numbers, `Object` objects, regexes,
      * sets, strings, symbols, and typed arrays. `Object` objects are compared
      * by their own, not inherited, enumerable properties. Functions and DOM
      * nodes are compared by strict equality, i.e. `===`.
@@ -15442,7 +15442,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * @since 3.0.0
      * @category Lang
      * @param {*} value The value to check.
-     * @returns {boolean} Returns `true` if `value` is an error object, else `false`.
+     * @returns {boolean} Returns `true` if `value` is an errors object, else `false`.
      * @example
      *
      * _.isError(new Error);
@@ -15766,7 +15766,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * of the core-js package because core-js circumvents this kind of detection.
      * Despite multiple requests, the core-js maintainer has made it clear: any
      * attempt to fix the detection will be obstructed. As a result, we're left
-     * with little choice but to throw an error. Unfortunately, this also affects
+     * with little choice but to throw an errors. Unfortunately, this also affects
      * packages, like [babel-polyfill](https://www.npmjs.com/package/babel-polyfill),
      * which rely on core-js.
      *
@@ -18623,7 +18623,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * // => 'hello mustache!'
      *
      * // Use the `source` property to inline compiled templates for meaningful
-     * // line numbers in error messages and stack traces.
+     * // line numbers in errors messages and stack traces.
      * fs.writeFileSync(path.join(process.cwd(), 'jst.js'), '\
      *   var JST = {\
      *     "main": ' + _.template(mainText).source + '\
@@ -19089,7 +19089,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
     /*------------------------------------------------------------------------*/
 
     /**
-     * Attempts to invoke `func`, returning either the result or the caught error
+     * Attempts to invoke `func`, returning either the result or the caught errors
      * object. Any additional arguments are provided to `func` when it's invoked.
      *
      * @static
@@ -19098,7 +19098,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * @category Util
      * @param {Function} func The function to attempt.
      * @param {...*} [args] The arguments to invoke `func` with.
-     * @returns {*} Returns the `func` result or error object.
+     * @returns {*} Returns the `func` result or errors object.
      * @example
      *
      * // Avoid throwing errors for invalid selectors.
@@ -21066,7 +21066,7 @@ function runTimeout(fun) {
             // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
             return cachedSetTimeout.call(null, fun, 0);
         } catch(e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global errors
             return cachedSetTimeout.call(this, fun, 0);
         }
     }
@@ -21091,7 +21091,7 @@ function runClearTimeout(marker) {
             // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
             return cachedClearTimeout.call(null, marker);
         } catch (e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global errors.
             // Some versions of I.E. have different rules for clearTimeout vs setTimeout
             return cachedClearTimeout.call(this, marker);
         }
@@ -21203,7 +21203,7 @@ process.umask = function() { return 0; };
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
-/******/ 	
+/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
@@ -21216,20 +21216,20 @@ process.umask = function() { return 0; };
 /******/ 			loaded: false,
 /******/ 			exports: {}
 /******/ 		};
-/******/ 	
+/******/
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/ 	
+/******/
 /******/ 		// Flag the module as loaded
 /******/ 		module.loaded = true;
-/******/ 	
+/******/
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/ 	
+/******/
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = __webpack_modules__;
-/******/ 	
+/******/
 /******/ 	// the startup function
 /******/ 	// It's empty as some runtime module handles the default behavior
 /******/ 	__webpack_require__.x = x => {};
@@ -21245,12 +21245,12 @@ process.umask = function() { return 0; };
 /******/ 			}
 /******/ 		})();
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
@@ -21261,7 +21261,7 @@ process.umask = function() { return 0; };
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/node module decorator */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nmd = (module) => {
@@ -21270,34 +21270,34 @@ process.umask = function() { return 0; };
 /******/ 			return module;
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/jsonp chunk loading */
 /******/ 	(() => {
 /******/ 		// no baseURI
-/******/ 		
+/******/
 /******/ 		// object to store loaded and loading chunks
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// Promise = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/app": 0
 /******/ 		};
-/******/ 		
+/******/
 /******/ 		var deferredModules = [
 /******/ 			["./resources/js/app.js"],
 /******/ 			["./resources/css/app.css"]
 /******/ 		];
 /******/ 		// no chunk on demand loading
-/******/ 		
+/******/
 /******/ 		// no prefetching
-/******/ 		
+/******/
 /******/ 		// no preloaded
-/******/ 		
+/******/
 /******/ 		// no HMR
-/******/ 		
+/******/
 /******/ 		// no HMR manifest
-/******/ 		
+/******/
 /******/ 		var checkDeferredModules = x => {};
-/******/ 		
+/******/
 /******/ 		// install a JSONP callback for chunk loading
 /******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
 /******/ 			var [chunkIds, moreModules, runtime, executeModules] = data;
@@ -21321,18 +21321,18 @@ process.umask = function() { return 0; };
 /******/ 			while(resolves.length) {
 /******/ 				resolves.shift()();
 /******/ 			}
-/******/ 		
+/******/
 /******/ 			// add entry modules from loaded chunk to deferred list
 /******/ 			if(executeModules) deferredModules.push.apply(deferredModules, executeModules);
-/******/ 		
+/******/
 /******/ 			// run deferred modules when all chunks ready
 /******/ 			return checkDeferredModules();
 /******/ 		}
-/******/ 		
+/******/
 /******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
-/******/ 		
+/******/
 /******/ 		function checkDeferredModulesImpl() {
 /******/ 			var result;
 /******/ 			for(var i = 0; i < deferredModules.length; i++) {
@@ -21360,7 +21360,7 @@ process.umask = function() { return 0; };
 /******/ 			return (checkDeferredModules = checkDeferredModulesImpl)();
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /************************************************************************/
 /******/ 	// run startup
 /******/ 	__webpack_require__.x();

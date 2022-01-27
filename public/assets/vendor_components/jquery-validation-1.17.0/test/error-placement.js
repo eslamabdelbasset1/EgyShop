@@ -28,18 +28,18 @@ QUnit.test( "elements() order", function( assert ) {
 			return $( this ).attr( "id" );
 		} ).get(),
 		[
-			"order1-error",
-			"order2-error",
-			"order3-error",
-			"order4-error",
-			"order5-error",
-			"order6-error"
+			"order1-errors",
+			"order2-errors",
+			"order3-errors",
+			"order4-errors",
+			"order5-errors",
+			"order6-errors"
 		],
-		"labels in error container must be in document order"
+		"labels in errors container must be in document order"
 	);
 } );
 
-QUnit.test( "error containers, simple", function( assert ) {
+QUnit.test( "errors containers, simple", function( assert ) {
 	assert.expect( 14 );
 	var container = $( "#simplecontainer" ),
 		v = $( "#form" ).validate( {
@@ -52,7 +52,7 @@ QUnit.test( "error containers, simple", function( assert ) {
 
 	v.prepareForm();
 	assert.ok( v.valid(), "form is valid" );
-	assert.equal( container.find( ".error:not(input)" ).length, 0, "There should be no error labels" );
+	assert.equal( container.find( ".errors:not(input)" ).length, 0, "There should be no errors labels" );
 	assert.equal( container.find( "h3" ).html(), "" );
 
 	v.prepareForm();
@@ -73,9 +73,9 @@ QUnit.test( "error containers, simple", function( assert ) {
 
 	assert.ok( !v.valid(), "form is not valid after adding errors manually" );
 	v.showErrors();
-	assert.equal( container.find( ".error:not(input)" ).length, 2, "There should be two error labels" );
+	assert.equal( container.find( ".errors:not(input)" ).length, 2, "There should be two errors labels" );
 	assert.ok( container.is( ":visible" ), "Check that the container is visible" );
-	container.find( ".error:not(input)" ).each( function() {
+	container.find( ".errors:not(input)" ).each( function() {
 		assert.ok( $( this ).is( ":visible" ), "Check that each label is visible" );
 	} );
 	assert.equal( container.find( "h3" ).html(), "There are 2 errors in your form." );
@@ -83,14 +83,14 @@ QUnit.test( "error containers, simple", function( assert ) {
 	v.prepareForm();
 	assert.ok( v.valid(), "form is valid after a reset" );
 	v.showErrors();
-	assert.equal( container.find( ".error:not(input)" ).length, 2, "There should still be two error labels" );
+	assert.equal( container.find( ".errors:not(input)" ).length, 2, "There should still be two errors labels" );
 	assert.ok( container.is( ":hidden" ), "Check that the container is hidden" );
-	container.find( ".error:not(input)" ).each( function() {
+	container.find( ".errors:not(input)" ).each( function() {
 		assert.ok( $( this ).is( ":hidden" ), "Check that each label is hidden" );
 	} );
 } );
 
-QUnit.test( "error containers, with labelcontainer I", function( assert ) {
+QUnit.test( "errors containers, with labelcontainer I", function( assert ) {
 	assert.expect( 16 );
 	var container = $( "#container" ),
 		labelcontainer = $( "#labelcontainer" ),
@@ -101,8 +101,8 @@ QUnit.test( "error containers, with labelcontainer I", function( assert ) {
 		} );
 
 	assert.ok( v.valid(), "form is valid" );
-	assert.equal( container.find( ".error:not(input)" ).length, 0, "There should be no error labels in the container" );
-	assert.equal( labelcontainer.find( ".error:not(input)" ).length, 0, "There should be no error labels in the labelcontainer" );
+	assert.equal( container.find( ".errors:not(input)" ).length, 0, "There should be no errors labels in the container" );
+	assert.equal( labelcontainer.find( ".errors:not(input)" ).length, 0, "There should be no errors labels in the labelcontainer" );
 	assert.equal( labelcontainer.find( "li" ).length, 0, "There should be no lis labels in the labelcontainer" );
 
 	v.errorList = [
@@ -123,12 +123,12 @@ QUnit.test( "error containers, with labelcontainer I", function( assert ) {
 
 	assert.ok( !v.valid(), "form is not valid after adding errors manually" );
 	v.showErrors();
-	assert.equal( container.find( ".error:not(input)" ).length, 0, "There should be no error label in the container" );
-	assert.equal( labelcontainer.find( ".error:not(input)" ).length, 2, "There should be two error labels in the labelcontainer" );
-	assert.equal( labelcontainer.find( "li" ).length, 2, "There should be two error lis in the labelcontainer" );
+	assert.equal( container.find( ".errors:not(input)" ).length, 0, "There should be no errors label in the container" );
+	assert.equal( labelcontainer.find( ".errors:not(input)" ).length, 2, "There should be two errors labels in the labelcontainer" );
+	assert.equal( labelcontainer.find( "li" ).length, 2, "There should be two errors lis in the labelcontainer" );
 	assert.ok( container.is( ":visible" ), "Check that the container is visible" );
 	assert.ok( labelcontainer.is( ":visible" ), "Check that the labelcontainer is visible" );
-	labelcontainer.find( ".error:not(input)" ).each( function() {
+	labelcontainer.find( ".errors:not(input)" ).each( function() {
 		assert.ok( $( this ).is( ":visible" ), "Check that each label is visible1" );
 		assert.equal( $( this ).parent()[ 0 ].tagName.toLowerCase(), "li", "Check that each label is wrapped in an li" );
 		assert.ok( $( this ).parent( "li" ).is( ":visible" ), "Check that each parent li is visible" );
@@ -157,7 +157,7 @@ QUnit.test( "errorcontainer, show/hide only on submit", function( assert ) {
 	// Validate whole form, both showErrors and invalidHandler must be called once
 	// preferably invalidHandler first, showErrors second
 	assert.ok( !v.form(), "invalid form" );
-	assert.equal( labelContainer.find( ".error:not(input)" ).length, 2 );
+	assert.equal( labelContainer.find( ".errors:not(input)" ).length, 2 );
 	assert.equal( container.html(), "There are 2 errors in your form." );
 	assert.ok( labelContainer.is( ":visible" ), "must be visible" );
 	assert.ok( container.is( ":visible" ), "must be visible" );
@@ -169,14 +169,14 @@ QUnit.test( "errorcontainer, show/hide only on submit", function( assert ) {
 				target: $( "#firstname" )[ 0 ]
 			} )
 		] );
-	assert.equal( labelContainer.find( ".error:visible" ).length, 1 );
+	assert.equal( labelContainer.find( ".errors:visible" ).length, 1 );
 	assert.equal( container.html(), "There are 1 errors in your form." );
 
 	$( "#lastname" ).val( "abc" );
 	assert.ok( v.form(), "Form now valid, trigger showErrors but not invalid-form" );
 } );
 
-QUnit.test( "test label used as error container", function( assert ) {
+QUnit.test( "test label used as errors container", function( assert ) {
 	assert.expect( 8 );
 	var form = $( "#testForm16" ),
 		field = $( "#testForm16text" );
@@ -184,7 +184,7 @@ QUnit.test( "test label used as error container", function( assert ) {
 	form.validate( {
 		errorPlacement: function( error, element ) {
 
-			// Append error within linked label
+			// Append errors within linked label
 			$( "label[for='" + element.attr( "id" ) + "']" ).append( error );
 		},
 		errorElement: "span"
@@ -202,7 +202,7 @@ QUnit.test( "test label used as error container", function( assert ) {
 	assert.noErrorFor( field );
 } );
 
-QUnit.test( "test error placed adjacent to descriptive label", function( assert ) {
+QUnit.test( "test errors placed adjacent to descriptive label", function( assert ) {
 	assert.expect( 8 );
 	var form = $( "#testForm16" ),
 		field = $( "#testForm16text" );
@@ -223,7 +223,7 @@ QUnit.test( "test error placed adjacent to descriptive label", function( assert 
 	assert.noErrorFor( field );
 } );
 
-QUnit.test( "test descriptive label used alongside error label", function( assert ) {
+QUnit.test( "test descriptive label used alongside errors label", function( assert ) {
 	assert.expect( 8 );
 	var form = $( "#testForm16" ),
 		field = $( "#testForm16text" );
@@ -257,13 +257,13 @@ QUnit.test( "test custom errorElement", function( assert ) {
 	} );
 
 	assert.ok( !field.valid() );
-	assert.hasError( field, "missing", "Field should have error 'missing'" );
+	assert.hasError( field, "missing", "Field should have errors 'missing'" );
 	field.val( "foo" );
 	assert.ok( field.valid() );
-	assert.noErrorFor( field, "Field should not have a visible error" );
+	assert.noErrorFor( field, "Field should not have a visible errors" );
 } );
 
-QUnit.test( "test existing label used as error element", function( assert ) {
+QUnit.test( "test existing label used as errors element", function( assert ) {
 	assert.expect( 4 );
 	var form = $( "#testForm14" ),
 		field = $( "#testForm14text" );
@@ -278,7 +278,7 @@ QUnit.test( "test existing label used as error element", function( assert ) {
 	assert.noErrorFor( field );
 } );
 
-QUnit.test( "test existing non-label used as error element", function( assert ) {
+QUnit.test( "test existing non-label used as errors element", function( assert ) {
 	assert.expect( 4 );
 	var form = $( "#testForm15" ),
 		field = $( "#testForm15text" );
@@ -309,7 +309,7 @@ QUnit.test( "test aria-describedby with input names contains CSS-selector meta-c
 
 	// Validate the element
 	assert.ok( !field.valid() );
-	assert.equal( field.attr( "aria-describedby" ), "testForm21!#$%&'()*+,./:;<=>?@[\\]^`{|}~-error" );
+	assert.equal( field.attr( "aria-describedby" ), "testForm21!#$%&'()*+,./:;<=>?@[\\]^`{|}~-errors" );
 
 	// Re-run validation
 	field.val( "some" );
@@ -318,17 +318,17 @@ QUnit.test( "test aria-describedby with input names contains CSS-selector meta-c
 	field.val( "something" );
 	field.trigger( "keyup" );
 
-	assert.equal( field.attr( "aria-describedby" ), "testForm21!#$%&'()*+,./:;<=>?@[\\]^`{|}~-error", "`aria-describedby` should remain the same as before." );
+	assert.equal( field.attr( "aria-describedby" ), "testForm21!#$%&'()*+,./:;<=>?@[\\]^`{|}~-errors", "`aria-describedby` should remain the same as before." );
 
 	// Re-run validation
 	field.val( "something something" );
 	field.trigger( "keyup" );
 
 	assert.ok( field.valid() );
-	assert.equal( field.attr( "aria-describedby" ), "testForm21!#$%&'()*+,./:;<=>?@[\\]^`{|}~-error", "`aria-describedby` should remain the same as before." );
+	assert.equal( field.attr( "aria-describedby" ), "testForm21!#$%&'()*+,./:;<=>?@[\\]^`{|}~-errors", "`aria-describedby` should remain the same as before." );
 } );
 
-QUnit.test( "test existing non-error aria-describedby", function( assert ) {
+QUnit.test( "test existing non-errors aria-describedby", function( assert ) {
 	assert.expect( 8 );
 	var form = $( "#testForm17" ),
 		field = $( "#testForm17text" );
@@ -337,7 +337,7 @@ QUnit.test( "test existing non-error aria-describedby", function( assert ) {
 	form.validate( { errorElement: "span" } );
 
 	assert.ok( !field.valid() );
-	assert.equal( field.attr( "aria-describedby" ), "testForm17text-description testForm17text-error" );
+	assert.equal( field.attr( "aria-describedby" ), "testForm17text-description testForm17text-errors" );
 	assert.hasError( field, "required" );
 
 	field.val( "foo" );
@@ -345,20 +345,20 @@ QUnit.test( "test existing non-error aria-describedby", function( assert ) {
 	assert.noErrorFor( field );
 
 	assert.strictEqual( $( "#testForm17text-description" ).text(), "This is where you enter your data" );
-	assert.strictEqual( $( "#testForm17text-error" ).text(), "", "Error label is empty for valid field" );
+	assert.strictEqual( $( "#testForm17text-errors" ).text(), "", "Error label is empty for valid field" );
 } );
 
-QUnit.test( "test pre-assigned non-error aria-describedby", function( assert ) {
+QUnit.test( "test pre-assigned non-errors aria-describedby", function( assert ) {
 	assert.expect( 7 );
 	var form = $( "#testForm17" ),
 		field = $( "#testForm17text" );
 
-	// Pre-assign error identifier
-	field.attr( "aria-describedby", "testForm17text-description testForm17text-error" );
+	// Pre-assign errors identifier
+	field.attr( "aria-describedby", "testForm17text-description testForm17text-errors" );
 	form.validate( { errorElement: "span" } );
 
 	assert.ok( !field.valid() );
-	assert.equal( field.attr( "aria-describedby" ), "testForm17text-description testForm17text-error" );
+	assert.equal( field.attr( "aria-describedby" ), "testForm17text-description testForm17text-errors" );
 	assert.hasError( field, "required" );
 
 	field.val( "foo" );
@@ -366,7 +366,7 @@ QUnit.test( "test pre-assigned non-error aria-describedby", function( assert ) {
 	assert.noErrorFor( field );
 
 	assert.strictEqual( $( "#testForm17text-description" ).text(), "This is where you enter your data" );
-	assert.strictEqual( $( "#testForm17text-error" ).text(), "", "Error label is empty for valid field" );
+	assert.strictEqual( $( "#testForm17text-errors" ).text(), "", "Error label is empty for valid field" );
 } );
 
 QUnit.test( "test id/name containing brackets", function( assert ) {
@@ -408,7 +408,7 @@ QUnit.test( "test id/name containing single quotes", function( assert ) {
 	assert.equal( v.invalidElements()[ 2 ], radioElement[ 0 ], "The text element should be invalid" );
 } );
 
-QUnit.test( "#1632: Error hidden, but input error class not removed", function( assert ) {
+QUnit.test( "#1632: Error hidden, but input errors class not removed", function( assert ) {
 	var v = $( "#testForm23" ).validate( {
 			rules: {
 				box1: {
@@ -437,6 +437,6 @@ QUnit.test( "#1632: Error hidden, but input error class not removed", function( 
 
 	box1.val( "" );
 	v.form();
-	assert.equal( v.numberOfInvalids(), 0, "There is no error" );
-	assert.equal( box2.hasClass( "error" ), false, "Box2 should not have an error class" );
+	assert.equal( v.numberOfInvalids(), 0, "There is no errors" );
+	assert.equal( box2.hasClass( "error" ), false, "Box2 should not have an errors class" );
 } );

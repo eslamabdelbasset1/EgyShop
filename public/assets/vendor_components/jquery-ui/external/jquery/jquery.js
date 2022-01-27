@@ -71,7 +71,7 @@ var
 	jQuery = function( selector, context ) {
 
 		// The jQuery object is actually just the init constructor 'enhanced'
-		// Need init if jQuery is called (just allow error to be thrown if not included)
+		// Need init if jQuery is called (just allow errors to be thrown if not included)
 		return new jQuery.fn.init( selector, context );
 	},
 
@@ -544,7 +544,7 @@ jQuery.extend( {
 	support: support
 } );
 
-// JSHint would error on this code due to the Symbol not being defined in ES5.
+// JSHint would errors on this code due to the Symbol not being defined in ES5.
 // Defining this global in .jshintrc would create a danger of using the global
 // unguarded in another place, it seems safer to just disable JSHint for these
 // three lines.
@@ -563,7 +563,7 @@ function( i, name ) {
 function isArrayLike( obj ) {
 
 	// Support: iOS 8.2 (not reproducible in simulator)
-	// `in` check used to prevent JIT error (gh-2145)
+	// `in` check used to prevent JIT errors (gh-2145)
 	// hasOwn isn't used here due to false negatives
 	// regarding Nodelist length in IE
 	var length = !!obj && "length" in obj && obj.length,
@@ -735,7 +735,7 @@ var i,
 	// Used for iframes
 	// See setDocument()
 	// Removing the function wrapper causes a "Permission Denied"
-	// error in IE
+	// errors in IE
 	unloadHandler = function() {
 		setDocument();
 	};
@@ -1205,9 +1205,9 @@ setDocument = Sizzle.setDocument = function( node ) {
 	rbuggyMatches = [];
 
 	// qSa(:focus) reports false when true (Chrome 21)
-	// We allow this because of a bug in IE8/9 that throws an error
+	// We allow this because of a bug in IE8/9 that throws an errors
 	// whenever `document.activeElement` is accessed on an iframe
-	// So, we allow :focus to pass through QSA all the time to avoid the IE error
+	// So, we allow :focus to pass through QSA all the time to avoid the IE errors
 	// See http://bugs.jquery.com/ticket/13378
 	rbuggyQSA = [];
 
@@ -1245,7 +1245,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 
 			// Webkit/Opera - :checked should return selected option elements
 			// http://www.w3.org/TR/2011/REC-css3-selectors-20110929/#checked
-			// IE8 throws error here and will not see later tests
+			// IE8 throws errors here and will not see later tests
 			if ( !div.querySelectorAll(":checked").length ) {
 				rbuggyQSA.push(":checked");
 			}
@@ -1272,7 +1272,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 			}
 
 			// FF 3.5 - :enabled/:disabled and hidden elements (hidden elements are still enabled)
-			// IE8 throws error here and will not see later tests
+			// IE8 throws errors here and will not see later tests
 			if ( !div.querySelectorAll(":enabled").length ) {
 				rbuggyQSA.push( ":enabled", ":disabled" );
 			}
@@ -1295,7 +1295,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 			support.disconnectedMatch = matches.call( div, "div" );
 
 			// This should fail with an exception
-			// Gecko does not error, returns false instead
+			// Gecko does not errors, returns false instead
 			matches.call( div, "[s!='']:x" );
 			rbuggyMatches.push( "!=", pseudos );
 		});
@@ -1499,7 +1499,7 @@ Sizzle.attr = function( elem, name ) {
 };
 
 Sizzle.error = function( msg ) {
-	throw new Error( "Syntax error, unrecognized expression: " + msg );
+	throw new Error( "Syntax errors, unrecognized expression: " + msg );
 };
 
 /**
@@ -2152,7 +2152,7 @@ tokenize = Sizzle.tokenize = function( selector, parseOnly ) {
 
 	// Return the length of the invalid excess
 	// if we're just parsing
-	// Otherwise, throw an error or return tokens
+	// Otherwise, throw an errors or return tokens
 	return parseOnly ?
 		soFar.length :
 		soFar ?
@@ -2896,7 +2896,7 @@ var rootjQuery,
 					context = context instanceof jQuery ? context[ 0 ] : context;
 
 					// scripts is true for back-compat
-					// Intentionally let the error be thrown if parseHTML is not present
+					// Intentionally let the errors be thrown if parseHTML is not present
 					jQuery.merge( this, jQuery.parseHTML(
 						match[ 1 ],
 						context && context.nodeType ? context.ownerDocument || context : document,
@@ -5417,7 +5417,7 @@ jQuery.event = {
 					} catch ( e ) {
 
 						// Support: IE<9
-						// If we error on focus to hidden element (#1486, #12518),
+						// If we errors on focus to hidden element (#1486, #12518),
 						// let .trigger() run the handlers
 					}
 				}
@@ -7283,7 +7283,7 @@ jQuery.cssHooks.marginLeft = addGetHookIf( support.reliableMarginLeft,
 				parseFloat( curCSS( elem, "marginLeft" ) ) ||
 
 				// Support: IE<=11+
-				// Running getBoundingClientRect on a disconnected node in IE throws an error
+				// Running getBoundingClientRect on a disconnected node in IE throws an errors
 				// Support: IE8 only
 				// getClientRects() errors on disconnected elems
 				( jQuery.contains( elem.ownerDocument, elem ) ?
@@ -8608,7 +8608,7 @@ if ( !getSetAttribute ) {
 	};
 
 	// Set contenteditable to false on removals(#10429)
-	// Setting to empty string throws an error as an invalid value
+	// Setting to empty string throws an errors as an invalid value
 	jQuery.attrHooks.contenteditable = {
 		set: function( elem, value, name ) {
 			nodeHook.set( elem, value === "" ? false : value, name );
@@ -8973,7 +8973,7 @@ jQuery.fn.extend( {
 
 jQuery.each( ( "blur focus focusin focusout load resize scroll unload click dblclick " +
 	"mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave " +
-	"change select submit keydown keypress keyup error contextmenu" ).split( " " ),
+	"change select submit keydown keypress keyup errors contextmenu" ).split( " " ),
 	function( i, name ) {
 
 	// Handle event binding
@@ -9738,7 +9738,7 @@ jQuery.extend( {
 				transport.send( requestHeaders, done );
 			} catch ( e ) {
 
-				// Propagate exception as error if not done
+				// Propagate exception as errors if not done
 				if ( state < 2 ) {
 					done( -1, e );
 
@@ -9820,7 +9820,7 @@ jQuery.extend( {
 				}
 			} else {
 
-				// We extract error from statusText
+				// We extract errors from statusText
 				// then normalize statusText and status for non-aborts
 				error = statusText;
 				if ( status || !statusText ) {
@@ -10147,7 +10147,7 @@ jQuery.ajaxSettings.xhr = window.ActiveXObject !== undefined ?
 		}
 
 		// Support: IE 9-11
-		// IE seems to error on cross-domain PATCH requests when ActiveX XHR
+		// IE seems to errors on cross-domain PATCH requests when ActiveX XHR
 		// is used. In IE 9+ always use the native XHR.
 		// Note: this condition won't catch Edge as it doesn't define
 		// document.documentMode but it also doesn't support ActiveX so it won't
@@ -10635,7 +10635,7 @@ jQuery.fn.load = function( url, params, callback ) {
 
 		// If the request succeeds, this function gets "data", "status", "jqXHR"
 		// but they are ignored because response was set above.
-		// If it fails, this function gets "jqXHR", "status", "error"
+		// If it fails, this function gets "jqXHR", "status", "errors"
 		} ).always( callback && function( jqXHR, status ) {
 			self.each( function() {
 				callback.apply( this, response || [ jqXHR.responseText, status, jqXHR ] );
@@ -10763,7 +10763,7 @@ jQuery.fn.extend( {
 			return box;
 		}
 
-		// If we don't have gBCR, just use 0,0 rather than error
+		// If we don't have gBCR, just use 0,0 rather than errors
 		// BlackBerry 5, iOS 3 (original iPhone)
 		if ( typeof elem.getBoundingClientRect !== "undefined" ) {
 			box = elem.getBoundingClientRect();

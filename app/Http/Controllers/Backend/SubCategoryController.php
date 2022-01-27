@@ -170,7 +170,7 @@ class SubCategoryController extends Controller
 
         $notification = array(
             'message' => 'Sub-SubCategory Deleted Successfully',
-            'alert-type' => 'error'
+            'alert-type' => 'errors'
         );
 
 

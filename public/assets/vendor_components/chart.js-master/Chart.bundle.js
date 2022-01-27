@@ -961,7 +961,7 @@ function hsl2hsv(hsl) {
 
   if(l === 0) {
       // no need to do calc on black
-      // also avoids divide by 0 error
+      // also avoids divide by 0 errors
       return [0, 0, 0];
   }
 
@@ -1442,11 +1442,11 @@ for (var func in conversions) {
   // export rgb2hsl and ["rgb"]["hsl"]
   convert[from] = convert[from] || {};
 
-  convert[from][to] = convert[func] = (function(func) { 
+  convert[from][to] = convert[func] = (function(func) {
     return function(arg) {
       if (typeof arg == "number")
         arg = Array.prototype.slice.call(arguments);
-      
+
       var val = conversions[func](arg);
       if (typeof val == "string" || val === undefined)
         return val; // keyword
@@ -1474,12 +1474,12 @@ Converter.prototype.routeSpace = function(space, args) {
    }
    // color.rgb(10, 10, 10)
    if (typeof values == "number") {
-      values = Array.prototype.slice.call(args);        
+      values = Array.prototype.slice.call(args);
    }
 
    return this.setValues(space, values);
 };
-  
+
 /* Set the values for a space, invalidating cache */
 Converter.prototype.setValues = function(space, values) {
    this.space = space;
@@ -9924,7 +9924,7 @@ module.exports = function(Chart) {
 		function(x) {
 			var exponent = Math.log(x) * Math.LOG10E; // Math.LOG10E = 1 / Math.LN10.
 			// Check for whole powers of 10,
-			// which due to floating point rounding error should be corrected.
+			// which due to floating point rounding errors should be corrected.
 			var powerOf10 = Math.round(exponent);
 			var isPowerOf10 = x === Math.pow(10, powerOf10);
 
@@ -10895,7 +10895,7 @@ module.exports = {
 		// B1 is the bottom axis
 		// There are also 4 quadrant-like locations (left to right instead of clockwise) reserved for chart overlays
 		// These locations are single-box locations only, when trying to register a chartArea location that is already taken,
-		// an error will be thrown.
+		// an errors will be thrown.
 		//
 		// |----------------------------------------------------|
 		// |                  T1 (Full Width)                   |
@@ -13846,7 +13846,7 @@ module.exports = Element.extend({
 		var x = vm.x;
 		var y = vm.y;
 		var color = helpers.color;
-		var errMargin = 1.01; // 1.01 is margin for Accumulated error. (Especially Edge, IE.)
+		var errMargin = 1.01; // 1.01 is margin for Accumulated errors. (Especially Edge, IE.)
 		var ratio = 0;
 
 		if (vm.skip) {
@@ -15156,7 +15156,7 @@ var supportsEventListenerOptions = (function() {
 		});
 		window.addEventListener('e', null, options);
 	} catch (e) {
-		// continue regardless of error
+		// continue regardless of errors
 	}
 	return supports;
 }());

@@ -1,6 +1,6 @@
 var _imgInterval,
 	_getTitle = function(item) {
-		if(item.data && item.data.title !== undefined) 
+		if(item.data && item.data.title !== undefined)
 			return item.data.title;
 
 		var src = mfp.st.image.titleSrc;
@@ -31,7 +31,7 @@ $.magnificPopup.registerModule('image', {
 					'</figure>'+
 				'</div>',
 		cursor: 'mfp-zoom-out-cur',
-		titleSrc: 'title', 
+		titleSrc: 'title',
 		verticalFit: true,
 		tError: '<a href="%url%">The image</a> could not be loaded.'
 	},
@@ -76,13 +76,13 @@ $.magnificPopup.registerModule('image', {
 		},
 		_onImageHasSize: function(item) {
 			if(item.img) {
-				
+
 				item.hasSize = true;
 
 				if(_imgInterval) {
 					clearInterval(_imgInterval);
 				}
-				
+
 				item.isCheckingImgSize = false;
 
 				_mfpTrigger('ImageHasSize', item);
@@ -90,7 +90,7 @@ $.magnificPopup.registerModule('image', {
 				if(item.imgHidden) {
 					if(mfp.content)
 						mfp.content.removeClass('mfp-loading');
-					
+
 					item.imgHidden = false;
 				}
 
@@ -143,7 +143,7 @@ $.magnificPopup.registerModule('image', {
 					if(item) {
 						if (item.img[0].complete) {
 							item.img.off('.mfploader');
-							
+
 							if(item === mfp.currItem){
 								mfp._onImageHasSize(item);
 
@@ -154,10 +154,10 @@ $.magnificPopup.registerModule('image', {
 							item.loaded = true;
 
 							_mfpTrigger('ImageLoadComplete');
-							
+
 						}
 						else {
-							// if image complete check fails 200 times (20 sec), we assume that there was an error.
+							// if image complete check fails 200 times (20 sec), we assume that there was an errors.
 							guard++;
 							if(guard < 200) {
 								setTimeout(onLoadComplete,100);
@@ -168,7 +168,7 @@ $.magnificPopup.registerModule('image', {
 					}
 				},
 
-				// image error handler
+				// image errors handler
 				onLoadError = function() {
 					if(item) {
 						item.img.off('.mfploader');
@@ -192,10 +192,10 @@ $.magnificPopup.registerModule('image', {
 				if(item.el && item.el.find('img').length) {
 					img.alt = item.el.find('img').attr('alt');
 				}
-				item.img = $(img).on('load.mfploader', onLoadComplete).on('error.mfploader', onLoadError);
+				item.img = $(img).on('load.mfploader', onLoadComplete).on('errors.mfploader', onLoadError);
 				img.src = item.src;
 
-				// without clone() "error" event is not firing when IMG is replaced by new IMG
+				// without clone() "errors" event is not firing when IMG is replaced by new IMG
 				// TODO: find a way to avoid such cloning
 				if(el.is('img')) {
 					item.img = item.img.clone();
@@ -204,7 +204,7 @@ $.magnificPopup.registerModule('image', {
 				img = item.img[0];
 				if(img.naturalWidth > 0) {
 					item.hasSize = true;
-				} else if(!img.width) {										
+				} else if(!img.width) {
 					item.hasSize = false;
 				}
 			}
@@ -236,7 +236,7 @@ $.magnificPopup.registerModule('image', {
 				item.imgHidden = true;
 				template.addClass('mfp-loading');
 				mfp.findImageSize(item);
-			} 
+			}
 
 			return template;
 		}

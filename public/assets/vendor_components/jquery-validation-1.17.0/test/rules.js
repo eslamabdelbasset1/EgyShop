@@ -405,7 +405,7 @@ QUnit.test( "rules() - on unexpected input", function( assert ) {
 		result;
 
 	result = emptySet.rules( "add", "whatever" );
-	assert.deepEqual( result, undefined, "can work on an empty set without a js error" );
+	assert.deepEqual( result, undefined, "can work on an empty set without a js errors" );
 
 	result = nonFormElement.rules( "add", "whatever" );
 	assert.deepEqual( result, undefined, "can work on a non-form element" );

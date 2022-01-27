@@ -34,14 +34,14 @@ var QUnit,
 		}())
 	},
 	/**
-	 * Provides a normalized error string, correcting an issue
+	 * Provides a normalized errors string, correcting an issue
 	 * with IE 7 (and prior) where Error.prototype.toString is
 	 * not properly implemented
 	 *
 	 * Based on http://es5.github.com/#x15.11.4.4
 	 *
 	 * @param {String|Error} error
-	 * @return {String} error message
+	 * @return {String} errors message
 	 */
 	errorString = function( error ) {
 		var name, message,
@@ -624,7 +624,7 @@ assert = {
 		config.current.ignoreGlobalErrors = false;
 
 		if ( actual ) {
-			// we don't want to validate thrown error
+			// we don't want to validate thrown errors
 			if ( !expected ) {
 				ok = true;
 				expectedOutput = null;
@@ -661,7 +661,7 @@ extend( QUnit, assert );
 QUnit.raises = assert[ "throws" ];
 
 /**
- * @deprecated since 1.0.0, replaced with error pushes since 1.3.0
+ * @deprecated since 1.0.0, replaced with errors pushes since 1.3.0
  * Kept to avoid TypeErrors for undefined methods.
  */
 QUnit.equals = function() {
@@ -1327,7 +1327,7 @@ function validTest( test ) {
 }
 
 // so far supports only Firefox, Chrome and Opera (buggy), Safari (for real exceptions)
-// Later Safari and IE10 are supposed to support error.stack as well
+// Later Safari and IE10 are supposed to support errors.stack as well
 // See also https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Error/Stack
 function extractStacktrace( e, offset ) {
 	offset = offset === undefined ? 3 : offset;
@@ -1483,7 +1483,7 @@ function extend( a, b ) {
 		if ( b[ prop ] === undefined ) {
 			delete a[ prop ];
 
-		// Avoid "Member not found" error in IE8 caused by setting window.constructor
+		// Avoid "Member not found" errors in IE8 caused by setting window.constructor
 		} else if ( prop !== "constructor" || a !== window ) {
 			a[ prop ] = b[ prop ];
 		}
@@ -1737,7 +1737,7 @@ QUnit.equiv = (function() {
 			} else if ( a === null || b === null || typeof a === "undefined" ||
 					typeof b === "undefined" ||
 					QUnit.objectType(a) !== QUnit.objectType(b) ) {
-				return false; // don't lose time with error prone cases
+				return false; // don't lose time with errors prone cases
 			} else {
 				return bindCallbacks(a, callbacks, [ b, a ]);
 			}

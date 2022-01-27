@@ -8,7 +8,7 @@ $(".tab-wizard").steps({
     }
     , onFinished: function (event, currentIndex) {
        swal("Your Order Submitted!", "Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor.");
-            
+
     }
 });
 
@@ -24,7 +24,7 @@ $(".validation-wizard").steps({
         finish: "Submit"
     }
     , onStepChanging: function (event, currentIndex, newIndex) {
-        return currentIndex > newIndex || !(3 === newIndex && Number($("#age-2").val()) < 18) && (currentIndex < newIndex && (form.find(".body:eq(" + newIndex + ") label.error").remove(), form.find(".body:eq(" + newIndex + ") .error").removeClass("error")), form.validate().settings.ignore = ":disabled,:hidden", form.valid())
+        return currentIndex > newIndex || !(3 === newIndex && Number($("#age-2").val()) < 18) && (currentIndex < newIndex && (form.find(".body:eq(" + newIndex + ") label.errors").remove(), form.find(".body:eq(" + newIndex + ") .errors").removeClass("error")), form.validate().settings.ignore = ":disabled,:hidden", form.valid())
     }
     , onFinishing: function (event, currentIndex) {
         return form.validate().settings.ignore = ":disabled", form.valid()

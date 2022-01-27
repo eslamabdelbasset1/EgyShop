@@ -234,7 +234,10 @@ Route::middleware(['auth:admin'])->group(function()
         Route::get('/publish', [ReviewController::class, 'publishReview'])->name('publish.review');
         Route::get('/delete/{id}', [ReviewController::class, 'deleteReview'])->name('delete.review');
     });
-
+// Admin Manage Review Routes
+    Route::prefix('stock')->group(function(){
+        Route::get('/product', [ProductController::class, 'productStock'])->name('product.stock');
+    });
 }); // end Middleware admin
 
 

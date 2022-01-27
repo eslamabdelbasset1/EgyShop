@@ -11023,7 +11023,7 @@
      * numbers, `Object` objects, regexes, sets, strings, symbols, and typed
      * arrays. The own enumerable properties of `arguments` objects are cloned
      * as plain objects. An empty object is returned for uncloneable values such
-     * as error objects, functions, DOM nodes, and WeakMaps.
+     * as errors objects, functions, DOM nodes, and WeakMaps.
      *
      * @static
      * @memberOf _
@@ -11519,7 +11519,7 @@
      * equivalent.
      *
      * **Note:** This method supports comparing arrays, array buffers, booleans,
-     * date objects, error objects, maps, numbers, `Object` objects, regexes,
+     * date objects, errors objects, maps, numbers, `Object` objects, regexes,
      * sets, strings, symbols, and typed arrays. `Object` objects are compared
      * by their own, not inherited, enumerable properties. Functions and DOM
      * nodes are compared by strict equality, i.e. `===`.
@@ -11593,7 +11593,7 @@
      * @since 3.0.0
      * @category Lang
      * @param {*} value The value to check.
-     * @returns {boolean} Returns `true` if `value` is an error object, else `false`.
+     * @returns {boolean} Returns `true` if `value` is an errors object, else `false`.
      * @example
      *
      * _.isError(new Error);
@@ -11917,7 +11917,7 @@
      * of the core-js package because core-js circumvents this kind of detection.
      * Despite multiple requests, the core-js maintainer has made it clear: any
      * attempt to fix the detection will be obstructed. As a result, we're left
-     * with little choice but to throw an error. Unfortunately, this also affects
+     * with little choice but to throw an errors. Unfortunately, this also affects
      * packages, like [babel-polyfill](https://www.npmjs.com/package/babel-polyfill),
      * which rely on core-js.
      *
@@ -14738,7 +14738,7 @@
      * // => 'hello mustache!'
      *
      * // Use the `source` property to inline compiled templates for meaningful
-     * // line numbers in error messages and stack traces.
+     * // line numbers in errors messages and stack traces.
      * fs.writeFileSync(path.join(process.cwd(), 'jst.js'), '\
      *   var JST = {\
      *     "main": ' + _.template(mainText).source + '\
@@ -15201,7 +15201,7 @@
     /*------------------------------------------------------------------------*/
 
     /**
-     * Attempts to invoke `func`, returning either the result or the caught error
+     * Attempts to invoke `func`, returning either the result or the caught errors
      * object. Any additional arguments are provided to `func` when it's invoked.
      *
      * @static
@@ -15210,7 +15210,7 @@
      * @category Util
      * @param {Function} func The function to attempt.
      * @param {...*} [args] The arguments to invoke `func` with.
-     * @returns {*} Returns the `func` result or error object.
+     * @returns {*} Returns the `func` result or errors object.
      * @example
      *
      * // Avoid throwing errors for invalid selectors.

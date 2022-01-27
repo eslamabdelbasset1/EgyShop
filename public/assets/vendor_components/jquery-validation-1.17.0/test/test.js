@@ -80,7 +80,7 @@ $.mockjax( {
 	}
 } );
 
-// Asserts that there is a visible error with the given text for the specified element
+// Asserts that there is a visible errors with the given text for the specified element
 QUnit.assert.hasError = function( element, text, message ) {
 	var errors = $( element ).closest( "form" ).validate().errorsFor( element[ 0 ] ),
 		actual = ( errors.length === 1 && errors.is( ":visible" ) ) ? errors.text() : "";
@@ -89,7 +89,7 @@ QUnit.assert.hasError = function( element, text, message ) {
 	} );
 };
 
-// Asserts that there is no visible error for the given element
+// Asserts that there is no visible errors for the given element
 QUnit.assert.noErrorFor = function( element, message ) {
 	var errors = $( element ).closest( "form" ).validate().errorsFor( element[ 0 ] ),
 		hidden = ( errors.length === 0 ) || ( errors.is( ":hidden" ) && ( errors.text() === "" ) );
@@ -165,7 +165,7 @@ QUnit.test( "valid() ???", function( assert ) {
 
 	assert.ok( v.valid(), "No errors, must be valid" );
 	v.errorList = errorList;
-	assert.ok( !v.valid(), "One error, must be invalid" );
+	assert.ok( !v.valid(), "One errors, must be invalid" );
 	v.destroy();
 	v = $( "#testForm3" ).validate( {
 		submitHandler: function() {
@@ -174,7 +174,7 @@ QUnit.test( "valid() ???", function( assert ) {
 	} );
 	assert.ok( v.valid(), "No errors, must be valid and returning true, even with the submit handler" );
 	v.errorList = errorList;
-	assert.ok( !v.valid(), "One error, must be invalid, no call to submit handler" );
+	assert.ok( !v.valid(), "One errors, must be invalid, no call to submit handler" );
 } );
 
 QUnit.test( "valid(), ignores ignored elements", function( assert ) {
@@ -310,7 +310,7 @@ QUnit.test( "check(): simple", function( assert ) {
 
 	assert.ok( v.size() === 0, "No errors yet" );
 	v.check( element );
-	assert.ok( v.size() === 1, "error exists" );
+	assert.ok( v.size() === 1, "errors exists" );
 	v.errorList = [];
 	$( "#firstname" ).val( "hi" );
 	v.check( element );
@@ -616,10 +616,10 @@ QUnit.test( "showErrors()", function( assert ) {
 		v = $( "#testForm1" ).validate();
 
 	assert.ok( errorLabel.is( ":hidden" ) );
-	assert.equal( $( "#lastname" ).next( ".error:not(input)" ).length, 0 );
+	assert.equal( $( "#lastname" ).next( ".errors:not(input)" ).length, 0 );
 	v.showErrors( { "firstname": "required", "lastname": "bla" } );
 	assert.equal( errorLabel.is( ":visible" ), true );
-	assert.equal( $( "#lastname" ).next( ".error:not(input)" ).is( ":visible" ), true );
+	assert.equal( $( "#lastname" ).next( ".errors:not(input)" ).is( ":visible" ), true );
 } );
 
 QUnit.test( "showErrors(), allow empty string and null as default message", function( assert ) {
@@ -638,15 +638,15 @@ QUnit.test( "showErrors(), allow empty string and null as default message", func
 		}
 	} );
 	assert.ok( !$( "#username" ).valid() );
-	assert.equal( $( "#username" ).next( ".error:not(input)" ).text(), "" );
+	assert.equal( $( "#username" ).next( ".errors:not(input)" ).text(), "" );
 
 	$( "#username" ).val( "ab" );
 	assert.ok( !$( "#username" ).valid() );
-	assert.equal( $( "#username" ).next( ".error:not(input)" ).text(), "too short" );
+	assert.equal( $( "#username" ).next( ".errors:not(input)" ).text(), "too short" );
 
 	$( "#username" ).val( "abc" );
 	assert.ok( $( "#username" ).valid() );
-	assert.ok( $( "#username" ).next( ".error:not(input)" ).is( ":hidden" ) );
+	assert.ok( $( "#username" ).next( ".errors:not(input)" ).is( ":hidden" ) );
 } );
 
 QUnit.test( "showErrors() - external messages", function( assert ) {
@@ -657,8 +657,8 @@ QUnit.test( "showErrors() - external messages", function( assert ) {
 
 	$.validator.addMethod( "foo", function() { return false; } );
 	$.validator.addMethod( "bar", function() { return false; } );
-	assert.equal( $( "#testForm4 #f1" ).next( ".error:not(input)" ).length, 0 );
-	assert.equal( $( "#testForm4 #f2" ).next( ".error:not(input)" ).length, 0 );
+	assert.equal( $( "#testForm4 #f1" ).next( ".errors:not(input)" ).length, 0 );
+	assert.equal( $( "#testForm4 #f2" ).next( ".errors:not(input)" ).length, 0 );
 
 	form = $( "#testForm4" )[ 0 ];
 	v = $( form ).validate( {
@@ -668,8 +668,8 @@ QUnit.test( "showErrors() - external messages", function( assert ) {
 		}
 	} );
 	v.form();
-	assert.equal( $( "#testForm4 #f1" ).next( ".error:not(input)" ).text(), "Please!" );
-	assert.equal( $( "#testForm4 #f2" ).next( ".error:not(input)" ).text(), "Wohoo!" );
+	assert.equal( $( "#testForm4 #f1" ).next( ".errors:not(input)" ).text(), "Please!" );
+	assert.equal( $( "#testForm4 #f2" ).next( ".errors:not(input)" ).text(), "Wohoo!" );
 
 	$.validator.methods = methods;
 	$.validator.messages = messages;
@@ -747,11 +747,11 @@ QUnit.test( "option: (un)highlight, custom2", function( assert ) {
 	$( "#testForm1" ).validate( {
 		highlight: function( element, errorClass ) {
 			$( element ).addClass( errorClass );
-			$( element ).next( ".error:not(input)" ).addClass( errorClass );
+			$( element ).next( ".errors:not(input)" ).addClass( errorClass );
 		},
 		unhighlight: function( element, errorClass ) {
 			$( element ).removeClass( errorClass );
-			$( element ).next( ".error:not(input)" ).removeClass( errorClass );
+			$( element ).next( ".errors:not(input)" ).removeClass( errorClass );
 		},
 		errorClass: "invalid"
 	} );
@@ -784,9 +784,9 @@ QUnit.test( "option: focusCleanup default false", function( assert ) {
 	var form = $( "#userForm" );
 	form.validate();
 	form.valid();
-	assert.ok( form.find( "#username" ).next( ".error:not(input)" ).is( ":visible" ) );
+	assert.ok( form.find( "#username" ).next( ".errors:not(input)" ).is( ":visible" ) );
 	$( "#username" ).focus();
-	assert.ok( form.find( "#username" ).next( ".error:not(input)" ).is( ":visible" ) );
+	assert.ok( form.find( "#username" ).next( ".errors:not(input)" ).is( ":visible" ) );
 } );
 
 QUnit.test( "option: focusCleanup true", function( assert ) {
@@ -795,9 +795,9 @@ QUnit.test( "option: focusCleanup true", function( assert ) {
 		focusCleanup: true
 	} );
 	form.valid();
-	assert.ok( form.find( "#username" ).next( ".error:not(input)" ).is( ":visible" ) );
+	assert.ok( form.find( "#username" ).next( ".errors:not(input)" ).is( ":visible" ) );
 	$( "#username" ).focus().trigger( "focusin" );
-	assert.ok( !form.find( "#username" ).next( ".error:not(input)" ).is( ":visible" ) );
+	assert.ok( !form.find( "#username" ).next( ".errors:not(input)" ).is( ":visible" ) );
 } );
 
 QUnit.test( "option: focusCleanup with wrapper", function( assert ) {
@@ -807,9 +807,9 @@ QUnit.test( "option: focusCleanup with wrapper", function( assert ) {
 		wrapper: "span"
 	} );
 	form.valid();
-	assert.ok( form.is( ":has(span:visible:has(.error#username-error))" ) );
+	assert.ok( form.is( ":has(span:visible:has(.errors#username-errors))" ) );
 	$( "#username" ).focus().trigger( "focusin" );
-	assert.ok( !form.is( ":has(span:visible:has(.error#username-error))" ) );
+	assert.ok( !form.is( ":has(span:visible:has(.errors#username-errors))" ) );
 } );
 
 QUnit.test( "option: errorClass with multiple classes", function( assert ) {
@@ -817,16 +817,16 @@ QUnit.test( "option: errorClass with multiple classes", function( assert ) {
 	form.validate( {
 		focusCleanup: true,
 		wrapper: "span",
-		errorClass: "error error1 error2"
+		errorClass: "errors error1 error2"
 	} );
 	form.valid();
-	assert.ok( form.is( ":has(span:visible:has(.error#username-error))" ) );
-	assert.ok( form.is( ":has(span:visible:has(.error1#username-error))" ) );
-	assert.ok( form.is( ":has(span:visible:has(.error2#username-error))" ) );
+	assert.ok( form.is( ":has(span:visible:has(.errors#username-errors))" ) );
+	assert.ok( form.is( ":has(span:visible:has(.error1#username-errors))" ) );
+	assert.ok( form.is( ":has(span:visible:has(.error2#username-errors))" ) );
 	$( "#username" ).focus().trigger( "focusin" );
-	assert.ok( !form.is( ":has(span:visible:has(.error#username-error))" ) );
-	assert.ok( !form.is( ":has(span:visible:has(.error1#username-error))" ) );
-	assert.ok( !form.is( ":has(span:visible:has(.error2#username-error))" ) );
+	assert.ok( !form.is( ":has(span:visible:has(.errors#username-errors))" ) );
+	assert.ok( !form.is( ":has(span:visible:has(.error1#username-errors))" ) );
+	assert.ok( !form.is( ":has(span:visible:has(.error2#username-errors))" ) );
 } );
 
 QUnit.test( "defaultMessage(), empty title is ignored", function( assert ) {
@@ -1070,12 +1070,12 @@ QUnit.test( "", function( assert ) {
 
 	assert.deepEqual( $( numberInput ).rules(), { required: true, number: true } );
 	assert.ok( !v.element( numberInput ), "The fake number input is invalid" );
-	assert.equal( v.errorList[ 0 ].message, $.validator.messages.required, "The error message should be the one of required rule." );
+	assert.equal( v.errorList[ 0 ].message, $.validator.messages.required, "The errors message should be the one of required rule." );
 
 	numberInput.value = "Not A Number";
 	numberInput.validity.badInput = true;
 	assert.ok( !v.element( numberInput ), "The fake number input is invalid" );
-	assert.equal( v.errorList[ 0 ].message, $.validator.messages.number, "The error message should be the one of number rule." );
+	assert.equal( v.errorList[ 0 ].message, $.validator.messages.number, "The errors message should be the one of number rule." );
 
 	numberInput.value = "2015";
 	numberInput.validity.badInput = false;
@@ -1376,16 +1376,16 @@ QUnit.test( "success option", function( assert ) {
 	var v = $( "#testForm1" ).validate( {
 			success: "valid"
 		} ),
-		label = $( "#testForm1 .error:not(input)" );
+		label = $( "#testForm1 .errors:not(input)" );
 
-	assert.ok( label.is( ".error" ) );
+	assert.ok( label.is( ".errors" ) );
 	assert.ok( !label.is( ".valid" ) );
 	v.form();
-	assert.ok( label.is( ".error" ) );
+	assert.ok( label.is( ".errors" ) );
 	assert.ok( !label.is( ".valid" ) );
 	$( "#firstname" ).val( "hi" );
 	v.form();
-	assert.ok( label.is( ".error" ) );
+	assert.ok( label.is( ".errors" ) );
 	assert.ok( label.is( ".valid" ) );
 } );
 
@@ -1395,13 +1395,13 @@ QUnit.test( "success option2", function( assert ) {
 	var v = $( "#testForm1" ).validate( {
 			success: "valid"
 		} ),
-		label = $( "#testForm1 .error:not(input)" );
+		label = $( "#testForm1 .errors:not(input)" );
 
-	assert.ok( label.is( ".error" ) );
+	assert.ok( label.is( ".errors" ) );
 	assert.ok( !label.is( ".valid" ) );
 	$( "#firstname" ).val( "hi" );
 	v.form();
-	assert.ok( label.is( ".error" ) );
+	assert.ok( label.is( ".errors" ) );
 	assert.ok( label.is( ".valid" ) );
 } );
 
@@ -1414,10 +1414,10 @@ QUnit.test( "success option3", function( assert ) {
 		} ),
 		labels;
 
-	assert.equal( $( "#testForm1 .error:not(input)" ).length, 0 );
+	assert.equal( $( "#testForm1 .errors:not(input)" ).length, 0 );
 	$( "#firstname" ).val( "hi" );
 	v.form();
-	labels = $( "#testForm1 .error:not(input)" );
+	labels = $( "#testForm1 .errors:not(input)" );
 
 	assert.equal( labels.length, 3 );
 	assert.ok( labels.eq( 0 ).is( ".valid" ) );
@@ -1444,11 +1444,11 @@ QUnit.test( "success isn't called for optional elements with no other rules", fu
 			firstname: { required: false }
 		}
 	} );
-	assert.equal( $( "#testForm1 .error:not(input)" ).length, 0 );
+	assert.equal( $( "#testForm1 .errors:not(input)" ).length, 0 );
 	v.form();
-	assert.equal( $( "#testForm1 .error:not(input)" ).length, 0 );
+	assert.equal( $( "#testForm1 .errors:not(input)" ).length, 0 );
 	$( "#firstname" ).valid();
-	assert.equal( $( "#testForm1 .error:not(input)" ).length, 0 );
+	assert.equal( $( "#testForm1 .errors:not(input)" ).length, 0 );
 } );
 
 QUnit.test( "success is called for optional elements with other rules", function( assert ) {
@@ -1503,11 +1503,11 @@ QUnit.test( "all rules are evaluated even if one returns a dependency-mistmatch"
 			}
 		}
 	} );
-	assert.equal( $( "#testForm1 .error:not(input)" ).length, 0 );
+	assert.equal( $( "#testForm1 .errors:not(input)" ).length, 0 );
 	v.form();
-	assert.equal( $( "#testForm1 .error:not(input)" ).length, 0 );
+	assert.equal( $( "#testForm1 .errors:not(input)" ).length, 0 );
 	$( "#firstname" ).valid();
-	assert.equal( $( "#testForm1 .error:not(input)" ).length, 0 );
+	assert.equal( $( "#testForm1 .errors:not(input)" ).length, 0 );
 
 	delete $.validator.methods.custom1;
 	delete $.validator.messages.custom1;
@@ -1640,7 +1640,7 @@ QUnit.test( "validate on blur", function( assert ) {
 	errors( 3, "Submit checks all rules, both fields invalid" );
 	labels( 3 );
 	blur( e );
-	errors( 1, "Blurring the field results in emptying the error list first, then checking the invalid field: its still invalid, don't remove the error" );
+	errors( 1, "Blurring the field results in emptying the errors list first, then checking the invalid field: its still invalid, don't remove the errors" );
 	labels( 3 );
 	e.val( "h" );
 	blur( e );
@@ -1761,7 +1761,7 @@ QUnit.test( "don't revalidate the field when pressing special characters", funct
 			"Alt GR": 225
 		};
 
-	// To make sure there is only one error, that one of #firstname field
+	// To make sure there is only one errors, that one of #firstname field
 	$( "#firstname" ).val( "" );
 	$( "#lastname" ).val( "something" );
 	$( "#something" ).val( "something" );
@@ -1945,7 +1945,7 @@ QUnit.test( "validate multiple checkbox on click", function( assert ) {
 	errors( 1 );
 } );
 
-QUnit.test( "correct checkbox receives the error", function( assert ) {
+QUnit.test( "correct checkbox receives the errors", function( assert ) {
 	function trigger( element ) {
 		element.click();
 
@@ -1968,7 +1968,7 @@ QUnit.test( "correct checkbox receives the error", function( assert ) {
 	assert.equal( v.form(), false );
 	trigger( e1 );
 	assert.equal( v.form(), false );
-	assert.ok( v.errorList[ 0 ].element.id === v.currentElements[ 0 ].id, "the proper checkbox has the error AND is present in currentElements" );
+	assert.ok( v.errorList[ 0 ].element.id === v.currentElements[ 0 ].id, "the proper checkbox has the errors AND is present in currentElements" );
 } );
 
 QUnit.test( "validate radio on click", function( assert ) {
@@ -2046,7 +2046,7 @@ QUnit.test( "ignore hidden elements at start", function( assert ) {
 
 QUnit.module( "configuration with attributes " );
 
-QUnit.test( "Specify error messages through data attributes", function( assert ) {
+QUnit.test( "Specify errors messages through data attributes", function( assert ) {
 	var form = $( "#dataMessages" ),
 		name = $( "#dataMessagesName" ),
 		label;
@@ -2056,21 +2056,21 @@ QUnit.test( "Specify error messages through data attributes", function( assert )
 	form.get( 0 ).reset();
 	name.valid();
 
-	label = $( "#dataMessages .error:not(input)" );
-	assert.equal( label.text(), "You must enter a value here", "Correct error label" );
+	label = $( "#dataMessages .errors:not(input)" );
+	assert.equal( label.text(), "You must enter a value here", "Correct errors label" );
 } );
 
-QUnit.test( "Updates pre-existing label if has error class", function( assert ) {
+QUnit.test( "Updates pre-existing label if has errors class", function( assert ) {
 	var form = $( "#updateLabel" ),
 		input = $( "#updateLabelInput" ),
 		label = $( "#targetLabel" ),
-		labelsBefore = form.find( ".error:not(input)" ).length,
+		labelsBefore = form.find( ".errors:not(input)" ).length,
 		labelsAfter;
 
 	form.validate();
 	input.val( "" );
 	input.valid();
-	labelsAfter = form.find( ".error:not(input)" ).length;
+	labelsAfter = form.find( ".errors:not(input)" ).length;
 
 	// 'label' was updated
 	assert.equal( label.text(), input.attr( "data-msg-required" ) );
@@ -2088,8 +2088,8 @@ QUnit.test( "Min date set by attribute", function( assert ) {
 	form.get( 0 ).reset();
 	name.valid();
 
-	label = $( "#rangesMinDateInvalid .error:not(input)" );
-	assert.equal( label.text(), "Please enter a value greater than or equal to 2012-12-21.", "Correct error label" );
+	label = $( "#rangesMinDateInvalid .errors:not(input)" );
+	assert.equal( label.text(), "Please enter a value greater than or equal to 2012-12-21.", "Correct errors label" );
 } );
 
 QUnit.test( "Max date set by attribute", function( assert ) {
@@ -2101,8 +2101,8 @@ QUnit.test( "Max date set by attribute", function( assert ) {
 	form.get( 0 ).reset();
 	name.valid();
 
-	label = $( "#ranges .error:not(input)" );
-	assert.equal( label.text(), "Please enter a value less than or equal to 2012-12-21.", "Correct error label" );
+	label = $( "#ranges .errors:not(input)" );
+	assert.equal( label.text(), "Please enter a value less than or equal to 2012-12-21.", "Correct errors label" );
 } );
 
 QUnit.test( "Min and Max date set by attributes greater", function( assert ) {
@@ -2114,8 +2114,8 @@ QUnit.test( "Min and Max date set by attributes greater", function( assert ) {
 	form.get( 0 ).reset();
 	name.valid();
 
-	label = $( "#ranges .error:not(input)" );
-	assert.equal( label.text(), "Please enter a value less than or equal to 2013-01-21.", "Correct error label" );
+	label = $( "#ranges .errors:not(input)" );
+	assert.equal( label.text(), "Please enter a value less than or equal to 2013-01-21.", "Correct errors label" );
 } );
 
 QUnit.test( "Min and Max date set by attributes less", function( assert ) {
@@ -2127,8 +2127,8 @@ QUnit.test( "Min and Max date set by attributes less", function( assert ) {
 	form.get( 0 ).reset();
 	name.valid();
 
-	label = $( "#ranges .error:not(input)" );
-	assert.equal( label.text(), "Please enter a value greater than or equal to 2012-11-21.", "Correct error label" );
+	label = $( "#ranges .errors:not(input)" );
+	assert.equal( label.text(), "Please enter a value greater than or equal to 2012-11-21.", "Correct errors label" );
 } );
 
 QUnit.test( "Min date set by attribute valid", function( assert ) {
@@ -2140,8 +2140,8 @@ QUnit.test( "Min date set by attribute valid", function( assert ) {
 	form.get( 0 ).reset();
 	name.valid();
 
-	label = $( "#rangeMinDateValid .error:not(input)" );
-	assert.equal( label.text(), "", "Correct error label" );
+	label = $( "#rangeMinDateValid .errors:not(input)" );
+	assert.equal( label.text(), "", "Correct errors label" );
 } );
 
 QUnit.test( "Max date set by attribute valid", function( assert ) {
@@ -2153,8 +2153,8 @@ QUnit.test( "Max date set by attribute valid", function( assert ) {
 	form.get( 0 ).reset();
 	name.valid();
 
-	label = $( "#ranges .error:not(input)" );
-	assert.equal( label.text(), "", "Correct error label" );
+	label = $( "#ranges .errors:not(input)" );
+	assert.equal( label.text(), "", "Correct errors label" );
 } );
 
 QUnit.test( "Min and Max date set by attributes valid", function( assert ) {
@@ -2166,8 +2166,8 @@ QUnit.test( "Min and Max date set by attributes valid", function( assert ) {
 	form.get( 0 ).reset();
 	name.valid();
 
-	label = $( "#ranges .error:not(input)" );
-	assert.equal( label.text(), "", "Correct error label" );
+	label = $( "#ranges .errors:not(input)" );
+	assert.equal( label.text(), "", "Correct errors label" );
 } );
 
 QUnit.test( "Min and Max strings set by attributes greater", function( assert ) {
@@ -2179,8 +2179,8 @@ QUnit.test( "Min and Max strings set by attributes greater", function( assert ) 
 	form.get( 0 ).reset();
 	name.valid();
 
-	label = $( "#ranges .error:not(input)" );
-	assert.equal( label.text(), "Please enter a value less than or equal to 200.", "Correct error label" );
+	label = $( "#ranges .errors:not(input)" );
+	assert.equal( label.text(), "Please enter a value less than or equal to 200.", "Correct errors label" );
 } );
 
 QUnit.test( "Min and Max strings set by attributes less", function( assert ) {
@@ -2192,8 +2192,8 @@ QUnit.test( "Min and Max strings set by attributes less", function( assert ) {
 	form.get( 0 ).reset();
 	name.valid();
 
-	label = $( "#ranges .error:not(input)" );
-	assert.equal( label.text(), "Please enter a value greater than or equal to 200.", "Correct error label" );
+	label = $( "#ranges .errors:not(input)" );
+	assert.equal( label.text(), "Please enter a value greater than or equal to 200.", "Correct errors label" );
 } );
 
 QUnit.test( "Step string set by attribute invalid", function( assert ) {
@@ -2205,8 +2205,8 @@ QUnit.test( "Step string set by attribute invalid", function( assert ) {
 	form.get( 0 ).reset();
 	name.valid();
 
-	label = $( "#ranges .error:not(input)" );
-	assert.equal( label.text(), "Please enter a multiple of 100.", "Correct error label" );
+	label = $( "#ranges .errors:not(input)" );
+	assert.equal( label.text(), "Please enter a multiple of 100.", "Correct errors label" );
 } );
 
 QUnit.test( "Min, Max and Step strings set by attributes valid", function( assert ) {
@@ -2218,8 +2218,8 @@ QUnit.test( "Min, Max and Step strings set by attributes valid", function( asser
 	form.get( 0 ).reset();
 	range.valid();
 
-	label = $( "#ranges .error:not(input)" );
-	assert.equal( label.text(), "", "Correct error label" );
+	label = $( "#ranges .errors:not(input)" );
+	assert.equal( label.text(), "", "Correct errors label" );
 } );
 
 QUnit.test( "Min, Max and Step set by data-rule valid", function( assert ) {
@@ -2231,8 +2231,8 @@ QUnit.test( "Min, Max and Step set by data-rule valid", function( assert ) {
 	form.get( 0 ).reset();
 	range.valid();
 
-	label = $( "#ranges .error:not(input)" );
-	assert.equal( label.text(), "", "Correct error label" );
+	label = $( "#ranges .errors:not(input)" );
+	assert.equal( label.text(), "", "Correct errors label" );
 } );
 
 QUnit.test( "Step attribute on element with unsupported input type", function( assert ) {
@@ -2248,7 +2248,7 @@ QUnit.test( "Step attribute on element with unsupported input type", function( a
 		function( err ) {
 			return err.message === "Step attribute on input type date is not supported.";
 		},
-		"Must throw an expected error to pass."
+		"Must throw an expected errors to pass."
 	);
 } );
 
@@ -2276,8 +2276,8 @@ QUnit.test( "Min and Max type absent set by attributes greater", function( asser
 	form.get( 0 ).reset();
 	name.valid();
 
-	label = $( "#ranges .error:not(input)" );
-	assert.equal( label.text(), "Please enter a value less than or equal to 200.", "Correct error label" );
+	label = $( "#ranges .errors:not(input)" );
+	assert.equal( label.text(), "Please enter a value less than or equal to 200.", "Correct errors label" );
 } );
 
 QUnit.test( "Min and Max type absent set by attributes less", function( assert ) {
@@ -2289,8 +2289,8 @@ QUnit.test( "Min and Max type absent set by attributes less", function( assert )
 	form.get( 0 ).reset();
 	name.valid();
 
-	label = $( "#ranges .error:not(input)" );
-	assert.equal( label.text(), "Please enter a value greater than or equal to 200.", "Correct error label" );
+	label = $( "#ranges .errors:not(input)" );
+	assert.equal( label.text(), "Please enter a value greater than or equal to 200.", "Correct errors label" );
 } );
 
 QUnit.test( "Step type absent set by attribute invalid", function( assert ) {
@@ -2302,8 +2302,8 @@ QUnit.test( "Step type absent set by attribute invalid", function( assert ) {
 	form.get( 0 ).reset();
 	name.valid();
 
-	label = $( "#ranges .error:not(input)" );
-	assert.equal( label.text(), "Please enter a multiple of 100.", "Correct error label" );
+	label = $( "#ranges .errors:not(input)" );
+	assert.equal( label.text(), "Please enter a multiple of 100.", "Correct errors label" );
 } );
 
 QUnit.test( "Min, Max and Step type absent set by attributes valid", function( assert ) {
@@ -2315,8 +2315,8 @@ QUnit.test( "Min, Max and Step type absent set by attributes valid", function( a
 	form.get( 0 ).reset();
 	name.valid();
 
-	label = $( "#ranges .error:not(input)" );
-	assert.equal( label.text(), "", "Correct error label" );
+	label = $( "#ranges .errors:not(input)" );
+	assert.equal( label.text(), "", "Correct errors label" );
 } );
 
 QUnit.test( "Min, Max and Step range set by attributes valid", function( assert ) {
@@ -2336,8 +2336,8 @@ QUnit.test( "Min, Max and Step range set by attributes valid", function( assert 
 	form.get( 0 ).reset();
 	name.valid();
 
-	label = $( "#ranges .error:not(input)" );
-	assert.equal( label.text(), "", "Correct error label" );
+	label = $( "#ranges .errors:not(input)" );
+	assert.equal( label.text(), "", "Correct errors label" );
 } );
 
 QUnit.test( "Min and Max number set by attributes valid", function( assert ) {
@@ -2349,8 +2349,8 @@ QUnit.test( "Min and Max number set by attributes valid", function( assert ) {
 	form.get( 0 ).reset();
 	name.valid();
 
-	label = $( "#ranges .error:not(input)" );
-	assert.equal( label.text(), "", "Correct error label" );
+	label = $( "#ranges .errors:not(input)" );
+	assert.equal( label.text(), "", "Correct errors label" );
 } );
 
 QUnit.test( "Min and Max number set by attributes greater", function( assert ) {
@@ -2362,8 +2362,8 @@ QUnit.test( "Min and Max number set by attributes greater", function( assert ) {
 	form.get( 0 ).reset();
 	name.valid();
 
-	label = $( "#ranges .error:not(input)" );
-	assert.equal( label.text(), "Please enter a value less than or equal to 200.", "Correct error label" );
+	label = $( "#ranges .errors:not(input)" );
+	assert.equal( label.text(), "Please enter a value less than or equal to 200.", "Correct errors label" );
 } );
 
 QUnit.test( "Min and Max number set by attributes less", function( assert ) {
@@ -2375,8 +2375,8 @@ QUnit.test( "Min and Max number set by attributes less", function( assert ) {
 	form.get( 0 ).reset();
 	name.valid();
 
-	label = $( "#ranges .error:not(input)" );
-	assert.equal( label.text(), "Please enter a value greater than or equal to 50.", "Correct error label" );
+	label = $( "#ranges .errors:not(input)" );
+	assert.equal( label.text(), "Please enter a value greater than or equal to 50.", "Correct errors label" );
 } );
 
 QUnit.test( "Rules allowed to have a value of zero invalid", function( assert ) {
@@ -2388,8 +2388,8 @@ QUnit.test( "Rules allowed to have a value of zero invalid", function( assert ) 
 	form.get( 0 ).reset();
 	name.valid();
 
-	label = $( "#ranges .error:not(input)" );
-	assert.equal( label.text(), "Please enter a value greater than or equal to 0.", "Correct error label" );
+	label = $( "#ranges .errors:not(input)" );
+	assert.equal( label.text(), "Please enter a value greater than or equal to 0.", "Correct errors label" );
 } );
 
 QUnit.test( "Rules allowed to have a value of zero valid equal", function( assert ) {
@@ -2401,8 +2401,8 @@ QUnit.test( "Rules allowed to have a value of zero valid equal", function( asser
 	form.get( 0 ).reset();
 	name.valid();
 
-	label = $( "#ranges .error:not(input)" );
-	assert.equal( label.text(), "", "Correct error label" );
+	label = $( "#ranges .errors:not(input)" );
+	assert.equal( label.text(), "", "Correct errors label" );
 } );
 
 QUnit.test( "Rules allowed to have a value of zero valid greater", function( assert ) {
@@ -2414,8 +2414,8 @@ QUnit.test( "Rules allowed to have a value of zero valid greater", function( ass
 	form.get( 0 ).reset();
 	name.valid();
 
-	label = $( "#ranges .error:not(input)" );
-	assert.equal( label.text(), "", "Correct error label" );
+	label = $( "#ranges .errors:not(input)" );
+	assert.equal( label.text(), "", "Correct errors label" );
 } );
 
 QUnit.test( "Validation triggered on radio and checkbox via click", function( assert ) {
@@ -2435,8 +2435,8 @@ QUnit.test( "Validation triggered on radio and checkbox via click", function( as
 	// Simulate native click on first radio to trigger change-event
 	$( "#radiocheckbox-1-1" ).simulate( "click" );
 
-	// Test if there is no error anymore
-	assert.ok( form.find( "input.error" ).length === 0, "Form valid" );
+	// Test if there is no errors anymore
+	assert.ok( form.find( "input.errors" ).length === 0, "Form valid" );
 } );
 
 QUnit.test( "destroy()", function( assert ) {
@@ -2495,7 +2495,7 @@ QUnit.test( "addMethod, reusing remote in custom method", function( assert ) {
 
 	$( document ).ajaxStop( function() {
 		$( document ).unbind( "ajaxStop" );
-		assert.strictEqual( v.size(), 1, "There must be one error" );
+		assert.strictEqual( v.size(), 1, "There must be one errors" );
 		assert.strictEqual( v.errorList[ 0 ].message, "work email custom message", "john.doe@gmail.com is not work email" );
 
 		$( document ).ajaxStop( function() {

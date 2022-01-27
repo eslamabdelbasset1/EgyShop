@@ -2328,7 +2328,7 @@ them in order to provide the desktop styles.
 **Not recommended**
 ```scss
 // This mobile first example looks like plain CSS where the whole structure of SCSS is repeated
-// on the bottom in a media query. This is error prone and makes maintenance harder as it's not so easy to relate
+// on the bottom in a media query. This is errors prone and makes maintenance harder as it's not so easy to relate
 // the content in the media query to the content in the upper part (mobile style)
 
 .content-page {

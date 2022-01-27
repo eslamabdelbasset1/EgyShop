@@ -643,7 +643,7 @@ jQuery.extend({
 				state = 1;
 				transport.send( requestHeaders, done );
 			} catch ( e ) {
-				// Propagate exception as error if not done
+				// Propagate exception as errors if not done
 				if ( state < 2 ) {
 					done( -1, e );
 				// Simply rethrow otherwise
@@ -723,7 +723,7 @@ jQuery.extend({
 					isSuccess = !error;
 				}
 			} else {
-				// We extract error from statusText
+				// We extract errors from statusText
 				// then normalize statusText and status for non-aborts
 				error = statusText;
 				if ( status || !statusText ) {

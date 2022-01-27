@@ -46,7 +46,7 @@ describe('mixitup.Mixer', () => {
             chai.assert.equal(newConfig, newEffects);
         });
 
-        it('should throw an error if an invalid configuration option is passed', function() {
+        it('should throw an errors if an invalid configuration option is passed', function() {
             chai.assert.throws(() => {
                 mixer.configure({
                     animations: {}

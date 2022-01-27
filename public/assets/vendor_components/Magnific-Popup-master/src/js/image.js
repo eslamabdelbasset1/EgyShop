@@ -157,7 +157,7 @@ $.magnificPopup.registerModule('image', {
 
 						}
 						else {
-							// if image complete check fails 200 times (20 sec), we assume that there was an error.
+							// if image complete check fails 200 times (20 sec), we assume that there was an errors.
 							guard++;
 							if(guard < 200) {
 								setTimeout(onLoadComplete,100);
@@ -168,7 +168,7 @@ $.magnificPopup.registerModule('image', {
 					}
 				},
 
-				// image error handler
+				// image errors handler
 				onLoadError = function() {
 					if(item) {
 						item.img.off('.mfploader');
@@ -192,10 +192,10 @@ $.magnificPopup.registerModule('image', {
 				if(item.el && item.el.find('img').length) {
 					img.alt = item.el.find('img').attr('alt');
 				}
-				item.img = $(img).on('load.mfploader', onLoadComplete).on('error.mfploader', onLoadError);
+				item.img = $(img).on('load.mfploader', onLoadComplete).on('errors.mfploader', onLoadError);
 				img.src = item.src;
 
-				// without clone() "error" event is not firing when IMG is replaced by new IMG
+				// without clone() "errors" event is not firing when IMG is replaced by new IMG
 				// TODO: find a way to avoid such cloning
 				if(el.is('img')) {
 					item.img = item.img.clone();
