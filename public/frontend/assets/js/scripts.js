@@ -332,7 +332,9 @@ jQuery(document).ready(function() {
     /*===================================================================================*/
     jQuery("[data-toggle='tooltip']").tooltip();
 
-    const site_url = "http://127.0.0.1:8000/";
+    $( document ).ready(function() {
+
+    const site_url = "/";
 
     $("body").on("keyup", "#search", function(){
 
@@ -362,5 +364,6 @@ jQuery(document).ready(function() {
 
     }); // end one
 
+    });
 
 });
