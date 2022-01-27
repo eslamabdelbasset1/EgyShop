@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="add error page">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/AdminUserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/role/admin_role_all.blade.php" afterDir="false" />
+    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="add admin user role">
+      <change afterPath="$PROJECT_DIR$/public/upload/admin/profile/1723123005334619.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/role/admin_role_create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/role/admin_role_edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/AdminProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/AdminProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/AdminUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/AdminUserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/admin_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin_profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/admin_profile_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin_profile_edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/role/admin_role_all.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/role/admin_role_all.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -181,7 +188,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Middleware" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/upload/admin_images" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -190,13 +197,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/upload/admin_images" />
       <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\src\app\Http\Middleware" />
       <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\resources\views\frontend" />
       <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\resources\views\backend\slider" />
       <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\resources\views\backend\product" />
-      <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\resources\views\backend\category" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/upload/admin/profile" />
       <recent name="$PROJECT_DIR$/resources/views/backend/blog/post" />
       <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\app\Models" />
       <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\app\Models\Backend" />
@@ -234,7 +242,8 @@
       <workItem from="1643226256703" duration="1141000" />
       <workItem from="1643228196697" duration="3184000" />
       <workItem from="1643238746127" duration="8079000" />
-      <workItem from="1643281603705" duration="9517000" />
+      <workItem from="1643281603705" duration="9578000" />
+      <workItem from="1643296682889" duration="6001000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1641649877243</created>
@@ -530,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643290042790</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="add admin user role">
+      <created>1643296653982</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1643296653982</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -550,7 +566,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="update product" />
     <MESSAGE value="update manage multi image" />
     <MESSAGE value="add active product" />
     <MESSAGE value="delete product" />
@@ -575,6 +590,7 @@
     <MESSAGE value="update orders" />
     <MESSAGE value="update review orders" />
     <MESSAGE value="add error page" />
-    <option name="LAST_COMMIT_MESSAGE" value="add error page" />
+    <MESSAGE value="add admin user role" />
+    <option name="LAST_COMMIT_MESSAGE" value="add admin user role" />
   </component>
 </project>

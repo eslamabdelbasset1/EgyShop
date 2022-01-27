@@ -1,6 +1,7 @@
 @extends('admin.admin_master')
 
 @section('content')
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <div class="container-full">
         <!-- Main content -->
         <section class="content">
@@ -23,7 +24,7 @@
                                                 <div class="form-group">
                                                     <h5>Admin Name <span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <input type="text" name="name" value="{{$editProfile->name}}" class="form-control" required>
+                                                        <input type="text" name="name" value="{{$editData->name}}" class="form-control" required>
                                                     </div>
                                                 </div>
 
@@ -32,7 +33,7 @@
                                                 <div class="form-group">
                                                     <h5>Admin Email <span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <input type="email" name="email" value="{{$editProfile->email}}" class="form-control" required>
+                                                        <input type="email" name="email" value="{{$editData->email}}" class="form-control" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -49,8 +50,8 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <img
-                                                     src="{{(!empty($editProfile->profile_photo_path)) ?
-                                                    url('upload/admin/profile/'.$editProfile->profile_photo_path)
+                                                     src="{{(!empty($editData->profile_photo_path)) ?
+                                                    url('upload/admin/profile/'.$editData->profile_photo_path)
                                                     : url('upload/admin/profile/no_image.jpg')}}"
                                                      id="showImage"
                                                     style="width: 100px;"
@@ -77,16 +78,16 @@
         <!-- /.content -->
     </div>
 
-{{--    <script src="{{asset('backend/js/jquery-3.6.0.min.js')}}"></script>--}}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
     <script type="text/javascript">
-        $(document).ready(function() {
-            $('#image').change(function(e) {
-               const reader = new FileReader();
-               reader.onLoad = function(e){
-                   $('#showImage').attr('src',e.target.result);
-               }
-               reader.readAsDataURL(e.target.files['0']);
+        $(document).ready(function(){
+            $('#image').change(function(e){
+                var reader = new FileReader();
+                reader.onload = function(e){
+                    $('#showImage').attr('src',e.target.result);
+                }
+                reader.readAsDataURL(e.target.files['0']);
             });
         });
     </script>
