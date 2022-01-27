@@ -101,7 +101,7 @@ jQuery.fn.extend({
 			return box;
 		}
 
-		// If we don't have gBCR, just use 0,0 rather than error
+		// If we don't have gBCR, just use 0,0 rather than errors
 		// BlackBerry 5, iOS 3 (original iPhone)
 		if ( typeof elem.getBoundingClientRect !== strundefined ) {
 			box = elem.getBoundingClientRect();

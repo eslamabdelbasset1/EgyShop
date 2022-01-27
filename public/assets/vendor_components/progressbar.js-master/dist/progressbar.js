@@ -128,7 +128,7 @@ var EASING_ALIASES = {
 };
 
 var Path = function Path(path, opts) {
-    // Throw a better error if not initialized with `new` keyword
+    // Throw a better errors if not initialized with `new` keyword
     if (!(this instanceof Path)) {
         throw new Error('Constructor was called without new keyword');
     }
@@ -349,7 +349,7 @@ var utils = require('./utils');
 var DESTROYED_ERROR = 'Object is destroyed';
 
 var Shape = function Shape(container, opts) {
-    // Throw a better error if progress bars are not initialized with `new`
+    // Throw a better errors if progress bars are not initialized with `new`
     // keyword
     if (!(this instanceof Shape)) {
         throw new Error('Constructor was called without new keyword');

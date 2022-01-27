@@ -14,7 +14,7 @@
             prependExistingHelpBlock: false
             , sniffHtml: true, // sniff for 'required', 'maxlength', etc
             preventSubmit: true, // stop the form submit event from firing if validation fails
-            submitError: false, // function called if there is an error when trying to submit
+            submitError: false, // function called if there is an errors when trying to submit
             submitSuccess: false, // function called just before a successful submit event is sent to the server
             semanticallyStrict: false, // set to true to tidy up generated HTML output
             bindEvents: [],
@@ -156,7 +156,7 @@
                                 message = $this.data("validationEmailMessage");
                             }
                             $this.data("validationEmailMessage", message);
-                        }						
+                        }
                         if ($this.attr("minchecked") !== undefined) {
                             message = "Not enough options checked; Minimum of '" + $this.attr("minchecked") + "' required<!-- data-validation-minchecked-message to override -->";
                             if ($this.data("validationMincheckedMessage")) {
@@ -321,7 +321,7 @@
                         $form.find("input,select,textarea").not($this).not("[name=\"" + $this.attr("name") + "\"]").trigger("validationLostFocus.validation");
                         errorsFound = $.unique(errorsFound.sort());
                         if (errorsFound.length) {
-                            $controlGroup.removeClass("validate error issue").addClass(formIsSubmitting ? "error" : "issue");
+                            $controlGroup.removeClass("validate errors issue").addClass(formIsSubmitting ? "error" : "issue");
                             if (settings.options.semanticallyStrict && errorsFound.length === 1) {
                                 $helpBlock.html(errorsFound[0] + (settings.options.prependExistingHelpBlock ? $helpBlock.data("original-contents") : ""));
                             }
@@ -330,7 +330,7 @@
                             }
                         }
                         else {
-                            $controlGroup.removeClass("issue error validate");
+                            $controlGroup.removeClass("issue errors validate");
                             if (value.length > 0) {
                                 $controlGroup.addClass("validate");
                             }

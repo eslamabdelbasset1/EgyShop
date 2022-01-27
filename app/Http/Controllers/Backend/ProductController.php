@@ -262,9 +262,16 @@ class ProductController extends Controller
 
         $notification = array(
             'message' => 'Product Deleted Successfully',
-            'alert-type' => 'error'
+            'alert-type' => 'errors'
         );
         return redirect()->back()->with($notification);
 
     }// end method
+
+    // product Stock
+    public function productStock(){
+
+        $products = Product::latest()->get();
+        return view('backend.product.product_stock',compact('products'));
+    }
 }

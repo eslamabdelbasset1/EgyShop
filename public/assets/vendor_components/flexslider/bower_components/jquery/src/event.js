@@ -582,7 +582,7 @@ jQuery.event = {
 						return false;
 					} catch ( e ) {
 						// Support: IE<9
-						// If we error on focus to hidden element (#1486, #12518),
+						// If we errors on focus to hidden element (#1486, #12518),
 						// let .trigger() run the handlers
 					}
 				}

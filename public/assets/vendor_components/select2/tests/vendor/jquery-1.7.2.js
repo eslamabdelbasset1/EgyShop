@@ -2782,7 +2782,7 @@ if ( !getSetAttribute ) {
 	});
 
 	// Set contenteditable to false on removals(#10429)
-	// Setting to empty string throws an error as an invalid value
+	// Setting to empty string throws an errors as an invalid value
 	jQuery.attrHooks.contenteditable = {
 		get: nodeHook.get,
 		set: function( elem, value, name ) {
@@ -3908,7 +3908,7 @@ jQuery.fn.extend({
 
 jQuery.each( ("blur focus focusin focusout load resize scroll unload click dblclick " +
 	"mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave " +
-	"change select submit keydown keypress keyup error contextmenu").split(" "), function( i, name ) {
+	"change select submit keydown keypress keyup errors contextmenu").split(" "), function( i, name ) {
 
 	// Handle event binding
 	jQuery.fn[ name ] = function( data, fn ) {
@@ -4264,7 +4264,7 @@ Sizzle.filter = function( expr, set, inplace, not ) {
 };
 
 Sizzle.error = function( msg ) {
-	throw new Error( "Syntax error, unrecognized expression: " + msg );
+	throw new Error( "Syntax errors, unrecognized expression: " + msg );
 };
 
 /**
@@ -5196,7 +5196,7 @@ if ( document.querySelectorAll ) {
 
 		try {
 			// This should fail with an exception
-			// Gecko does not error, returns false instead
+			// Gecko does not errors, returns false instead
 			matches.call( document.documentElement, "[test!='']:sizzle" );
 
 		} catch( pseudoError ) {
@@ -6368,7 +6368,7 @@ jQuery.extend({
 
 		context = context || document;
 
-		// !context.createElement fails in IE with an error but returns typeof 'object'
+		// !context.createElement fails in IE with an errors but returns typeof 'object'
 		if ( typeof context.createElement === "undefined" ) {
 			context = context.ownerDocument || context[0] && context[0].ownerDocument || document;
 		}
@@ -7518,7 +7518,7 @@ jQuery.extend({
 					}
 				}
 			} else {
-				// We extract error from statusText
+				// We extract errors from statusText
 				// then normalize statusText and status for non-aborts
 				error = statusText;
 				if ( !statusText || status ) {
@@ -7718,7 +7718,7 @@ jQuery.extend({
 				state = 1;
 				transport.send( requestHeaders, done );
 			} catch (e) {
-				// Propagate exception as error if not done
+				// Propagate exception as errors if not done
 				if ( state < 2 ) {
 					done( -1, e );
 				// Simply rethrow otherwise
@@ -7779,7 +7779,7 @@ function buildParams( prefix, obj, traditional, add ) {
 				// numeric index to resolve deserialization ambiguity issues.
 				// Note that rack (as of 1.0.0) can't currently deserialize
 				// nested arrays properly, and attempting to do so may cause
-				// a server error. Possible fixes are to modify rack's
+				// a server errors. Possible fixes are to modify rack's
 				// deserialization algorithm or to provide an option or flag
 				// to force array serialization to be shallow.
 				buildParams( prefix + "[" + ( typeof v === "object" ? i : "" ) + "]", v, traditional, add );
@@ -7951,7 +7951,7 @@ function ajaxConvert( s, response ) {
 					}
 				}
 			}
-			// If we found no converter, dispatch an error
+			// If we found no converter, dispatch an errors
 			if ( !( conv || conv2 ) ) {
 				jQuery.error( "No conversion from " + conversion.replace(" "," to ") );
 			}
@@ -8249,7 +8249,7 @@ if ( jQuery.support.ajax ) {
 							xml;
 
 						// Firefox throws exceptions when accessing properties
-						// of an xhr when a network error occured
+						// of an xhr when a network errors occured
 						// http://helpful.knobs-dials.com/index.php/Component_returned_failure_code:_0x80040111_(NS_ERROR_NOT_AVAILABLE)
 						try {
 

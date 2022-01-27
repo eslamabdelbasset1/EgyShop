@@ -36,7 +36,7 @@ $.magnificPopup.registerModule('gallery', {
 				supportsFastClick = Boolean($.fn.mfpFastClick);
 
 			mfp.direction = true; // true - next, false - prev
-			
+
 			if(!gSt || !gSt.enabled ) return false;
 
 			_wrapClasses += ' mfp-gallery';
@@ -75,16 +75,16 @@ $.magnificPopup.registerModule('gallery', {
 			_mfpOn('BuildControls' + ns, function() {
 				if(mfp.items.length > 1 && gSt.arrows && !mfp.arrowLeft) {
 					var markup = gSt.arrowMarkup,
-						arrowLeft = mfp.arrowLeft = $( markup.replace(/%title%/gi, gSt.tPrev).replace(/%dir%/gi, 'left') ).addClass(PREVENT_CLOSE_CLASS),			
+						arrowLeft = mfp.arrowLeft = $( markup.replace(/%title%/gi, gSt.tPrev).replace(/%dir%/gi, 'left') ).addClass(PREVENT_CLOSE_CLASS),
 						arrowRight = mfp.arrowRight = $( markup.replace(/%title%/gi, gSt.tNext).replace(/%dir%/gi, 'right') ).addClass(PREVENT_CLOSE_CLASS);
 
 					var eName = supportsFastClick ? 'mfpFastClick' : 'click';
 					arrowLeft[eName](function() {
 						mfp.prev();
-					});			
+					});
 					arrowRight[eName](function() {
 						mfp.next();
-					});	
+					});
 
 					// Polyfill for :before and :after (adds elements with classes mfp-a and mfp-b)
 					if(mfp.isIE7) {
@@ -104,21 +104,21 @@ $.magnificPopup.registerModule('gallery', {
 				mfp._preloadTimeout = setTimeout(function() {
 					mfp.preloadNearbyImages();
 					mfp._preloadTimeout = null;
-				}, 16);		
+				}, 16);
 			});
 
 
 			_mfpOn(CLOSE_EVENT+ns, function() {
 				_document.off(ns);
 				mfp.wrap.off('click'+ns);
-			
+
 				if(mfp.arrowLeft && supportsFastClick) {
 					mfp.arrowLeft.add(mfp.arrowRight).destroyMfpFastClick();
 				}
 				mfp.arrowRight = mfp.arrowLeft = null;
 			});
 
-		}, 
+		},
 		next: function() {
 			mfp.direction = true;
 			mfp.index = _getLoopedId(mfp.index + 1);
@@ -164,7 +164,7 @@ $.magnificPopup.registerModule('gallery', {
 			if(item.type === 'image') {
 				item.img = $('<img class="mfp-img" />').on('load.mfploader', function() {
 					item.hasSize = true;
-				}).on('error.mfploader', function() {
+				}).on('errors.mfploader', function() {
 					item.hasSize = true;
 					item.loadError = true;
 					_mfpTrigger('LazyLoadError', item);

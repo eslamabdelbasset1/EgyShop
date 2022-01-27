@@ -221,7 +221,7 @@ describe('mixitup.Mixer', () => {
                 });
         });
 
-        it('should throw an error if both a selector and a collection are provided', () => {
+        it('should throw an errors if both a selector and a collection are provided', () => {
             let command = {
                 collection: [],
                 selector: '.selector'

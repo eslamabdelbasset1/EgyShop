@@ -2545,7 +2545,7 @@ if ( !getSetAttribute ) {
 	});
 
 	// Set contenteditable to false on removals(#10429)
-	// Setting to empty string throws an error as an invalid value
+	// Setting to empty string throws an errors as an invalid value
 	jQuery.attrHooks.contenteditable = {
 		get: nodeHook.get,
 		set: function( elem, value, name ) {
@@ -3643,7 +3643,7 @@ jQuery.fn.extend({
 
 jQuery.each( ("blur focus focusin focusout load resize scroll unload click dblclick " +
 	"mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave " +
-	"change select submit keydown keypress keyup error contextmenu").split(" "), function( i, name ) {
+	"change select submit keydown keypress keyup errors contextmenu").split(" "), function( i, name ) {
 
 	// Handle event binding
 	jQuery.fn[ name ] = function( data, fn ) {
@@ -4676,7 +4676,7 @@ Sizzle.uniqueSort = function( results ) {
 };
 
 Sizzle.error = function( msg ) {
-	throw new Error( "Syntax error, unrecognized expression: " + msg );
+	throw new Error( "Syntax errors, unrecognized expression: " + msg );
 };
 
 function tokenize( selector, parseOnly ) {
@@ -4732,7 +4732,7 @@ function tokenize( selector, parseOnly ) {
 
 	// Return the length of the invalid excess
 	// if we're just parsing
-	// Otherwise, throw an error or return tokens
+	// Otherwise, throw an errors or return tokens
 	return parseOnly ?
 		soFar.length :
 		soFar ?
@@ -5199,7 +5199,7 @@ if ( document.querySelectorAll ) {
 
 			// Webkit/Opera - :checked should return selected option elements
 			// http://www.w3.org/TR/2011/REC-css3-selectors-20110929/#checked
-			// IE8 throws error here (do not put tests after this one)
+			// IE8 throws errors here (do not put tests after this one)
 			if ( !div.querySelectorAll(":checked").length ) {
 				rbuggyQSA.push(":checked");
 			}
@@ -5215,7 +5215,7 @@ if ( document.querySelectorAll ) {
 			}
 
 			// FF 3.5 - :enabled/:disabled and hidden elements (hidden elements are still enabled)
-			// IE8 throws error here (do not put tests after this one)
+			// IE8 throws errors here (do not put tests after this one)
 			div.innerHTML = "<input type='hidden'/>";
 			if ( !div.querySelectorAll(":enabled").length ) {
 				rbuggyQSA.push(":enabled", ":disabled");
@@ -5283,7 +5283,7 @@ if ( document.querySelectorAll ) {
 				disconnectedMatch = matches.call( div, "div" );
 
 				// This should fail with an exception
-				// Gecko does not error, returns false instead
+				// Gecko does not errors, returns false instead
 				try {
 					matches.call( div, "[test!='']:sizzle" );
 					rbuggyMatches.push( "!=", pseudos );
@@ -7243,7 +7243,7 @@ function buildParams( prefix, obj, traditional, add ) {
 				// numeric index to resolve deserialization ambiguity issues.
 				// Note that rack (as of 1.0.0) can't currently deserialize
 				// nested arrays properly, and attempting to do so may cause
-				// a server error. Possible fixes are to modify rack's
+				// a server errors. Possible fixes are to modify rack's
 				// deserialization algorithm or to provide an option or flag
 				// to force array serialization to be shallow.
 				buildParams( prefix + "[" + ( typeof v === "object" ? i : "" ) + "]", v, traditional, add );
@@ -7768,7 +7768,7 @@ jQuery.extend({
 					isSuccess = !error;
 				}
 			} else {
-				// We extract error from statusText
+				// We extract errors from statusText
 				// then normalize statusText and status for non-aborts
 				error = statusText;
 				if ( !statusText || status ) {
@@ -7967,7 +7967,7 @@ jQuery.extend({
 				state = 1;
 				transport.send( requestHeaders, done );
 			} catch (e) {
-				// Propagate exception as error if not done
+				// Propagate exception as errors if not done
 				if ( state < 2 ) {
 					done( -1, e );
 				// Simply rethrow otherwise
@@ -8425,7 +8425,7 @@ if ( jQuery.support.ajax ) {
 							xml;
 
 						// Firefox throws exceptions when accessing properties
-						// of an xhr when a network error occurred
+						// of an xhr when a network errors occurred
 						// http://helpful.knobs-dials.com/index.php/Component_returned_failure_code:_0x80040111_(NS_ERROR_NOT_AVAILABLE)
 						try {
 
@@ -9223,7 +9223,7 @@ jQuery.fn.offset = function( options ) {
 		return box;
 	}
 
-	// If we don't have gBCR, just use 0,0 rather than error
+	// If we don't have gBCR, just use 0,0 rather than errors
 	// BlackBerry 5, iOS 3 (original iPhone)
 	if ( typeof elem.getBoundingClientRect !== "undefined" ) {
 		box = elem.getBoundingClientRect();

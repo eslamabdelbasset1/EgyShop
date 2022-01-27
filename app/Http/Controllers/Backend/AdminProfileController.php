@@ -77,7 +77,7 @@ class AdminProfileController extends Controller
        {
            $notifications = array(
                'message' => 'Password is incorrect',
-               'alert-type' => 'error'
+               'alert-type' => 'errors'
            );
            return redirect()->back()->with($notifications);
        }

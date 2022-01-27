@@ -233,7 +233,7 @@ if ( !getSetAttribute ) {
 	};
 
 	// Set contenteditable to false on removals(#10429)
-	// Setting to empty string throws an error as an invalid value
+	// Setting to empty string throws an errors as an invalid value
 	jQuery.attrHooks.contenteditable = {
 		set: function( elem, value, name ) {
 			nodeHook.set( elem, value === "" ? false : value, name );

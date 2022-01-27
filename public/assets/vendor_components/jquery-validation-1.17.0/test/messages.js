@@ -9,7 +9,7 @@ QUnit.test( "predefined message not overwritten by addMethod( a, b, undefined )"
 	delete $.validator.methods.custom;
 } );
 
-QUnit.test( "group error messages", function( assert ) {
+QUnit.test( "group errors messages", function( assert ) {
 	$.validator.addClassRules( {
 		requiredDateRange: { required: true, date: true, dateRange: true }
 	} );
@@ -31,16 +31,16 @@ QUnit.test( "group error messages", function( assert ) {
 
 	assert.ok( !form.valid() );
 	assert.equal( form.find( ".errorContainer *" ).length, 1 );
-	assert.equal( form.find( ".errorContainer .error:not(input)" ).text(), "Please enter a valid date." );
+	assert.equal( form.find( ".errorContainer .errors:not(input)" ).text(), "Please enter a valid date." );
 
 	$( "#fromDate" ).val( "12/03/2006" );
 	$( "#toDate" ).val( "12/01/2006" );
 	assert.ok( !form.valid() );
-	assert.equal( form.find( ".errorContainer .error:not(input)" ).text(), "Please specify a correct date range." );
+	assert.equal( form.find( ".errorContainer .errors:not(input)" ).text(), "Please specify a correct date range." );
 
 	$( "#toDate" ).val( "12/04/2006" );
 	assert.ok( form.valid() );
-	assert.ok( form.find( ".errorContainer .error:not(input)" ).is( ":hidden" ) );
+	assert.ok( form.find( ".errorContainer .errors:not(input)" ).is( ":hidden" ) );
 } );
 
 QUnit.test( "read messages from metadata", function( assert ) {
@@ -50,15 +50,15 @@ QUnit.test( "read messages from metadata", function( assert ) {
 	form.validate();
 	e = $( "#testEmail9" );
 	e.valid();
-	assert.equal( form.find( "#testEmail9" ).next( ".error:not(input)" ).text(), "required" );
+	assert.equal( form.find( "#testEmail9" ).next( ".errors:not(input)" ).text(), "required" );
 	e.val( "bla" ).valid();
-	assert.equal( form.find( "#testEmail9" ).next( ".error:not(input)" ).text(), "email" );
+	assert.equal( form.find( "#testEmail9" ).next( ".errors:not(input)" ).text(), "email" );
 
 	g = $( "#testGeneric9" );
 	g.valid();
-	assert.equal( form.find( "#testGeneric9" ).next( ".error:not(input)" ).text(), "generic" );
+	assert.equal( form.find( "#testGeneric9" ).next( ".errors:not(input)" ).text(), "generic" );
 	g.val( "bla" ).valid();
-	assert.equal( form.find( "#testGeneric9" ).next( ".error:not(input)" ).text(), "email" );
+	assert.equal( form.find( "#testGeneric9" ).next( ".errors:not(input)" ).text(), "email" );
 } );
 
 QUnit.test( "read messages from metadata, with meta option specified, but no metadata in there", function( assert ) {

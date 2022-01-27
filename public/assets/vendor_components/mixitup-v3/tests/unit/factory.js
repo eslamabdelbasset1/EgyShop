@@ -8,23 +8,23 @@ const dataset = require('../mock/dataset');
 const mixitup = require('../../dist/mixitup.js');
 
 describe('mixitup()', () => {
-    it('should throw an error if no container reference', () => {
+    it('should throw an errors if no container reference', () => {
         chai.assert.throws(() => mixitup(), Error, mixitup.messages.errorFactoryInvalidContainer());
     });
 
-    it('should throw an error if a null container reference is passed', () => {
+    it('should throw an errors if a null container reference is passed', () => {
         chai.assert.throws(() => mixitup(null), Error, mixitup.messages.errorFactoryInvalidContainer());
     });
 
-    it('should throw an error if an invalid container reference is passed', () => {
+    it('should throw an errors if an invalid container reference is passed', () => {
         chai.assert.throws(() => mixitup({}), Error, mixitup.messages.errorFactoryInvalidContainer());
     });
 
-    it('should throw an error if an invalid reference or selector is passed', function() {
+    it('should throw an errors if an invalid reference or selector is passed', function() {
         chai.assert.throws(() => mixitup(false), Error, mixitup.messages.errorFactoryInvalidContainer());
     });
 
-    it('should throw an error if an invalid configuration option is passed', function() {
+    it('should throw an errors if an invalid configuration option is passed', function() {
         let container = dom.getContainer();
 
         chai.assert.throws(() => {
@@ -77,7 +77,7 @@ describe('mixitup()', () => {
         mixer.destroy();
     });
 
-    it('should throw an error if the container selector yields no element', () => {
+    it('should throw an errors if the container selector yields no element', () => {
         chai.assert.throws(() => mixitup('.invalid-container-selector'), Error, mixitup.messages.errorFactoryContainerNotFound());
     });
 

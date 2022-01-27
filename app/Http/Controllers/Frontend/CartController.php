@@ -95,13 +95,13 @@ class CartController extends Controller
                 return response()->json(['success' => 'Successfully Added On Your Wishlist']);
             } else{
 
-            return response()->json(['error' => 'This Product has Already on Your Wishlist']);
+            return response()->json(['errors' => 'This Product has Already on Your Wishlist']);
 
         }
 
     }else{
 
-            return response()->json(['error' => 'At First Login Your Account']);
+            return response()->json(['errors' => 'At First Login Your Account']);
 
         }
     }
@@ -128,7 +128,7 @@ class CartController extends Controller
                 'success' => 'Coupon Applied Successfully'
             ));
         }else{
-            return response()->json(['error' => 'Invalid Coupon']);
+            return response()->json(['errors' => 'Invalid Coupon']);
         }
 
     }
@@ -173,7 +173,7 @@ class CartController extends Controller
 
                 $notification = array(
                     'message' => 'Shopping At list One Product',
-                    'alert-type' => 'error'
+                    'alert-type' => 'errors'
                 );
                 return redirect()->to('/')->with($notification);
             }
@@ -182,7 +182,7 @@ class CartController extends Controller
 
             $notification = array(
                 'message' => 'You Need to Login First',
-                'alert-type' => 'error'
+                'alert-type' => 'errors'
             );
             return redirect()->route('login')->with($notification);
 

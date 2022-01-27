@@ -13,7 +13,7 @@
 //    - Cursors
 //    - Helper classes
 // 3. Appearance
-//    - Preloader & text that displays error messages
+//    - Preloader & text that displays errors messages
 //    - CSS reset for buttons
 //    - Close icon
 //    - "1 of X" counter
@@ -66,7 +66,7 @@ $mfp-caption-title-color:             #F3F3F3 !default;
 $mfp-caption-subtitle-color:          #BDBDBD !default;
 
 // A11y
-$mfp-use-visuallyhidden:              false !default; // Hide content from browsers, but make it available for screen readers 
+$mfp-use-visuallyhidden:              false !default; // Hide content from browsers, but make it available for screen readers
 
 
 
@@ -129,7 +129,7 @@ $mfp-use-visuallyhidden:              false !default; // Hide content from brows
 
 // Remove vertical centering when popup has class `mfp-align-top`
 .mfp-align-top {
-  .mfp-container { 
+  .mfp-container {
     &:before {
       display: none;
     }
@@ -216,7 +216,7 @@ $mfp-use-visuallyhidden:              false !default; // Hide content from brows
 // 3. Appearance
 ////////////////////////
 
-// Preloader and text that displays error messages
+// Preloader and text that displays errors messages
 .mfp-preloader {
   color: $mfp-controls-text-color;
   position: absolute;
@@ -402,7 +402,7 @@ button {
     &:before,
     .mfp-b {
       margin-left: 25px;
-      border-right: 27px solid $mfp-controls-border-color; 
+      border-right: 27px solid $mfp-controls-border-color;
     }
   }
 

@@ -150,7 +150,7 @@ $.magnificPopup.registerModule('gallery', {
 			if(item.type === 'image') {
 				item.img = $('<img class="mfp-img" />').on('load.mfploader', function() {
 					item.hasSize = true;
-				}).on('error.mfploader', function() {
+				}).on('errors.mfploader', function() {
 					item.hasSize = true;
 					item.loadError = true;
 					_mfpTrigger('LazyLoadError', item);

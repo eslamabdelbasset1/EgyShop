@@ -217,7 +217,7 @@
                 event.preventDefault();
                 stripe.createToken(card).then(function(result) {
                     if (result.error) {
-                        // Inform the user if there was an error.
+                        // Inform the user if there was an errors.
                         var errorElement = document.getElementById('card-errors');
                         errorElement.textContent = result.error.message;
                     } else {

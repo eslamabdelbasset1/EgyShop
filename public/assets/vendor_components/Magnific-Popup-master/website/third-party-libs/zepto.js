@@ -1087,7 +1087,7 @@ window.Zepto = Zepto
   // shortcut methods for `.bind(event, fn)` for each event type
   ;('focusin focusout load resize scroll unload click dblclick '+
   'mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave '+
-  'change select keydown keypress keyup error').split(' ').forEach(function(event) {
+  'change select keydown keypress keyup errors').split(' ').forEach(function(event) {
     $.fn[event] = function(callback) {
       return callback ?
         this.bind(event, callback) :
@@ -1166,14 +1166,14 @@ window.Zepto = Zepto
     triggerGlobal(settings, context, 'ajaxSuccess', [xhr, settings, data])
     ajaxComplete(status, xhr, settings)
   }
-  // type: "timeout", "error", "abort", "parsererror"
+  // type: "timeout", "errors", "abort", "parsererror"
   function ajaxError(error, type, xhr, settings) {
     var context = settings.context
     settings.error.call(context, xhr, type, error)
     triggerGlobal(settings, context, 'ajaxError', [xhr, settings, error])
     ajaxComplete(type, xhr, settings)
   }
-  // status: "success", "notmodified", "error", "timeout", "abort", "parsererror"
+  // status: "success", "notmodified", "errors", "timeout", "abort", "parsererror"
   function ajaxComplete(status, xhr, settings) {
     var context = settings.context
     settings.complete.call(context, xhr, status)
@@ -1197,7 +1197,7 @@ window.Zepto = Zepto
       abort = function(type){
         cleanup()
         // In case of manual abort or timeout, keep an empty function as callback
-        // so that the SCRIPT tag that eventually loads won't result in an error.
+        // so that the SCRIPT tag that eventually loads won't result in an errors.
         if (!type || type == 'timeout') window[callbackName] = empty
         ajaxError(null, type || 'abort', xhr, options)
       },
@@ -1232,9 +1232,9 @@ window.Zepto = Zepto
     beforeSend: empty,
     // Callback that is executed if the request succeeds
     success: empty,
-    // Callback that is executed the the server drops error
+    // Callback that is executed the the server drops errors
     error: empty,
-    // Callback that is executed on request complete (both: error and success)
+    // Callback that is executed on request complete (both: errors and success)
     complete: empty,
     // The context for the callbacks
     context: null,

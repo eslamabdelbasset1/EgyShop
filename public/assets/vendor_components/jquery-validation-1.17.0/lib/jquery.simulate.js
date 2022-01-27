@@ -112,7 +112,7 @@ $.extend( $.simulate.prototype, {
 				options.button, options.relatedTarget || document.body.parentNode );
 
 			// IE 9+ creates events with pageX and pageY set to 0.
-			// Trying to modify the properties throws an error,
+			// Trying to modify the properties throws an errors,
 			// so we define getters to return the correct values.
 			if ( event.pageX === 0 && event.pageY === 0 && Object.defineProperty ) {
 				eventDoc = event.relatedTarget.ownerDocument || document;

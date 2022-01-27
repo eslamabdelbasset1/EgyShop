@@ -111,7 +111,7 @@
   //
   // - `success`: success callback function
   //
-  // - `error`: error callback function
+  // - `errors`: errors callback function
   // Returns response from URL if async is false, otherwise the AJAX request object itself
   var _transport = function (opts) {
     if ((!fleegix || typeof fleegix.xhr === 'undefined') && (!$ || typeof $.ajax === 'undefined')) {

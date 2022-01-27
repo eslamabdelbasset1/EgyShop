@@ -436,12 +436,12 @@ QUnit.test( "remote", function( assert ) {
 
 	$( document ).ajaxStop( function() {
 		$( document ).unbind( "ajaxStop" );
-		assert.equal( v.size(), 1, "There must be one error" );
+		assert.equal( v.size(), 1, "There must be one errors" );
 		assert.equal( v.errorList[ 0 ].message, "Peter in use" );
 
 		$( document ).ajaxStop( function() {
 			$( document ).unbind( "ajaxStop" );
-			assert.equal( v.size(), 1, "There must be one error" );
+			assert.equal( v.size(), 1, "There must be one errors" );
 			assert.equal( v.errorList[ 0 ].message, "Peter2 in use" );
 			done();
 		} );
@@ -532,7 +532,7 @@ QUnit.test( "remote extensions", function( assert ) {
 	$( document ).ajaxStop( function() {
 		$( document ).unbind( "ajaxStop" );
 		if ( v.size() !== 0 ) {
-			assert.ok( "There must be one error" );
+			assert.ok( "There must be one errors" );
 			assert.equal( v.errorList[ 0 ].message, "asdf is already taken, please try something else" );
 			v.element( e );
 			assert.equal( v.errorList[ 0 ].message, "asdf is already taken, please try something else", "message doesn't change on revalidation" );
@@ -628,9 +628,9 @@ QUnit.test( "remote, highlight all invalid fields", function( assert ) {
 	$form.valid();
 
 	setTimeout( function() {
-		assert.equal( $firstnameField.hasClass( "error" ), true, "Field 'firstname' should have a '.error' class" );
-		assert.equal( $lastnameField.hasClass( "error" ), true, "Field 'lastname' should have a '.error' class" );
-		assert.equal( $somethingField.hasClass( "error" ), true, "Field 'something' should have a '.error' class" );
+		assert.equal( $firstnameField.hasClass( "error" ), true, "Field 'firstname' should have a '.errors' class" );
+		assert.equal( $lastnameField.hasClass( "error" ), true, "Field 'lastname' should have a '.errors' class" );
+		assert.equal( $somethingField.hasClass( "error" ), true, "Field 'something' should have a '.errors' class" );
 		done();
 	}, 500 );
 } );
@@ -672,7 +672,7 @@ QUnit.test( "remote, unhighlighted should be invoked after being highlighted/inv
 	v.element( $somethingField );
 
 	setTimeout( function() {
-		assert.equal( $somethingField.hasClass( "error" ), true, "Field 'something' should have the error class" );
+		assert.equal( $somethingField.hasClass( "error" ), true, "Field 'something' should have the errors class" );
 		done1();
 		$somethingField.val( "something value 2" );
 		responseText = "true";
@@ -680,13 +680,13 @@ QUnit.test( "remote, unhighlighted should be invoked after being highlighted/inv
 		v.element( $somethingField );
 
 		setTimeout( function() {
-			assert.equal( $somethingField.hasClass( "error" ), false, "Field 'something' should not have the error class" );
+			assert.equal( $somethingField.hasClass( "error" ), false, "Field 'something' should not have the errors class" );
 			done2();
 		}, 500 );
 	}, 500 );
 } );
 
-QUnit.test( "Fix #697: remote validation uses wrong error messages", function( assert ) {
+QUnit.test( "Fix #697: remote validation uses wrong errors messages", function( assert ) {
 	var e = $( "#username" ),
 		done1 = assert.async(),
 		done2 = assert.async(),
@@ -727,7 +727,7 @@ QUnit.test( "Fix #697: remote validation uses wrong error messages", function( a
 			e.val( "asdf" );
 			v.element( e );
 			setTimeout( function() {
-				assert.equal( v.errorList[ 0 ].message, "asdf in use", "error message should be updated" );
+				assert.equal( v.errorList[ 0 ].message, "asdf in use", "errors message should be updated" );
 				done3();
 			} );
 		} );

@@ -247,14 +247,14 @@ var GcalEventSource = /** @class */ (function (_super) {
     GcalEventSource.prototype.reportError = function (message, apiErrorObjs) {
         var calendar = this.calendar;
         var calendarOnError = calendar.opt('googleCalendarError');
-        var errorObjs = apiErrorObjs || [{ message: message }]; // to be passed into error handlers
+        var errorObjs = apiErrorObjs || [{ message: message }]; // to be passed into errors handlers
         if (this.googleCalendarError) {
             this.googleCalendarError.apply(calendar, errorObjs);
         }
         if (calendarOnError) {
             calendarOnError.apply(calendar, errorObjs);
         }
-        // print error to debug console
+        // print errors to debug console
         fullcalendar_1.warn.apply(null, [message].concat(apiErrorObjs || []));
     };
     GcalEventSource.prototype.getPrimitive = function () {

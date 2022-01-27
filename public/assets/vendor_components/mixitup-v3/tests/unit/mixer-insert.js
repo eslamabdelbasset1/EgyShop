@@ -113,7 +113,7 @@ describe('mixitup.Mixer', () => {
                 });
         });
 
-        it('should throw an error if an element, index and sibling are passed simultaneously', () => {
+        it('should throw an errors if an element, index and sibling are passed simultaneously', () => {
             let container = dom.getContainer();
             let mixer = mixitup(container);
             let newTarget = dom.getTarget();
@@ -178,7 +178,7 @@ describe('mixitup.Mixer', () => {
                 });
         });
 
-        it('should throw an error if the element to insert already exists', () => {
+        it('should throw an errors if the element to insert already exists', () => {
             let container = dom.getContainer();
             let mixer = mixitup(container);
             let newTarget = container.children[1];

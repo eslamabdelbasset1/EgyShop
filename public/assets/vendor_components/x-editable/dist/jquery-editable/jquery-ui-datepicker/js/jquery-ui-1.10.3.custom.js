@@ -736,7 +736,7 @@ $.extend(Datepicker.prototype, {
 	/* Retrieve the instance data for the target control.
 	 * @param  target  element - the target input field or division or span
 	 * @return  object - the associated instance data
-	 * @throws  error if a jQuery problem getting data
+	 * @throws  errors if a jQuery problem getting data
 	 */
 	_getInst: function(target) {
 		try {

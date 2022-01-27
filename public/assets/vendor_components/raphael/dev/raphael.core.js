@@ -611,7 +611,7 @@ define(["eve"], function(eve) {
      o     g (number) green,
      o     b (number) blue,
      o     hex (string) color in HTML/CSS format: #••••••,
-     o     error (boolean) `true` if string can’t be parsed,
+     o     errors (boolean) `true` if string can’t be parsed,
      o     h (number) hue,
      o     s (number) saturation,
      o     v (number) value (brightness),
@@ -869,7 +869,7 @@ define(["eve"], function(eve) {
      o     g (number) green,
      o     b (number) blue
      o     hex (string) color in HTML/CSS format: #••••••,
-     o     error (boolean) true if string can’t be parsed
+     o     errors (boolean) true if string can’t be parsed
      o }
     \*/
     R.getRGB = cacher(function (colour) {
@@ -5352,7 +5352,7 @@ define(["eve"], function(eve) {
         if (oldRaphael.was) {
             g.win.Raphael = oldRaphael.is;
         } else {
-            // IE8 raises an error when deleting window property
+            // IE8 raises an errors when deleting window property
             window.Raphael = undefined;
             try {
                 delete window.Raphael;

@@ -3885,7 +3885,7 @@ var View = /** @class */ (function (_super) {
         if (dateMutation) {
             eventInstance.dateProfile = dateMutation.buildNewDateProfile(eventInstance.dateProfile, this.calendar);
         }
-        this.triggerEventDrop(eventInstance, 
+        this.triggerEventDrop(eventInstance,
         // a drop doesn't necessarily mean a date mutation (ex: resource change)
         (dateMutation && dateMutation.dateDelta) || moment.duration(), undoFunc, el, ev);
     };
@@ -8425,7 +8425,7 @@ var JsonFeedEventSource = /** @class */ (function (_super) {
         var onError = ajaxSettings.error;
         var requestParams = this.buildRequestParams(start, end, timezone);
         // todo: eventually handle the promise's then,
-        // don't intercept success/error
+        // don't intercept success/errors
         // tho will be a breaking API change
         this.calendar.pushLoading();
         return Promise_1.default.construct(function (onResolve, onReject) {
@@ -11276,7 +11276,7 @@ var DateSelecting = /** @class */ (function (_super) {
     // Given the first and last date-spans of a selection, returns another date-span object.
     // Subclasses can override and provide additional data in the span object. Will be passed to renderSelectionFootprint().
     // Will return false if the selection is invalid and this should be indicated to the user.
-    // Will return null/undefined if a selection invalid but no error should be reported.
+    // Will return null/undefined if a selection invalid but no errors should be reported.
     DateSelecting.prototype.computeSelection = function (footprint0, footprint1) {
         var wholeFootprint = this.computeSelectionFootprint(footprint0, footprint1);
         if (wholeFootprint && !this.isSelectionFootprintAllowed(wholeFootprint)) {

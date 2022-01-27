@@ -24,13 +24,13 @@ gulp.task('scripts', function() {
 
 // Watch
 gulp.task('watch', function() {
- 
+
   // Watch .js files
   gulp.watch('jquery.webticker.js', ['scripts']);
- 
+
 });
 
-// Handle the error
+// Handle the errors
 function errorHandler (error) {
   console.log(error.toString());
   this.emit('end');
