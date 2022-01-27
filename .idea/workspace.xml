@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="add settings">
-      <change afterPath="$PROJECT_DIR$/app/Models/Seo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2022_01_27_002613_create_seos_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/setting/seo_update.blade.php" afterDir="false" />
+    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="Add meta of User">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/ReturnController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/return_order/all_return_request.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/return_order/return_request.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/SiteSettingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/SiteSettingController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/logo/1723052734343562.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/logo/1723052858900438.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/logo/1723052935984372.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/logo/1723052935984372.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/AllUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/AllUserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/CashController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/CashController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/includes/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/includes/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/orders/pending_orders_details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/orders/pending_orders_details.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/includes/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/main_master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/main_master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/user/order/order_details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/user/order/order_details.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/user/order/order_view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/user/order/order_view.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/user/order/return_order_view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/user/order/return_order_view.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -242,7 +242,7 @@
       <workItem from="1643224916832" duration="1312000" />
       <workItem from="1643226256703" duration="1141000" />
       <workItem from="1643228196697" duration="3184000" />
-      <workItem from="1643238746127" duration="4601000" />
+      <workItem from="1643238746127" duration="7861000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1641649877243</created>
@@ -517,7 +517,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643231376516</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Add meta of User">
+      <created>1643245270529</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1643245270529</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -536,7 +543,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="update and delete sub subCategory" />
     <MESSAGE value="add product" />
     <MESSAGE value="Add Multi images" />
     <MESSAGE value="manage product" />
@@ -561,6 +567,7 @@
     <MESSAGE value="Update counter in dashboard" />
     <MESSAGE value="add blog posts in user and dashboard" />
     <MESSAGE value="add settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="add settings" />
+    <MESSAGE value="Add meta of User" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add meta of User" />
   </component>
 </project>

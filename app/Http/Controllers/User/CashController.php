@@ -43,7 +43,7 @@ class CashController extends Controller
             'order_date' => Carbon::now()->format('d F Y'),
             'order_month' => Carbon::now()->format('F'),
             'order_year' => Carbon::now()->format('Y'),
-            'status' => 'Pending',
+            'status' => 'pending',
             'created_at' => Carbon::now(),
 
         ]);
@@ -64,14 +64,13 @@ class CashController extends Controller
 
         $carts = Cart::content();
         foreach ($carts as $cart) {
-            OrderItem::insert([
+            OrderItem::create([
                 'order_id' => $order_id,
                 'product_id' => $cart->id,
                 'color' => $cart->options->color,
                 'size' => $cart->options->size,
                 'qty' => $cart->qty,
                 'price' => $cart->price,
-                'created_at' => Carbon::now(),
 
             ]);
         }
