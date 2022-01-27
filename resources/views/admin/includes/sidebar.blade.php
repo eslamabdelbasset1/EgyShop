@@ -166,6 +166,21 @@
                 </ul>
             </li>
 
+            <li class="treeview {{ ($prefix == '/return')?'active':'' }}  ">
+                <a href="#">
+                    <i data-feather="file"></i>
+                    <span>Return Order</span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="{{ ($route == 'return.request')? 'active':'' }}"><a href="{{ route('return.request') }}"><i class="ti-more"></i>Return Request</a></li>
+                    <li class="{{ ($route == 'seo.setting')? 'active':'' }}"><a href="{{ route('seo.setting') }}"><i class="ti-more"></i>All Request</a></li>
+                    <li class="{{ ($route == 'all.request')? 'active':'' }}"><a href="{{ route('all.request') }}"><i class="ti-more"></i>All Request</a></li>
+
+                </ul>
+            </li>
 
             <li class="treeview {{ ($prefix == '/reports')?'active':'' }}  ">
                 <a href="#">
@@ -211,6 +226,20 @@
                     <li class="{{ ($route == 'add.post')? 'active':'' }}"><a href="{{ route('add.post') }}"><i class="ti-more"></i>Add Blog Post</a></li>
                 </ul>
             </li>
+            <li class="treeview {{ ($prefix == '/setting')?'active':'' }}  ">
+                <a href="#">
+                    <i data-feather="file"></i>
+                    <span>Manage Setting</span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="{{ ($route == 'site.setting')? 'active':'' }}"><a href="{{ route('site.setting') }}"><i class="ti-more"></i>Site Setting</a></li>
+                    <li class="{{ ($route == 'seo.setting')? 'active':'' }}"><a href="{{ route('seo.setting') }}"><i class="ti-more"></i>Seo Setting</a></li>
+                </ul>
+            </li>
+
 
         </ul>
     </section>

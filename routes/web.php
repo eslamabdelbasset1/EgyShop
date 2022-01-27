@@ -8,7 +8,9 @@ use App\Http\Controllers\Backend\CouponController;
 use App\Http\Controllers\Backend\OrderController;
 use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\ReportController;
+use App\Http\Controllers\Backend\ReturnController;
 use App\Http\Controllers\Backend\ShippingAreaController;
+use App\Http\Controllers\Backend\SiteSettingController;
 use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Backend\SubCategoryController;
 use App\Http\Controllers\Frontend\CartController;
@@ -39,8 +41,6 @@ use App\Http\Controllers\User\CashController;
 //    return view('welcome');
 //});
 // Admin All Route -------------------------------------------------------------------------
-
-
 Route::group(['prefix'=> 'admin', 'middleware'=>['admin:admin']], function(){
     Route::get('/login', [AdminController::class, 'loginForm']);
     Route::post('/login',[AdminController::class, 'store'])->name('admin.login');
@@ -208,7 +208,23 @@ Route::middleware(['auth:admin'])->group(function()
         Route::get('/add/post', [BlogController::class, 'addBlogPost'])->name('add.post');
         Route::post('/post/store', [BlogController::class, 'blogPostStore'])->name('post-store');
     });
+
+    // Admin Site Setting Routes
+    Route::prefix('setting')->group(function(){
+        Route::get('/site', [SiteSettingController::class, 'siteSetting'])->name('site.setting');
+        Route::post('/site/update', [SiteSettingController::class, 'siteSettingUpdate'])->name('update.sitesetting');
+        Route::get('/seo', [SiteSettingController::class, 'seoSetting'])->name('seo.setting');
+        Route::post('/seo/update', [SiteSettingController::class, 'seoSettingUpdate'])->name('update.seosetting');
+    });
+
+    // Admin Return Order Routes
+    Route::prefix('return')->group(function(){
+        Route::get('/admin/request', [ReturnController::class, 'returnRequest'])->name('return.request');
+        Route::get('/admin/return/approve/{order_id}', [ReturnController::class, 'returnRequestApprove'])->name('return.approve');
+        Route::get('/admin/all/request', [ReturnController::class, 'returnAllRequest'])->name('all.request');
+    });
 }); // end Middleware admin
+
 
 
 

@@ -1121,14 +1121,13 @@
 
 
                                                 <span class="info">{{ Carbon\Carbon::parse($blog->created_at)->diffForHumans()  }}</span>
+                                                <p>
 
-                                                <p class="text">
-{{--                                                    --}}
-{{--                                                    @if(session()->get('language') == 'arabic') --}}
-{{--                                                        {{ \Illuminate\Support\Str::limit($blog->post_details_ar, 100, $end = '...' )  }}--}}
-{{--                                                    @else --}}
-{{--                                                        {{ \Illuminate\Support\Str::limit($blog->post_details_en, 100, $end = '...' )  }}--}}
-{{--                                                    @endif--}}
+                                                    @if(session()->get('language') == 'arabic')
+                                                        <span>{{ \Illuminate\Support\Str::limit($blog->post_details_ar, 100, $end = '...' )  }}</span>
+                                                    @else
+                                                        <span>{{ \Illuminate\Support\Str::limit($blog->post_details_en, 100, $end = '...' )  }}</span>
+                                                    @endif
                                                 </p>
 
 
