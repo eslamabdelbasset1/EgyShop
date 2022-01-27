@@ -20,6 +20,7 @@ use App\Http\Controllers\Frontend\LanguageController;
 use App\Http\Controllers\User\AllUserController;
 use App\Http\Controllers\User\CartPageController;
 use App\Http\Controllers\User\CheckoutController;
+use App\Http\Controllers\User\ReviewController;
 use App\Http\Controllers\User\StripeController;
 use App\Http\Controllers\User\WishlistController;
 use App\Models\Admin;
@@ -223,6 +224,17 @@ Route::middleware(['auth:admin'])->group(function()
         Route::get('/admin/return/approve/{order_id}', [ReturnController::class, 'returnRequestApprove'])->name('return.approve');
         Route::get('/admin/all/request', [ReturnController::class, 'returnAllRequest'])->name('all.request');
     });
+
+
+// Admin Manage Review Routes
+    Route::prefix('review')->group(function(){
+        Route::get('/pending', [ReviewController::class, 'pendingReview'])->name('pending.review');
+        Route::get('/admin/approve/{id}', [ReviewController::class, 'reviewApprove'])->name('review.approve');
+        Route::get('/admin/all/request', [ReturnController::class, 'returnAllRequest'])->name('all.request');
+        Route::get('/publish', [ReviewController::class, 'publishReview'])->name('publish.review');
+        Route::get('/delete/{id}', [ReviewController::class, 'deleteReview'])->name('delete.review');
+    });
+
 }); // end Middleware admin
 
 
@@ -315,3 +327,8 @@ Route::post('/checkout/store', [CheckoutController::class, 'checkoutStore'])->na
 Route::get('/blog', [HomeBlogController::class, 'addBlogPost'])->name('home.blog');
 Route::get('/post/details/{id}', [HomeBlogController::class, 'detailsBlogPost'])->name('post.details');
 Route::get('/blog/category/post/{category_id}', [HomeBlogController::class, 'homeBlogCatPost']);
+
+
+
+/// Frontend Product Review Routes
+Route::post('/review/store', [ReviewController::class, 'reviewStore'])->name('review.store');

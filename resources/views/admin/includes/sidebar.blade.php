@@ -10,7 +10,7 @@
 
         <div class="user-profile">
             <div class="ulogo">
-                <a href="index.html">
+                <a href="{{url('/')}}">
                     <!-- logo for regular state and mobile devices -->
                     <div class="d-flex align-items-center justify-content-center">
                         <img src="{{asset('backend/images/logo-dark.png')}}" alt="">
@@ -129,6 +129,19 @@
                     <li class="{{ ($route == 'manage-state')? 'active':'' }}">
                         <a href="{{ route('manage-state') }}"><i class="ti-more"></i>Ship State</a>
                     </li>
+                </ul>
+            </li>
+            <li class="treeview {{ ($prefix == '/review')?'active':'' }}  ">
+                <a href="#">
+                    <i data-feather="file"></i>
+                    <span>Manage Review</span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="{{ ($route == 'pending.review')? 'active':'' }}"><a href="{{ route('pending.review') }}"><i class="ti-more"></i>Pending Review</a></li>
+                    <li class="{{ ($route == 'publish.review')? 'active':'' }}"><a href="{{ route('publish.review') }}"><i class="ti-more"></i>Publish Review</a></li>
                 </ul>
             </li>
 
