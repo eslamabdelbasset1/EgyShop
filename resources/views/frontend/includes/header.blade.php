@@ -24,7 +24,8 @@
 
                 <div class="cnt-block">
                     <ul class="list-unstyled list-inline">
-                        <li class="dropdown dropdown-small"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span class="value">USD </span><b class="caret"></b></a>
+                        <li class="dropdown dropdown-small"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
+                                <span class="value">USD </span><b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">GBP</a></li>
                             </ul>
@@ -60,8 +61,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
+                @php
+                    $setting = App\Models\SiteSetting::find(1);
+                @endphp
                     <!-- ============================================================= LOGO ============================================================= -->
-                    <div class="logo"> <a href="{{route('user.index')}}"> <img src="{{asset('frontend/assets/images/logo.png')}}" alt="logo"> </a> </div>
+                    <div class="logo"> <a href="{{route('user.index')}}"> <img src="{{ $setting->logo }}" alt="logo"> </a> </div>
                     <!-- /.logo -->
                     <!-- ============================================================= LOGO : END ============================================================= --> </div>
                 <!-- /.logo-holder -->

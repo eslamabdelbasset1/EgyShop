@@ -40,8 +40,6 @@ use App\Http\Controllers\User\CashController;
 //    return view('welcome');
 //});
 // Admin All Route -------------------------------------------------------------------------
-
-
 Route::group(['prefix'=> 'admin', 'middleware'=>['admin:admin']], function(){
     Route::get('/login', [AdminController::class, 'loginForm']);
     Route::post('/login',[AdminController::class, 'store'])->name('admin.login');
@@ -214,8 +212,11 @@ Route::middleware(['auth:admin'])->group(function()
     Route::prefix('setting')->group(function(){
         Route::get('/site', [SiteSettingController::class, 'siteSetting'])->name('site.setting');
         Route::post('/site/update', [SiteSettingController::class, 'siteSettingUpdate'])->name('update.sitesetting');
+        Route::get('/seo', [SiteSettingController::class, 'seoSetting'])->name('seo.setting');
+        Route::post('/seo/update', [SiteSettingController::class, 'seoSettingUpdate'])->name('update.seosetting');
     });
 }); // end Middleware admin
+
 
 
 
