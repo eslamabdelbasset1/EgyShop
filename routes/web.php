@@ -320,6 +320,9 @@ Route::get('/wishlist', [WishlistController::class, 'viewWishlist'])->name('wish
     Route::post('/return/order/{order_id}', [AllUserController::class, 'returnOrder'])->name('return.order');
     Route::get('/return/order/list', [AllUserController::class, 'returnOrderList'])->name('return.order.list');
     Route::get('/cancel/orders', [AllUserController::class, 'cancelOrders'])->name('cancel.orders');
+    /// Order Tracking Route
+    Route::post('/order/tracking', [AllUserController::class, 'orderTracking'])->name('order.tracking');
+
 });
 // My Cart Page All Routes
 Route::get('/mycart', [CartPageController::class, 'myCart'])->name('mycart');

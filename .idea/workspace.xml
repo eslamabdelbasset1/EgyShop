@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="add admin user role">
-      <change afterPath="$PROJECT_DIR$/public/upload/admin/profile/1723123005334619.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/role/admin_role_create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/role/admin_role_edit.blade.php" afterDir="false" />
+    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="update dashboard">
+      <change afterPath="$PROJECT_DIR$/resources/views/frontend/tracking/track_order.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/AdminProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/AdminProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/AdminUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/AdminUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/admin_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin_profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/admin_profile_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin_profile_edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/role/admin_role_all.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/role/admin_role_all.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/AllUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/AllUserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/includes/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -243,7 +236,7 @@
       <workItem from="1643228196697" duration="3184000" />
       <workItem from="1643238746127" duration="8079000" />
       <workItem from="1643281603705" duration="9578000" />
-      <workItem from="1643296682889" duration="6001000" />
+      <workItem from="1643296682889" duration="7679000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1641649877243</created>
@@ -546,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643296653982</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="update dashboard">
+      <created>1643304750220</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1643304750220</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -566,7 +566,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="update manage multi image" />
     <MESSAGE value="add active product" />
     <MESSAGE value="delete product" />
     <MESSAGE value="Add slider" />
@@ -591,6 +590,7 @@
     <MESSAGE value="update review orders" />
     <MESSAGE value="add error page" />
     <MESSAGE value="add admin user role" />
-    <option name="LAST_COMMIT_MESSAGE" value="add admin user role" />
+    <MESSAGE value="update dashboard" />
+    <option name="LAST_COMMIT_MESSAGE" value="update dashboard" />
   </component>
 </project>
