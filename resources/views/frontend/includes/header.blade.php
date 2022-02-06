@@ -23,13 +23,10 @@
             <div class="header-top-inner">
                 <div class="cnt-account">
                     <ul class="list-unstyled">
-                        <li><a href="#"><i class="icon fa fa-user"></i>
-                                @if(session()->get('language') == 'arabic') العربية @else My Account @endif
-                            </a></li>
                         <li><a href="{{ route('wishlist') }}"><i class="icon fa fa-heart"></i>Wishlist</a></li>
                         <li><a href="{{ route('mycart') }}"><i class="icon fa fa-shopping-cart"></i>My Cart</a></li>
                         <li><a href="{{ route('checkout') }}"><i class="icon fa fa-check"></i>Checkout</a></li>
-                        <li><a href="" type="button" data-toggle="modal" data-target="#ordertraking"><i class="icon fa fa-truck"></i>Order Traking</a></li>
+                        <li><a href="" type="button" data-toggle="modal" data-target="#ordertraking"><i class="icon fa fa-truck"></i>Order Tracking</a></li>
                        @auth
                             <li><a href="{{route('dashboard')}}"><i class="icon fa fa-user"></i>Profile</a></li>
                         @else
@@ -41,12 +38,12 @@
 
                 <div class="cnt-block">
                     <ul class="list-unstyled list-inline">
-                        <li class="dropdown dropdown-small"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
-                                <span class="value">USD </span><b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">GBP</a></li>
-                            </ul>
-                        </li>
+{{--                        <li class="dropdown dropdown-small"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">--}}
+{{--                                <span class="value">USD </span><b class="caret"></b></a>--}}
+{{--                            <ul class="dropdown-menu">--}}
+{{--                                <li><a href="#">GBP</a></li>--}}
+{{--                            </ul>--}}
+{{--                        </li>--}}
 
                         <li class="dropdown dropdown-small">
                             <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
@@ -80,9 +77,10 @@
                 <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
                 @php
                     $setting = App\Models\SiteSetting::find(1);
+                    $categories = App\Models\Category::orderBy('category_name_en','ASC')->get();
                 @endphp
                     <!-- ============================================================= LOGO ============================================================= -->
-                    <div class="logo"> <a href="{{ url('/') }}"> <img src="{{ asset($setting->logo) }}" alt="logo"> </a> </div>
+                    <div class="logo"> <a href="{{ url('/') }}"> <img src="{{ asset($setting->logo) }}" style="width: 110px" alt="logo">  </a> </div>
                     <!-- /.logo -->
                     <!-- ============================================================= LOGO : END ============================================================= --> </div>
                 <!-- /.logo-holder -->
@@ -95,18 +93,24 @@
                             @csrf
                             <div class="control-group">
                                 <ul class="categories-filter animate-dropdown">
-                                    <li class="dropdown"> <a class="dropdown-toggle"  data-toggle="dropdown" href="category.html">Categories <b class="caret"></b></a>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle"  data-toggle="dropdown" href="#">Categories <b class="caret"></b></a>
                                         <ul class="dropdown-menu" role="menu" >
-                                            <li class="menu-header">Computer</li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Clothing</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Electronics</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Shoes</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Watches</a></li>
+                                            @foreach ($categories as $category)
+                                            <li role="presentation">
+                                                <a role="menuitem" tabindex="-1" href="#category{{ $category->id }}">-
+                                                    @if(session()->get('language') == 'arabic')
+                                                        {{ $category->category_name_ar }}
+                                                    @else {{ $category->category_name_en }}
+                                                    @endif
+                                                </a>
+                                            </li>
+                                            @endforeach
                                         </ul>
                                     </li>
                                 </ul>
                                 <input class="search-field" onfocus="search_result_show()" onblur="search_result_hide()" id="search" name="search" placeholder="Search here..." />
-                                <button class="search-button" type="submit"></button> </div>
+                                <button class="search-button border-0" type="submit"></button> </div>
                         </form>
                         <div id="searchProducts"></div>
                     </div>
@@ -143,10 +147,11 @@
                                 <div class="clearfix cart-total">
                                     <div class="pull-right">
                                         <span class="text">Sub Total :</span>
-                                        <span class='price' id="cartSubTotal"> </span> </div>
+                                        <span class='price' id="cartSubTotal"> </span>
                                     </div>
                                     <div class="clearfix"></div>
-                                    <a href="checkout.html" class="btn btn-upper btn-primary btn-block m-t-20">Checkout</a> </div>
+                                        <a href="{{ route('checkout') }}" class="btn btn-upper btn-primary btn-block m-t-20">Checkout</a>
+                                </div>
                                 <!-- /.cart-total-->
                             </li>
                         </ul>
@@ -177,9 +182,11 @@
                     <div class="navbar-collapse collapse" id="mc-horizontal-menu-collapse">
                         <div class="nav-outer">
                             <ul class="nav navbar-nav">
-                                <li class="active dropdown yamm-fw"> <a href="{{url('/')}}" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">
+                                <li class="active dropdown yamm-fw">
+                                    <a href="{{url('/')}}" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">
                                         @if(session()->get('language') == 'arabic') الرئيسية @else Home @endif
-                                    </a> </li>
+                                    </a>
+                                </li>
 
                                 <!--   // Get Category Table Data -->
                                 @php
@@ -187,7 +194,7 @@
                                 @endphp
                                 @foreach($categories as $category)
                                     <li class="dropdown yamm mega-menu">
-                                        <a href="home.html" data-hover="dropdown" class="dropdown-toggle"
+                                        <a href="#category{{ $category->id }}" data-hover="dropdown" class="dropdown-toggle"
                                            data-toggle="dropdown">
                                             @if(session()->get('language') == 'arabic'){{ $category->category_name_ar }}
                                             @else   {{ $category->category_name_en }}

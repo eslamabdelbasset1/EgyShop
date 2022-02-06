@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="add search">
-      <change afterPath="$PROJECT_DIR$/public/upload/logo/invoice.pdf" afterDir="false" />
+    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="updating search">
+      <change afterPath="$PROJECT_DIR$/public/frontend/assets/images/logo/logo.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/assets/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/frontend/assets/js/scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/OrderController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,6 +236,7 @@
       <workItem from="1643281603705" duration="9578000" />
       <workItem from="1643296682889" duration="15631000" />
       <workItem from="1643324426004" duration="544000" />
+      <workItem from="1644156987826" duration="1289000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1641649877243</created>
