@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="updating indexing dashboard">
-      <change afterPath="$PROJECT_DIR$/public/frontend/assets/css/arabicStyle.css" afterDir="false" />
+    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="update logo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/common/vertical_menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/common/vertical_menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/includes/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/main_master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/main_master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/logo/1724025083033345.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/logo/1724025561723204.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/logo/21249 Your Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/logo/invoice.pdf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,8 +237,9 @@
       <workItem from="1643228196697" duration="3184000" />
       <workItem from="1643238746127" duration="8079000" />
       <workItem from="1643281603705" duration="9578000" />
-      <workItem from="1643296682889" duration="15610000" />
-      <workItem from="1644161583960" duration="7433000" />
+      <workItem from="1643296682889" duration="15631000" />
+      <workItem from="1643324426004" duration="544000" />
+      <workItem from="1644156987826" duration="2145000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1641649877243</created>
@@ -554,14 +556,21 @@
       <option name="project" value="LOCAL" />
       <updated>1643306664178</updated>
     </task>
-    <task id="LOCAL-00046" summary="updating indexing dashboard">
-      <created>1643318190207</created>
+    <task id="LOCAL-00046" summary="add search">
+      <created>1643318569643</created>
       <option name="number" value="00046" />
       <option name="presentableId" value="LOCAL-00046" />
       <option name="project" value="LOCAL" />
-      <updated>1643318190207</updated>
+      <updated>1643318569643</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="update logo">
+      <created>1644160533058</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1644160533058</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -577,12 +586,10 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add slider" />
     <MESSAGE value="Show products" />
     <MESSAGE value="Show product details" />
     <MESSAGE value="Show hot deal" />
@@ -606,7 +613,8 @@
     <MESSAGE value="add admin user role" />
     <MESSAGE value="update dashboard" />
     <MESSAGE value="add tracking page" />
-    <MESSAGE value="updating indexing dashboard" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating indexing dashboard" />
+    <MESSAGE value="add search" />
+    <MESSAGE value="update logo" />
+    <option name="LAST_COMMIT_MESSAGE" value="update logo" />
   </component>
 </project>
