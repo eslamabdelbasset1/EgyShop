@@ -53,7 +53,7 @@ class IndexController extends Controller
     {
         $id = Auth::user()->id;
         $user = User::find($id);
-        return view('frontend.profile.userprofile', compact('user'));
+        return view('frontend.profile.userProfile', compact('user'));
     }
 
     public function userUpdateProfile(Request $request)
