@@ -20,9 +20,14 @@
     <!-- /// Google Analytics Code // -->
 
         <link rel="stylesheet" href="{{asset('frontend/assets/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/assets/css/main.css')}}">
+
 
     <!-- Customizable CSS -->
+
+    @if(session()->get('language') == 'arabic')
+        <link rel="stylesheet" href="{{asset('frontend/assets/css/arabicStyle.css')}}">
+    @endif
+        <link rel="stylesheet" href="{{asset('frontend/assets/css/main.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/blue.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/owl.carousel.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/owl.transitions.css')}}">
