@@ -187,11 +187,24 @@
                                 <!--   // End Mini Cart Start with Ajax -->
                                 <div class="clearfix cart-total">
                                     <div class="pull-right">
-                                        <span class="text">Sub Total :</span>
+                                        <span class="text">
+                                             @if(session()->get('language') == 'arabic')
+                                                {{__('المجموع الفرعي')}}
+                                            @else
+                                                {{__( 'Sub Total :')}}
+                                            @endif
+
+                                            </span>
                                         <span class='price' id="cartSubTotal"> </span>
                                     </div>
                                     <div class="clearfix"></div>
-                                        <a href="{{ route('checkout') }}" class="btn btn-upper btn-primary btn-block m-t-20">Checkout</a>
+                                        <a href="{{ route('checkout') }}" class="btn btn-upper btn-primary btn-block m-t-20">
+                                            @if(session()->get('language') == 'arabic')
+                                                {{__('الدفع')}}
+                                            @else
+                                                {{__( 'Checkout')}}
+                                            @endif
+                                        </a>
                                 </div>
                                 <!-- /.cart-total-->
                             </li>
