@@ -1,0 +1,30 @@
+
+.header-style-1 .header-nav .navbar-default,
+.sidebar
+    {
+        float: right !important;
+    }
+.sidebar .side-menu nav .nav li a:after{
+    float: left !important;
+}
+.sidebar .side-menu nav .nav > li > a
+{
+    text-align: end;
+}
+.sidebar .side-menu nav .nav li .mega-menu {
+    padding: 3px 0;
+    top: 0 !important;
+    left: -330% !important;
+    right: 100% !important;
+    margin: 0;
+    min-width: 330%;
+    position: absolute;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    overflow: hidden;;
+}
+.sidebar .side-menu .head
+{
+    text-align: end;
+}

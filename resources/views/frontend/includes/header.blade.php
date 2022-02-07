@@ -23,14 +23,46 @@
             <div class="header-top-inner">
                 <div class="cnt-account">
                     <ul class="list-unstyled">
-                        <li><a href="{{ route('wishlist') }}"><i class="icon fa fa-heart"></i>Wishlist</a></li>
-                        <li><a href="{{ route('mycart') }}"><i class="icon fa fa-shopping-cart"></i>My Cart</a></li>
-                        <li><a href="{{ route('checkout') }}"><i class="icon fa fa-check"></i>Checkout</a></li>
-                        <li><a href="" type="button" data-toggle="modal" data-target="#ordertraking"><i class="icon fa fa-truck"></i>Order Tracking</a></li>
+                        <li>
+                            <a href="{{ route('wishlist') }}"><i class="icon fa fa-heart"></i>
+                                @if(session()->get('language') == 'arabic')
+                                    {{__('المفضلة')}}
+                                @else
+                                    {{__( 'Wishlist')}}
+                                @endif
+                                </a>
+                        </li>
+                        <li><a href="{{ route('mycart') }}"><i class="icon fa fa-shopping-cart"></i>
+                                @if(session()->get('language') == 'arabic')
+                                    {{__('عربة التسوق')}}
+                                @else
+                                    {{__( 'My Cart')}}
+                                @endif
+                                </a></li>
+                        <li><a href="{{ route('checkout') }}"><i class="icon fa fa-check"></i>
+                                @if(session()->get('language') == 'arabic')
+                                    {{__('الدفع')}}
+                                @else
+                                    {{__( 'Checkout')}}
+                                @endif
+                                </a></li>
+                        <li><a href="" type="button" data-toggle="modal" data-target="#ordertraking"><i class="icon fa fa-truck"></i>
+                                @if(session()->get('language') == 'arabic')
+                                    {{__('تتبع الطلب')}}
+                                @else
+                                    {{__( 'Order Tracking')}}
+                                @endif
+                                </a></li>
                        @auth
-                            <li><a href="{{route('dashboard')}}"><i class="icon fa fa-user"></i>Profile</a></li>
+                            <li><a href="{{route('dashboard')}}"><i class="icon fa fa-user"></i>Ahlan {{\Illuminate\Support\Facades\Auth::user()->name}}</a></li>
                         @else
-                            <li><a href="{{route('login')}}"><i class="icon fa fa-lock"></i>Login/Register</a></li>
+                            <li><a href="{{route('login')}}"> <i class="icon fa fa-lock"></i>
+                                    @if(session()->get('language') == 'arabic')
+                                        {{__('تسجيل الدخول')}}
+                                    @else
+                                        {{__( 'Sign In')}}
+                                    @endif
+                                </a></li>
                         @endauth
                     </ul>
                 </div>
@@ -94,7 +126,14 @@
                             <div class="control-group">
                                 <ul class="categories-filter animate-dropdown">
                                     <li class="dropdown">
-                                        <a class="dropdown-toggle"  data-toggle="dropdown" href="#">Categories <b class="caret"></b></a>
+                                        <a class="dropdown-toggle"  data-toggle="dropdown" href="#">
+                                            @if(session()->get('language') == 'arabic')
+                                                {{ __('جميع الفئات') }}
+                                            @else
+                                                {{ __('Categories') }}
+                                            @endif
+                                            <b class="caret"></b>
+                                        </a>
                                         <ul class="dropdown-menu" role="menu" >
                                             @foreach ($categories as $category)
                                             <li role="presentation">
@@ -109,7 +148,9 @@
                                         </ul>
                                     </li>
                                 </ul>
-                                <input class="search-field" onfocus="search_result_show()" onblur="search_result_hide()" id="search" name="search" placeholder="Search here..." />
+                                <input class="search-field" onfocus="search_result_show()"
+                                       onblur="search_result_hide()" id="search" name="search"
+                                       placeholder="Search here..." />
                                 <button class="search-button border-0" type="submit"></button> </div>
                         </form>
                         <div id="searchProducts"></div>
@@ -146,11 +187,24 @@
                                 <!--   // End Mini Cart Start with Ajax -->
                                 <div class="clearfix cart-total">
                                     <div class="pull-right">
-                                        <span class="text">Sub Total :</span>
+                                        <span class="text">
+                                             @if(session()->get('language') == 'arabic')
+                                                {{__('المجموع الفرعي')}}
+                                            @else
+                                                {{__( 'Sub Total :')}}
+                                            @endif
+
+                                            </span>
                                         <span class='price' id="cartSubTotal"> </span>
                                     </div>
                                     <div class="clearfix"></div>
-                                        <a href="{{ route('checkout') }}" class="btn btn-upper btn-primary btn-block m-t-20">Checkout</a>
+                                        <a href="{{ route('checkout') }}" class="btn btn-upper btn-primary btn-block m-t-20">
+                                            @if(session()->get('language') == 'arabic')
+                                                {{__('الدفع')}}
+                                            @else
+                                                {{__( 'Checkout')}}
+                                            @endif
+                                        </a>
                                 </div>
                                 <!-- /.cart-total-->
                             </li>

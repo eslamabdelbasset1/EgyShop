@@ -3,15 +3,30 @@
 @endphp
 
 <div class="side-menu animate-dropdown outer-bottom-xs">
-    <div class="head"><i class="icon fa fa-align-justify fa-fw"></i> Categories</div>
+    <div class="head">
+        @if(session()->get('language') == 'arabic')
+            {{ __('جميع الفئات') }}
+            <i class="icon fa fa-align-justify fa-fw"></i>
+        @else
+            <i class="icon fa fa-align-justify fa-fw"></i>
+            {{ __('Categories') }}
+        @endif
+    </div>
     <nav class="yamm megamenu-horizontal">
         <ul class="nav">
 
             @foreach($categories as $category)
                 <li class="dropdown menu-item">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+
+                        @if(session()->get('language') == 'arabic') {{ $category->category_name_ar }}
                         <i class="icon {{ $category->category_icon }}" aria-hidden="true"></i>
-                        @if(session()->get('language') == 'arabic') {{ $category->category_name_ar }} @else {{ $category->category_name_en }} @endif
+
+                        @else
+                            <i class="icon {{ $category->category_icon }}" aria-hidden="true"></i>
+                            {{ $category->category_name_en }}
+
+                        @endif
                     </a>
                     <ul class="dropdown-menu mega-menu">
                         <li class="yamm-content">
@@ -56,20 +71,6 @@
                 </li>
                 <!-- /.menu-item -->
         @endforeach <!-- End SubCategory Foreach -->
-
-            <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-paper-plane"></i>Kids and Babies</a>
-                <!-- /.dropdown-menu --> </li>
-            <!-- /.menu-item -->
-
-            <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-futbol-o"></i>Sports</a>
-                <!-- ================================== MEGAMENU VERTICAL ================================== -->
-                <!-- /.dropdown-menu -->
-                <!-- ================================== MEGAMENU VERTICAL ================================== --> </li>
-            <!-- /.menu-item -->
-
-            <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>Home and Garden</a>
-                <!-- /.dropdown-menu --> </li>
-            <!-- /.menu-item -->
 
         </ul>
         <!-- /.nav -->
