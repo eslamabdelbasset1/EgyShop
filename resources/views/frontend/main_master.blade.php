@@ -613,13 +613,13 @@
                         type: 'success',
                         icon: 'success',
                         title: data.success
-                    })
+                    });
                 }else{
                     Toast.fire({
                         type: 'error',
                         icon: 'error',
                         title: data.error
-                    })
+                    });
                 }
                 // End Message
             }

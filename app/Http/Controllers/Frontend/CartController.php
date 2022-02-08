@@ -128,7 +128,7 @@ class CartController extends Controller
                 'success' => 'Coupon Applied Successfully'
             ));
         }else{
-            return response()->json(['errors' => 'Invalid Coupon']);
+            return response()->json(['error' => 'Invalid Coupon']);
         }
 
     }
