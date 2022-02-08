@@ -635,11 +635,14 @@
                     $('#couponCalField').html(
                         `<tr>
                 <th>
-                    <div class="cart-sub-total">
-                        Subtotal<span class="inner-left-md">$ ${data.total}</span>
+                     <div class="cart-sub-total">
+                        Subtotal<span class="inner-left-md"> ${data.total} EGY</span>
+                    </div>
+                     <div class="cart-sub-total">
+                        Shipping Details<span class="inner-left-md"> Free</span>
                     </div>
                     <div class="cart-grand-total">
-                        Grand Total<span class="inner-left-md">$ ${data.total}</span>
+                        Total(Inclusive of VAT)<span class="inner-left-md"> ${data.total} EGY</span>
                     </div>
                 </th>
             </tr>`
@@ -649,17 +652,17 @@
                         `<tr>
         <th>
             <div class="cart-sub-total">
-                Subtotal<span class="inner-left-md">$ ${data.subtotal}</span>
+                Subtotal<span class="inner-left-md"> ${data.subtotal} EGY</span>
             </div>
             <div class="cart-sub-total">
                 Coupon<span class="inner-left-md">$ ${data.coupon_name}</span>
                 <button type="submit" onclick="couponRemove()"><i class="fa fa-times"></i>  </button>
             </div>
              <div class="cart-sub-total">
-                Discount Amount<span class="inner-left-md">$ ${data.discount_amount}</span>
+                Discount Amount<span class="inner-left-md"> ${data.discount_amount} EGY</span>
             </div>
             <div class="cart-grand-total">
-                Grand Total<span class="inner-left-md">$ ${data.total_amount}</span>
+                Total(Inclusive of VAT)<span class="inner-left-md"> ${data.total_amount} EGY</span>
             </div>
         </th>
             </tr>`
