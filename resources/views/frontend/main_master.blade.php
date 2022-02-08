@@ -283,14 +283,14 @@
                     miniCart += `<div class="cart-item product-summary">
                       <div class="row">
                         <div class="col-xs-4">
-                          <div class="image"> <a href="detail.html"><img src="/${value.options.image}" alt=""></a> </div>
+                          <div class="image"> <a href="#"><img src="/${value.options.image}" alt=""></a> </div>
                         </div>
                         <div class="col-xs-7">
-                          <h3 class="name"><a href="index.php?page-detail">${value.name}</a></h3>
+                          <h3 class="name"><a href="#">${value.name}</a></h3>
                           <div class="price"> ${value.price} * ${value.qty} </div>
                         </div>
                        <div class="col-xs-1 action">
-                          <button type="submit" id="${value.rowId}" onclick="miniCartRemove(this.id)">
+                          <button type="submit" id="${value.rowId}" onclick="miniCartRemove(this.id)" style="border: none; background: transparent;">
                                 <i class="fa fa-trash text-danger"></i>
                           </button>
                        </div>
@@ -613,13 +613,13 @@
                         type: 'success',
                         icon: 'success',
                         title: data.success
-                    })
+                    });
                 }else{
                     Toast.fire({
                         type: 'error',
                         icon: 'error',
                         title: data.error
-                    })
+                    });
                 }
                 // End Message
             }
@@ -635,11 +635,14 @@
                     $('#couponCalField').html(
                         `<tr>
                 <th>
-                    <div class="cart-sub-total">
-                        Subtotal<span class="inner-left-md">$ ${data.total}</span>
+                     <div class="cart-sub-total">
+                        Subtotal<span class="inner-left-md"> ${data.total} EGY</span>
+                    </div>
+                     <div class="cart-sub-total">
+                        Shipping Details<span class="inner-left-md"> Free</span>
                     </div>
                     <div class="cart-grand-total">
-                        Grand Total<span class="inner-left-md">$ ${data.total}</span>
+                        Total(Inclusive of VAT)<span class="inner-left-md"> ${data.total} EGY</span>
                     </div>
                 </th>
             </tr>`
@@ -649,17 +652,17 @@
                         `<tr>
         <th>
             <div class="cart-sub-total">
-                Subtotal<span class="inner-left-md">$ ${data.subtotal}</span>
+                Subtotal<span class="inner-left-md"> ${data.subtotal} EGY</span>
             </div>
             <div class="cart-sub-total">
                 Coupon<span class="inner-left-md">$ ${data.coupon_name}</span>
                 <button type="submit" onclick="couponRemove()"><i class="fa fa-times"></i>  </button>
             </div>
              <div class="cart-sub-total">
-                Discount Amount<span class="inner-left-md">$ ${data.discount_amount}</span>
+                Discount Amount<span class="inner-left-md"> ${data.discount_amount} EGY</span>
             </div>
             <div class="cart-grand-total">
-                Grand Total<span class="inner-left-md">$ ${data.total_amount}</span>
+                Total(Inclusive of VAT)<span class="inner-left-md"> ${data.total_amount} EGY</span>
             </div>
         </th>
             </tr>`

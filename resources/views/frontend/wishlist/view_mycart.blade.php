@@ -6,7 +6,7 @@
         <div class="container">
             <div class="breadcrumb-inner">
                 <ul class="list-inline list-unstyled">
-                    <li><a href="home.html">Home</a></li>
+                    <li><a href="{{url('/')}}">Home</a></li>
                     <li class='active'>MyCart</li>
                 </ul>
             </div><!-- /.breadcrumb-inner -->
@@ -39,12 +39,12 @@
                     </div>
 
 
-                    <div class="col-md-4 col-sm-12 estimate-ship-tax">
+                    <div class="col-md-2 col-sm-12 estimate-ship-tax">
 
                     </div>
 
 
-                    <div class="col-md-4 col-sm-12 estimate-ship-tax">
+                    <div class="col-md-5 col-sm-12 estimate-ship-tax">
                         @if(Session::has('coupon'))
 
                         @else
@@ -81,7 +81,7 @@
 
 
 
-                    <div class="col-md-4 col-sm-12 cart-shopping-total">
+                    <div class="col-md-5 col-sm-12 cart-shopping-total">
                         <table class="table">
                             <thead id="couponCalField">
 
@@ -89,8 +89,8 @@
                             <tbody>
                             <tr>
                                 <td>
-                                    <div class="cart-checkout-btn pull-right">
-                                        <a href="{{ route('checkout') }}" type="submit" class="btn btn-primary checkout-btn">PROCCED TO CHEKOUT</a>
+                                    <div class="cart-checkout-btn pull-center w-100">
+                                        <a href="{{ route('checkout') }}" type="submit" class="btn btn-primary checkout-btn">CHECKOUT</a>
 
                                     </div>
                                 </td>
@@ -99,17 +99,8 @@
                         </table><!-- /table -->
                     </div><!-- /.cart-shopping-total -->
 
-
-
-
-
-
-
-
-
-
                 </div><!-- /.row -->
-            </div><!-- /.sigin-in-->
+            </div><!-- /.sign in-in-->
 
 
 

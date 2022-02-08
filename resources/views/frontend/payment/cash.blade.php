@@ -38,24 +38,24 @@
                                         <li>
                                             @if(\Illuminate\Support\Facades\Session::has('coupon'))
 
-                                                <strong>SubTotal: </strong> ${{ $cartTotal }} <hr>
+                                                <strong>SubTotal: </strong> {{ $cartTotal }} EGY<hr>
 
                                                 <strong>Coupon Name : </strong> {{ session()->get('coupon')['coupon_name'] }}
                                                 ( {{ session()->get('coupon')['coupon_discount'] }} % )
                                                 <hr>
 
-                                                <strong>Coupon Discount : </strong> ${{ session()->get('coupon')['discount_amount'] }}
+                                                <strong>Coupon Discount : </strong>{{ session()->get('coupon')['discount_amount'] }} EGY
                                                 <hr>
 
-                                                <strong>Grand Total : </strong> ${{ session()->get('coupon')['total_amount'] }}
+                                                <strong>Total : </strong>{{ session()->get('coupon')['total_amount'] }} EGY
                                                 <hr>
 
 
                                             @else
 
-                                                <strong>SubTotal: </strong> ${{ $cartTotal }} <hr>
+                                                <strong>SubTotal: </strong> {{ $cartTotal }} EGY<hr>
 
-                                                <strong>Grand Total : </strong> ${{ $cartTotal }} <hr>
+                                                <strong>Grand Total : </strong> {{ $cartTotal }} EGY<hr>
 
 
                                             @endif
@@ -97,7 +97,7 @@
                                         </label>
                                     </div>
                                     <br>
-                                    <button class="btn btn-primary">Submit Payment</button>
+                                    <button class="btn btn-primary">Place Order</button>
                                 </form>
                             </div>
                         </div>

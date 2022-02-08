@@ -39,10 +39,6 @@
                                                 <!-- guest-login -->
                                                 <div class="col-md-6 col-sm-6 already-registered-login">
                                                     <h4 class="checkout-subtitle"><b>Shipping Address</b></h4>
-
-
-
-
                                                         <div class="form-group">
                                                             <label class="info-title" for="shipping_name"><b>Shipping Name</b>  <span>*</span></label>
                                                             <input type="text" name="shipping_name" class="form-control unicase-form-control text-input" id="shipping_name" placeholder="Full Name" value="{{ Auth::user()->name }}" required="">
@@ -62,8 +58,9 @@
 
 
                                                         <div class="form-group">
-                                                            <label class="info-title" for="post_code"><b>Post Code </b> <span>*</span></label>
-                                                            <input type="text" name="post_code" class="form-control unicase-form-control text-input" id="post_code" placeholder="Post Code" required="">
+                                                            <label class="info-title" for="post_code"><b>Post Code </b></label>
+                                                            <input type="text" name="post_code" class="form-control unicase-form-control text-input"
+                                                                   id="post_code" placeholder="Post Code">
                                                         </div>  <!-- // end form group  -->
                                                 </div>
                                                 <!-- guest-login -->
@@ -75,7 +72,7 @@
                                                         <h5><b>Division Select </b> <span class="text-danger">*</span></h5>
                                                         <div class="controls">
                                                             <select name="division_id" class="form-control" required="" >
-                                                                <option value="" selected="" disabled="">Select Division</option>
+                                                                <option value="" selected="" disabled="">Select Governorate</option>
                                                                 @foreach($divisions as $item)
                                                                     <option value="{{ $item->id }}">{{ $item->division_name }}</option>
                                                                 @endforeach
@@ -90,7 +87,7 @@
                                                         <h5><b>District Select</b>  <span class="text-danger">*</span></h5>
                                                         <div class="controls">
                                                             <select name="district_id" class="form-control" required="" >
-                                                                <option value="" selected="" disabled="">Select District</option>
+                                                                <option value="" selected="" disabled="">Select City</option>
 
                                                             </select>
                                                             @error('district_id')
@@ -103,7 +100,7 @@
                                                         <h5><b>State Select</b> <span class="text-danger">*</span></h5>
                                                         <div class="controls">
                                                             <select name="state_id" class="form-control" required="" >
-                                                                <option value="" selected="" disabled="">Select State</option>
+                                                                <option value="" selected="" disabled="">Select Area</option>
                                                             </select>
                                                             @error('state_id')
                                                             <span class="text-danger">{{ $message }}</span>
@@ -112,7 +109,7 @@
                                                     </div> <!-- // end form group -->
 
                                                     <div class="form-group">
-                                                        <label class="info-title" for="exampleInputEmail1">Notes <span>*</span></label>
+                                                        <label class="info-title" for="exampleInputEmail1">Landmark, group number, etc. <span>*</span></label>
                                                         <textarea class="form-control" cols="30" rows="5" placeholder="Notes" name="notes"></textarea>
                                                     </div>  <!-- // end form group  -->
                                                 </div>
@@ -164,15 +161,15 @@
                                                         ( {{ session()->get('coupon')['coupon_discount'] }} % )
                                                         <hr>
 
-                                                        <strong>Coupon Discount : </strong> ${{ session()->get('coupon')['discount_amount'] }}
+                                                        <strong>Coupon Discount : </strong> {{ session()->get('coupon')['discount_amount'] }} EGY
                                                         <hr>
 
-                                                        <strong>Grand Total : </strong> ${{ session()->get('coupon')['total_amount'] }}
+                                                        <strong>Grand Total : </strong> {{ session()->get('coupon')['total_amount'] }} EGY
                                                         <hr>
                                                     @else
-                                                        <strong>SubTotal: </strong> ${{ $cartTotal }} <hr>
+                                                        <strong>SubTotal: </strong> {{ $cartTotal }} EGY<hr>
 
-                                                        <strong>Grand Total : </strong> ${{ $cartTotal }} <hr>
+                                                        <strong>Grand Total : </strong> {{ $cartTotal }} EGY<hr>
                                                     @endif
                                                 </li>
                                             </ul>
@@ -195,13 +192,13 @@
 
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <label for="">Stripe</label>
+                                            <label for="">Cart</label>
                                             <input type="radio" name="payment_method" value="stripe">
                                             <img src="{{ asset('frontend/assets/images/payments/4.png') }}">
                                         </div> <!-- end col md 4 -->
 
                                         <div class="col-md-4">
-                                            <label for="">Card</label>
+                                            <label for="">Installment</label>
                                             <input type="radio" name="payment_method" value="card">
                                             <img src="{{ asset('frontend/assets/images/payments/3.png') }}">
                                         </div> <!-- end col md 4 -->
@@ -215,7 +212,7 @@
 
                                     </div> <!-- // end row  -->
                                     <hr>
-                                    <button type="submit" class="btn-upper btn btn-primary checkout-page-button">Payment Step</button>
+                                    <button type="submit" class="btn-upper btn btn-primary checkout-page-button">Continue</button>
                                 </div>
                             </div>
                         </div>
