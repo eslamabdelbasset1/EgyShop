@@ -121,20 +121,20 @@ class IndexController extends Controller
         $color_en = $product->product_color_en;
         $product_color_en = explode(',', $color_en);
 
-        $color_hin = $product->product_color_hin;
-        $product_color_hin = explode(',', $color_hin);
+        $color_ar = $product->product_color_ar;
+        $product_color_ar = explode(',', $color_ar);
 
         $size_en = $product->product_size_en;
         $product_size_en = explode(',', $size_en);
 
-        $size_hin = $product->product_size_hin;
-        $product_size_hin = explode(',', $size_hin);
+        $size_ar = $product->product_size_ar;
+        $product_size_ar = explode(',', $size_ar);
         $multiImag = MultiImg::where('product_id',$id)->get();
         $cat_id = $product->category_id;
         $relatedProduct = Product::where('category_id',$cat_id)->where('id','!=',$id)->orderBy('id','DESC')->get();
         return view('frontend.product.product_details',
-            compact('product','multiImag','product_color_en','product_color_hin',
-                'product_size_en','product_size_hin','relatedProduct'));
+            compact('product','multiImag','product_color_en','product_color_ar',
+                'product_size_en','product_size_ar','relatedProduct'));
     }
 
 
@@ -160,7 +160,7 @@ class IndexController extends Controller
         $products = Product::where('status',1)->where('subsubcategory_id',$subsubcat_id)->orderBy('id','DESC')->paginate(6);
         $categories = Category::orderBy('category_name_en','ASC')->get();
         $breadsubsubcat = SubSubCategory::with(['category','subcategory'])->where('id',$subsubcat_id)->get();
-        return view('frontend.product.sub_subcategory_view',compact('products','categories','breadsubsubcat'));
+        return view('frontend.product.subSubcategory_view',compact('products','categories','breadsubsubcat'));
     }
 
     /// Product View With Ajax

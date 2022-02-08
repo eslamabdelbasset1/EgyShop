@@ -266,8 +266,10 @@ Route::middleware(['auth:admin'])->group(function()
 
 // User All Route---------------------------------------------------------------------------------------
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
+    return view('profile');
 })->name('dashboard');
+
+
 //// Frontend All Routes /////
 Route::middleware(['auth:web'])->group(function()
 {

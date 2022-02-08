@@ -283,14 +283,14 @@
                     miniCart += `<div class="cart-item product-summary">
                       <div class="row">
                         <div class="col-xs-4">
-                          <div class="image"> <a href="detail.html"><img src="/${value.options.image}" alt=""></a> </div>
+                          <div class="image"> <a href="#"><img src="/${value.options.image}" alt=""></a> </div>
                         </div>
                         <div class="col-xs-7">
-                          <h3 class="name"><a href="index.php?page-detail">${value.name}</a></h3>
+                          <h3 class="name"><a href="#">${value.name}</a></h3>
                           <div class="price"> ${value.price} * ${value.qty} </div>
                         </div>
                        <div class="col-xs-1 action">
-                          <button type="submit" id="${value.rowId}" onclick="miniCartRemove(this.id)">
+                          <button type="submit" id="${value.rowId}" onclick="miniCartRemove(this.id)" style="border: none; background: transparent;">
                                 <i class="fa fa-trash text-danger"></i>
                           </button>
                        </div>

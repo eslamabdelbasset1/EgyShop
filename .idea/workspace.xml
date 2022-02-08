@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="update arabic">
+    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="update index page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/includes/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/main_master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/main_master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/product/subSubCategory_view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/product/subSubCategory_view.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/product/subcategory_view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/product/subcategory_view.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +243,7 @@
       <workItem from="1643324426004" duration="544000" />
       <workItem from="1644156987826" duration="2145000" />
       <workItem from="1644266221230" duration="1599000" />
-      <workItem from="1644345921170" duration="1025000" />
+      <workItem from="1644345921170" duration="5145000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1641649877243</created>
@@ -575,7 +581,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644182679440</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="update index page">
+      <created>1644346972071</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1644346972071</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -596,7 +609,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Show product details" />
     <MESSAGE value="Show hot deal" />
     <MESSAGE value="Show tags" />
     <MESSAGE value="add strip Payment" />
@@ -621,6 +633,7 @@
     <MESSAGE value="add search" />
     <MESSAGE value="update logo" />
     <MESSAGE value="update arabic" />
-    <option name="LAST_COMMIT_MESSAGE" value="update arabic" />
+    <MESSAGE value="update index page" />
+    <option name="LAST_COMMIT_MESSAGE" value="update index page" />
   </component>
 </project>
