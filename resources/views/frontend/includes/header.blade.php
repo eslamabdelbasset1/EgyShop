@@ -106,7 +106,7 @@
     <div class="main-header">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
+                <div class="col-xs-12 col-sm-12 col-md-2 logo-holder">
                 @php
                     $setting = App\Models\SiteSetting::find(1);
                     $categories = App\Models\Category::orderBy('category_name_en','ASC')->get();
@@ -159,7 +159,7 @@
                     <!-- ============================================================= SEARCH AREA : END ============================================================= --> </div>
                 <!-- /.top-search-holder -->
 
-                <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
+                <div class="col-xs-12 col-sm-12 col-md-3 animate-dropdown top-cart-row">
                     <!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
                     <div class="dropdown dropdown-cart"> <a href="#" class="dropdown-toggle lnk-cart" data-toggle="dropdown">
                             <div class="items-cart-inner">
