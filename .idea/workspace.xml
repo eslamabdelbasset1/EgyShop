@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="update payment">
-      <change afterPath="$PROJECT_DIR$/resources/views/frontend/payment/installment.blade.php" afterDir="false" />
+    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="update installment">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/CheckoutController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/CheckoutController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,14 +236,8 @@
       <workItem from="1643324426004" duration="544000" />
       <workItem from="1644156987826" duration="2145000" />
       <workItem from="1644266221230" duration="1599000" />
-      <workItem from="1644345921170" duration="10626000" />
-    </task>
-    <task id="LOCAL-00004" summary="update and delete category">
-      <created>1641665338836</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1641665338836</updated>
+      <workItem from="1644345921170" duration="10655000" />
+      <workItem from="1644432372760" duration="2252000" />
     </task>
     <task id="LOCAL-00005" summary="add sub category">
       <created>1641688021457</created>
@@ -583,7 +575,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644355709063</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="update installment">
+      <created>1644360985602</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1644360985602</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -604,7 +603,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add strip Payment" />
     <MESSAGE value="add orders" />
     <MESSAGE value="update user profile" />
     <MESSAGE value="add cash payment" />
@@ -629,6 +627,7 @@
     <MESSAGE value="update index page" />
     <MESSAGE value="update coupon" />
     <MESSAGE value="update payment" />
-    <option name="LAST_COMMIT_MESSAGE" value="update payment" />
+    <MESSAGE value="update installment" />
+    <option name="LAST_COMMIT_MESSAGE" value="update installment" />
   </component>
 </project>
