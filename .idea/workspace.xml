@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="update installment">
+    <list default="true" id="ea8d87ee-53db-4849-b442-9b99316ff33a" name="Changes" comment="update logo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/common/hot_deals.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/common/hot_deals.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/includes/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/logo/1724025083033345.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/logo/1724025561723204.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/logo/21249 Your Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/logo/invoice.pdf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +182,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/frontend/payment" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/upload/admin_images" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -188,11 +191,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\resources\views\frontend\payment" />
       <recent name="$PROJECT_DIR$/public/upload/admin_images" />
       <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\src\app\Http\Middleware" />
       <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\resources\views\frontend" />
       <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\resources\views\backend\slider" />
+      <recent name="C:\xampp\htdocs\ecommerce-laravel\ecommerce\resources\views\backend\product" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/upload/admin/profile" />
@@ -237,9 +240,41 @@
       <workItem from="1643296682889" duration="15631000" />
       <workItem from="1643324426004" duration="544000" />
       <workItem from="1644156987826" duration="2145000" />
-      <workItem from="1644266221230" duration="1599000" />
-      <workItem from="1644345921170" duration="10655000" />
-      <workItem from="1644432372760" duration="3015000" />
+    </task>
+    <task id="LOCAL-00001" summary="init commit">
+      <created>1641649877243</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1641649877243</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add category">
+      <created>1641659853315</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1641659853316</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add category">
+      <created>1641659933176</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1641659933176</updated>
+    </task>
+    <task id="LOCAL-00004" summary="update and delete category">
+      <created>1641665338836</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1641665338836</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add sub category">
+      <created>1641688021457</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1641688021457</updated>
     </task>
     <task id="LOCAL-00006" summary="init commit">
       <created>1641913587531</created>
@@ -535,56 +570,7 @@
       <option name="project" value="LOCAL" />
       <updated>1644160533058</updated>
     </task>
-    <task id="LOCAL-00048" summary="update arabic">
-      <created>1644182679440</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1644182679440</updated>
-    </task>
-    <task id="LOCAL-00049" summary="update index page">
-      <created>1644346972071</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1644346972071</updated>
-    </task>
-    <task id="LOCAL-00050" summary="update coupon">
-      <created>1644351494035</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1644351494035</updated>
-    </task>
-    <task id="LOCAL-00051" summary="update coupon">
-      <created>1644352052353</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1644352052353</updated>
-    </task>
-    <task id="LOCAL-00052" summary="update payment">
-      <created>1644355709063</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1644355709063</updated>
-    </task>
-    <task id="LOCAL-00053" summary="update installment">
-      <created>1644360985602</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1644360985602</updated>
-    </task>
-    <task id="LOCAL-00054" summary="update installment">
-      <created>1644434957117</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1644434957117</updated>
-    </task>
-    <option name="localTasksCounter" value="55" />
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -600,11 +586,15 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Show products" />
+    <MESSAGE value="Show product details" />
+    <MESSAGE value="Show hot deal" />
+    <MESSAGE value="Show tags" />
+    <MESSAGE value="add strip Payment" />
     <MESSAGE value="add orders" />
     <MESSAGE value="update user profile" />
     <MESSAGE value="add cash payment" />
@@ -625,11 +615,6 @@
     <MESSAGE value="add tracking page" />
     <MESSAGE value="add search" />
     <MESSAGE value="update logo" />
-    <MESSAGE value="update arabic" />
-    <MESSAGE value="update index page" />
-    <MESSAGE value="update coupon" />
-    <MESSAGE value="update payment" />
-    <MESSAGE value="update installment" />
-    <option name="LAST_COMMIT_MESSAGE" value="update installment" />
+    <option name="LAST_COMMIT_MESSAGE" value="update logo" />
   </component>
 </project>
