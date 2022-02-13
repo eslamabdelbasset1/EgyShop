@@ -254,16 +254,6 @@ Route::middleware(['auth:admin'])->group(function()
 
 
 
-
-
-
-
-
-
-
-
-
-
 // User All Route---------------------------------------------------------------------------------------
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('profile');
@@ -307,15 +297,14 @@ Route::post('/cart/data/store/{id}', [CartController::class, 'addToCart']);
 Route::get('/product/mini/cart/', [CartController::class, 'addMiniCart']);
 // Remove mini cart
 Route::get('/minicart/product-remove/{rowId}', [CartController::class, 'removeMiniCart']);
-
 // Add to Wishlist
 Route::post('/add-to-wishlist/{product_id}', [CartController::class, 'addToWishlist']);
 
 
 //All User Auth
 Route::group(['prefix'=>'user','middleware' => ['user','auth'],'namespace'=>'User'],function(){
-// Wishlist page
-Route::get('/wishlist', [WishlistController::class, 'viewWishlist'])->name('wishlist');
+    // Wishlist page
+    Route::get('/wishlist', [WishlistController::class, 'viewWishlist'])->name('wishlist');
     Route::get('/get-wishlist-product', [WishlistController::class, 'getWishlistProduct']);
     Route::get('/wishlist-remove/{id}', [WishlistController::class, 'removeWishlistProduct']);
     Route::post('/cash/order', [CashController::class, 'cashOrder'])->name('cash.order');
@@ -328,7 +317,6 @@ Route::get('/wishlist', [WishlistController::class, 'viewWishlist'])->name('wish
     Route::get('/cancel/orders', [AllUserController::class, 'cancelOrders'])->name('cancel.orders');
     /// Order Tracking Route
     Route::post('/order/tracking', [AllUserController::class, 'orderTracking'])->name('order.tracking');
-
 });
 // My Cart Page All Routes
 Route::get('/mycart', [CartPageController::class, 'myCart'])->name('mycart');
@@ -350,8 +338,6 @@ Route::post('/checkout/store', [CheckoutController::class, 'checkoutStore'])->na
 Route::get('/blog', [HomeBlogController::class, 'addBlogPost'])->name('home.blog');
 Route::get('/post/details/{id}', [HomeBlogController::class, 'detailsBlogPost'])->name('post.details');
 Route::get('/blog/category/post/{category_id}', [HomeBlogController::class, 'homeBlogCatPost']);
-
-
 
 /// Frontend Product Review Routes
 Route::post('/review/store', [ReviewController::class, 'reviewStore'])->name('review.store');
